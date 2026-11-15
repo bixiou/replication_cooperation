@@ -1,0 +1,35 @@
+Part 1. Local counterfactuals: mutual defection ruled out in the PD versus Z_PD empty (exact arithmetic)
+   300 random PDs (rational payoffs), 12000 rule pairs (alpha, beta on a 1/20 grid plus the threshold): violations of (a), (b) and of "DD ruled out => Z_PD or its exchanged copy empty": 0
+   PD (5, 3, 1, 0): threshold (P-S)/(R-S) = 1/3; Z_PD player 1 payoffs [[3, 2], [0, -1]]; anonymous rule alpha = beta = 1: PD prediction [(0, 0)], Z_PD prediction []
+   PD (10, 3, 1, 0): threshold (P-S)/(R-S) = 1/3; Z_PD player 1 payoffs [[3, 2], [0, -1]]; anonymous rule alpha = beta = 1: PD prediction [(0, 0)], Z_PD prediction []
+   PD (4, 3, 2, 1): threshold (P-S)/(R-S) = 1/2; Z_PD player 1 payoffs [[3, 2], [1, 0]]; anonymous rule alpha = beta = 1: PD prediction [(0, 0)], Z_PD prediction []
+   non-anonymous rule (alpha_1,beta_1)=(0,1), (alpha_2,beta_2)=(1,1): PD [(0, 0)], Z_PD [(0, 1)], exchanged Z_PD []  [profiles as (row, column), 0 = C or a]
+
+Part 2. PTE in the traveler's dilemma: thresholds against c1 = 2, c_{k+1} = min(M, c_k + ceil(r))
+   308 (M, r) pairs, M = 3..30, r in {1/4,...,25}: mismatches with the recursion or limit != {(M,M)}: 0
+   example M = 12, r = 2: thresholds [2, 4, 6, 8, 10, 12, 12], limit [(12, 12)]
+
+Part 3. Chicken (0 = aggressive, 1 = yield): payoffs (0,0), (3,1), (1,3), (2,2)
+   credible alpha-core (outsiders best reply): []
+   set [(0, 0), (0, 1), (1, 0), (1, 1)]: thresholds (1, 1)
+   set [(0, 1), (1, 0), (1, 1)]: thresholds (3, 3)
+   last nonempty iterate [(0, 1), (1, 0), (1, 1)]; applying the test to it leaves []
+
+Part 4. Rules that look back at the previous profile (0 = C or a)
+   PD (5, 3, 1, 0): reciprocity [(0, 0)]; Z_PD reciprocity []
+      mutual gain, default worst: PD [(0, 0)]
+      mutual gain, default best: PD [(0, 0)]
+      mutual gain, default stay: PD []
+   PD (10, 3, 1, 0): reciprocity [(0, 0)]; Z_PD reciprocity []
+      mutual gain, default worst: PD [(0, 0)]
+      mutual gain, default best: PD [(0, 0)]
+      mutual gain, default stay: PD []
+   TD M = 6, r = 2, mutual gain, default worst: [(5, 6), (6, 5), (6, 6)]
+   TD M = 6, r = 2, mutual gain, default best: [(5, 6), (6, 5), (6, 6)]
+   TD M = 6, r = 2, mutual gain, default stay: []
+   TD M = 12, r = 2, mutual gain, default worst: [(11, 12), (12, 11), (12, 12)]
+   TD M = 12, r = 2, mutual gain, default best: [(11, 12), (12, 11), (12, 12)]
+   TD M = 12, r = 2, mutual gain, default stay: []
+   TD M = 12, r = 5, mutual gain, default worst: [(11, 12), (12, 11), (12, 12)]
+   TD M = 12, r = 5, mutual gain, default best: [(11, 12), (12, 11), (12, 12)]
+   TD M = 12, r = 5, mutual gain, default stay: []

@@ -1,0 +1,10 @@
+tie-break among best responses: max
+  r=3/2: M=3:[(2, 2)]; M=4:[(2, 2)]; M=5:top; M=6:top; M=7:top; M=8:top; M=9:top; M=10:top; M=11:top; M=12:top; M=13:top; M=14:top; M=15:top
+  r=2: M=3:[(2, 2)]; M=4:[(2, 2)]; M=5:[(2, 2), (5, 5)]; M=6:top; M=7:top; M=8:top; M=9:top; M=10:top; M=11:top; M=12:top; M=13:top; M=14:top; M=15:top
+  r=3: M=3:[(2, 2)]; M=4:[(2, 2)]; M=5:[(2, 2)]; M=6:[(2, 2), (6, 6)]; M=7:top; M=8:top; M=9:top; M=10:top; M=11:top; M=12:top; M=13:top; M=14:top; M=15:top
+  r=5: M=3:[(2, 2)]; M=4:[(2, 2)]; M=5:[(2, 2)]; M=6:[(2, 2)]; M=7:[(2, 2)]; M=8:[(2, 2), (8, 8)]; M=9:top; M=10:top; M=11:top; M=12:top; M=13:top; M=14:top; M=15:top
+tie-break among best responses: min
+  r=3/2: M=3:[(2, 2)]; M=4:[(2, 2)]; M=5:top; M=6:top; M=7:top; M=8:top; M=9:top; M=10:top; M=11:top; M=12:top; M=13:top; M=14:top; M=15:top
+  r=2: M=3:[(2, 2)]; M=4:[(2, 2)]; M=5:[(2, 2), (5, 5)]; M=6:top; M=7:top; M=8:top; M=9:top; M=10:top; M=11:top; M=12:top; M=13:top; M=14:top; M=15:top
+  r=3: M=3:[(2, 2)]; M=4:[(2, 2)]; M=5:[(2, 2)]; M=6:[(2, 2), (6, 6)]; M=7:top; M=8:top; M=9:top; M=10:top; M=11:top; M=12:top; M=13:top; M=14:top; M=15:top
+  r=5: M=3:[(2, 2)]; M=4:[(2, 2)]; M=5:[(2, 2)]; M=6:[(2, 2)]; M=7:[(2, 2)]; M=8:[(2, 2), (8, 8)]; M=9:top; M=10:top; M=11:top; M=12:top; M=13:top; M=14:top; M=15:top

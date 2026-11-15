@@ -1,0 +1,4 @@
+n = 2: PTE limit []; RPP gives rank k-1 to position k under every order: True; SPP gives rank 0 to the last and rank k to position k < n: True; distinct predictions RPP 2, SPP 2, of 2 orders
+n = 3: PTE limit []; RPP gives rank k-1 to position k under every order: True; SPP gives rank 0 to the last and rank k to position k < n: True; distinct predictions RPP 6, SPP 6, of 6 orders
+n = 4: PTE limit []; RPP gives rank k-1 to position k under every order: True; SPP gives rank 0 to the last and rank k to position k < n: True; distinct predictions RPP 24, SPP 24, of 24 orders
+n = 5: PTE limit []; RPP gives rank k-1 to position k under every order: True; SPP gives rank 0 to the last and rank k to position k < n: True; distinct predictions RPP 120, SPP 120, of 120 orders

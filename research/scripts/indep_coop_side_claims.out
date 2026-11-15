@@ -1,0 +1,40 @@
+Installed 2 packages in 337ms
+=== TD: iterated elimination of strategies strictly dominated by mixtures (r>1)
+PASS TD r>1: only the claim 2 survives iterated strict dominance by mixtures (M in 3,5,8,12,20; r in 1.1,1.5,2,3)
+=== 'copying pays iff fear' in symmetric 2x2 social dilemmas (ordinal values 1..4 with ties allowed)
+PASS copying pays iff P>S on all symmetric 2x2 social dilemmas with values in 1..4
+=== Prop 3(ii)-(iii): mixed and correlated profiles (grid evidence, step 1/400)
+PASS chicken mixed: guarantees (1,1) then (3,3), limit empty | ([np.float64(1.0), np.float64(1.0)], [np.float64(3.0), np.float64(3.0)])
+PASS chicken correlated: guarantees (1,1) then (3,3), limit empty | ([np.float64(1.0), np.float64(1.0)], [np.float64(3.0), np.float64(3.0)])
+PASS PD mixed payoffs u1 = 1 - p + 4q - pq
+PASS PD mixed: guarantees (1,1) in both rounds (grid), so the limit is {u1>=1,u2>=1} and contains (D,D) | ([np.float64(1.0), np.float64(1.0)], [np.float64(1.00995), np.float64(1.00995)])
+=== Prop S1 (volunteer's dilemma)
+PASS Prop S1 (i)-(iii) for n=2..5 and three cost vectors (equal, distinct, two pairs)
+PASS symmetric mixed NE: probability nobody volunteers (c/b)^(n/(n-1)) increases with n (c/b=0.3)
+=== S2 3x3 example with strategies x,y,z
+PASS PTE: S -> five profiles -> empty, guarantees (3,3) then (8,8) | [[3, 3], [8, 8]]
+PASS sequential reaches {(z,z)} under both orders
+PASS guarantees under (1,2): player 1 3,4,7; player 2 4,5,7 (distinct values) | ([3, 4, 7, 7], [4, 5, 7, 7])
+=== S2 public goods
+PASS unit public goods, 1/2<a<1: rounds S, (drop lone contributors), (drop nobody), empty
+PASS unit PG: seq leaves the 2nd reasoner free riding, res the 1st; full contribution reached by 1,1,{2,3} and a rest point
+PASS perturbed PG (eps x_{i+1}): no ties, limit empty, full contribution reachable, no rotation reaches it
+PASS w=(1,9/10,4/5): limit empty for all rationals a (den<200) with 9/17<a<1
+PASS w=(1,9/10,4/5): limit = full contribution exactly for 10/27<=a<10/19 (rationals, den<200) | min 10/27 max 101/192
+   outcomes for 10/19<=a<=9/17: ['empty', 'other:[(1, 1, 0)]']
+PASS w=(1,9/10,4/5): ties occur at exactly four values of a in (9/17,1) | [Fraction(10, 11), Fraction(5, 9), Fraction(8, 9), Fraction(9, 11)]
+PASS expected payoff with drawn order 2a+1/3 vs 3a: loss a-1/3
+=== S2 uniform law: search for a fully symmetric 3-player 3-strategy game with six distinct sequential predictions
+PASS a fully symmetric 3-player 3-strategy game with pairwise different sequential predictions over the 6 orders exists (random search) | 8
+=== S5: Leader, battle of the sexes, G_1/2 (grid evidence)
+PASS Leader: grid profiles not improved upon for both = {(A,Y),(Y,A)} | [(np.float64(0.0), np.float64(1.0)), (np.float64(1.0), np.float64(0.0))]
+PASS BoS: grid profiles not improved upon for both = {(A,Y),(Y,A)} | [(np.float64(0.0), np.float64(1.0)), (np.float64(1.0), np.float64(0.0))]
+PASS G_1/2: each plays A w.p. 3/7 gives 8/7 to both, and no grid profile gives both more
+=== S4 magical thinking, PD (5,3,1,0), types uniform on [0,1]
+PASS cutoff (5-sqrt17)/2 and mutual cooperation probability (1-cutoff)^2 rounds to 0.32 | 0.31534156157350907
+=== Nash-2 (Sandomirskaia) in matching pennies
+PASS Nash-2 empty in matching pennies; contains (C,C) and (D,D) in the PD
+=== S1 reciprocity rule
+PASS reciprocity: {(C,C)} in the PD and nothing in Z_PD (four PDs)
+
+TOTAL FAILURES: 0

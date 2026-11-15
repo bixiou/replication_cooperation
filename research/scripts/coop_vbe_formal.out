@@ -1,0 +1,32 @@
+Tie-break among best responses in the deviator's favour (JMP 2022, eq. (2))
+PD (T,R,P,S)=(5,3,1,0): feasible agreements [('D', 'D')]; VBE [('D', 'D')]; payoffs [(1, 1)]; VBE set self-consistent: True
+TD efforts 1..10, r=2 (AMR p. 10-11): feasible agreements [(1, 1), (10, 10)]; VBE [(10, 10)]; payoffs [(10, 10)]; VBE set self-consistent: True
+TD claims 2..100, r=2: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 2..100, r=1.5: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 2..100, r=3: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 2..100, r=5: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 2..100, r=10: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 2..100, r=40: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 80..200, r=80 (Capra et al.): feasible agreements [(80, 80), (200, 200)]; VBE [(200, 200)]; payoffs [(200, 200)]; VBE set self-consistent: True
+G_e, e=0.5: feasible agreements [('A', 'Y'), ('Y', 'A')]; VBE [('A', 'Y'), ('Y', 'A')]; payoffs [(3, 1), (1, 3)]; VBE set self-consistent: False
+Chicken (0,0),(3,1),(1,3),(2,2): feasible agreements [('A', 'Y'), ('Y', 'A')]; VBE [('A', 'Y'), ('Y', 'A')]; payoffs [(3, 1), (1, 3)]; VBE set self-consistent: False
+Aumann chicken (0,0),(7,2),(2,7),(6,6): feasible agreements [('A', 'Y'), ('Y', 'A')]; VBE [('A', 'Y'), ('Y', 'A')]; payoffs [(7, 2), (2, 7)]; VBE set self-consistent: False
+Battle of the sexes (2,1),(0,0),(0,0),(1,2): feasible agreements [('a', 'a'), ('b', 'b')]; VBE [('a', 'a'), ('b', 'b')]; payoffs [(2, 1), (1, 2)]; VBE set self-consistent: False
+Nash-product game of Prop. bargaining: feasible agreements [('b', 'b')]; VBE [('b', 'b')]; payoffs [(4, 4)]; VBE set self-consistent: True
+Census of the 576 strict 2x2 games, formal VBE in pure strategies: {'empty': 0, 'single': 516, 'two+': 60, 'swapped pair': 30, 'VBE self-consistent': 516, 'VBE contains a Pareto-optimal profile': 532}
+Tie-break among best responses against the deviator
+PD (T,R,P,S)=(5,3,1,0): feasible agreements [('D', 'D')]; VBE [('D', 'D')]; payoffs [(1, 1)]; VBE set self-consistent: True
+TD efforts 1..10, r=2 (AMR p. 10-11): feasible agreements [(1, 1), (10, 10)]; VBE [(10, 10)]; payoffs [(10, 10)]; VBE set self-consistent: True
+TD claims 2..100, r=2: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 2..100, r=1.5: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 2..100, r=3: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 2..100, r=5: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 2..100, r=10: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 2..100, r=40: feasible agreements [(2, 2), (100, 100)]; VBE [(100, 100)]; payoffs [(100, 100)]; VBE set self-consistent: True
+TD claims 80..200, r=80 (Capra et al.): feasible agreements [(80, 80), (200, 200)]; VBE [(200, 200)]; payoffs [(200, 200)]; VBE set self-consistent: True
+G_e, e=0.5: feasible agreements [('A', 'Y'), ('Y', 'A')]; VBE [('A', 'Y'), ('Y', 'A')]; payoffs [(3, 1), (1, 3)]; VBE set self-consistent: False
+Chicken (0,0),(3,1),(1,3),(2,2): feasible agreements [('A', 'Y'), ('Y', 'A')]; VBE [('A', 'Y'), ('Y', 'A')]; payoffs [(3, 1), (1, 3)]; VBE set self-consistent: False
+Aumann chicken (0,0),(7,2),(2,7),(6,6): feasible agreements [('A', 'Y'), ('Y', 'A')]; VBE [('A', 'Y'), ('Y', 'A')]; payoffs [(7, 2), (2, 7)]; VBE set self-consistent: False
+Battle of the sexes (2,1),(0,0),(0,0),(1,2): feasible agreements [('a', 'a'), ('b', 'b')]; VBE [('a', 'a'), ('b', 'b')]; payoffs [(2, 1), (1, 2)]; VBE set self-consistent: False
+Nash-product game of Prop. bargaining: feasible agreements [('b', 'b')]; VBE [('b', 'b')]; payoffs [(4, 4)]; VBE set self-consistent: True
+Census of the 576 strict 2x2 games, formal VBE in pure strategies: {'empty': 0, 'single': 516, 'two+': 60, 'swapped pair': 30, 'VBE self-consistent': 516, 'VBE contains a Pareto-optimal profile': 532}

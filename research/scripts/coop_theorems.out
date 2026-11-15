@@ -1,0 +1,57 @@
+Part 1. Dominant-strategy profiles under the response models (stay put, worst case, worst best reply)
+random two-player games with a strictly dominant-strategy profile: 644; kept under all three models: 644
+PD (5,3,1,0): (D,D) kept: {'stay': True, 'worst': True, 'bestreply': True}
+
+Part 2. Local counterfactual rules on 2x2 continuations with strictly opposed preferences
+pure rules (switch probability 0 or 1 per type) giving (C,C) alone:
+   switch in type a: 0, in type b: 0: (C,C) alone in PD (5,3,1,0): False; in the family: False; Z solutions: [(0, 1)]
+   switch in type a: 0, in type b: 1: (C,C) alone in PD (5,3,1,0): False; in the family: False; Z solutions: [(0, 1)]
+   switch in type a: 1, in type b: 0: (C,C) alone in PD (5,3,1,0): False; in the family: False; Z solutions: []
+   switch in type a: 1, in type b: 1: (C,C) alone in PD (5,3,1,0): True; in the family: True; Z solutions: []
+   set-valued, min aggregation, type a ('switch',), type b ('switch',): (C,C) alone in the family; Z solutions: []
+   set-valued, min aggregation, type a ('switch',), type b ('stay', 'switch'): (C,C) alone in the family; Z solutions: []
+   set-valued, max aggregation, type a ('switch',), type b ('switch',): (C,C) alone in the family; Z solutions: []
+   set-valued, max aggregation, type a ('stay', 'switch'), type b ('switch',): (C,C) alone in the family; Z solutions: []
+distributions: largest switch probability in type a that fails some PD of the family, smallest in type b:
+   pairs on the grid giving (C,C) alone in the whole family: [(np.float64(0.97), np.float64(0.99)), (np.float64(0.97), np.float64(1.0)), (np.float64(0.98), np.float64(0.99)), (np.float64(0.98), np.float64(1.0)), (np.float64(0.99), np.float64(0.99)), (np.float64(0.99), np.float64(1.0)), (np.float64(1.0), np.float64(0.99)), (np.float64(1.0), np.float64(1.0))]
+   in PD (5,3,1,0) alone: 3417 pairs; switch probability in type a ranges over [0.34, 1.00], in type b over [0.50, 1.00]
+   zero-sum 2x2 game with no solution found (random search, 3000 tries) for 3417 of the 3417 pairs
+strict ordinal 2x2 games: 576; with every continuation strictly opposed: 56; of these, empty under "always switch": 24
+reciprocity rule on Z: [] ; on the PD: [(0, 0)]
+TD M=6 r=2: reciprocity rule [(5, 6), (6, 5), (6, 6)]; pairwise joint-deviation rule [(5, 6), (6, 5), (6, 6)]
+TD M=12 r=2: reciprocity rule [(11, 12), (12, 11), (12, 12)]; pairwise joint-deviation rule [(11, 12), (12, 11), (12, 12)]
+TD M=12 r=5: reciprocity rule [(11, 12), (12, 11), (12, 12)]; pairwise joint-deviation rule [(11, 12), (12, 11), (12, 12)]
+pairwise joint-deviation rule on the PD: [(0, 0)] ; on Z: [(0, 1)]
+
+Part 3. Collective selections over pure profiles with the security levels (pure maximin) as threat point
+PD (5,3,1,0): security [np.float64(1.0), np.float64(1.0)]; maximin of gains [(0, 0)]; Nash product [(0, 0)]
+chicken: security [np.float64(1.0), np.float64(1.0)]; maximin of gains [(1, 1)]; Nash product [(1, 1)]
+battle of the sexes: security [np.float64(1.0), np.float64(1.0)]; maximin of gains [(0, 0), (1, 1)]; Nash product [(0, 0), (1, 1)]
+matching pennies: security [np.float64(-1.0), np.float64(-1.0)]; maximin of gains [(0, 0), (0, 1), (1, 0), (1, 1)]; Nash product [(0, 0), (0, 1), (1, 0), (1, 1)]
+Z: security [np.float64(3.0), np.float64(-3.0)]; maximin of gains [(0, 1)]; Nash product [(0, 1)]
+TD M=6 r=2: security [np.float64(2.0), np.float64(2.0)]; maximin of gains [(6, 6)]; Nash product [(6, 6)]
+TD M=12 r=2: security [np.float64(2.0), np.float64(2.0)]; maximin of gains [(12, 12)]; Nash product [(12, 12)]
+TD M=12 r=5: security [np.float64(2.0), np.float64(2.0)]; maximin of gains [(12, 12)]; Nash product [(12, 12)]
+TD M=30 r=3: security [np.float64(2.0), np.float64(2.0)]; maximin of gains [(30, 30)]; Nash product [(30, 30)]
+2 players, asymmetric strategy sets (3, 4), 2000 games with continuous payoffs: always nonempty; maximin of gains unique in 1997, Nash product unique in 1997
+3 players, asymmetric strategy sets (2, 3, 4), 1000 games with continuous payoffs: always nonempty; maximin of gains unique in 1000, Nash product unique in 1000
+4 players, asymmetric strategy sets (2, 2, 2, 3), 300 games with continuous payoffs: always nonempty; maximin of gains unique in 300, Nash product unique in 300
+
+Part 4. Joint deviations: alpha-core (worst case), credible core (best replies), strong Nash (stay put)
+PD (5,3,1,0), worst: ['CC']
+PD (5,3,1,0), bestreply: ['CC']
+PD (5,3,1,0), stay: []
+TD M=6 r=2, worst: [(5, 6), (6, 5), (6, 6)]
+TD M=6 r=2, bestreply: [(5, 6), (6, 5), (6, 6)]
+TD M=6 r=2, stay: []
+TD M=12 r=2, worst: [(11, 12), (12, 11), (12, 12)]
+TD M=12 r=2, bestreply: [(11, 12), (12, 11), (12, 12)]
+TD M=12 r=2, stay: []
+TD M=12 r=5, worst: [(11, 12), (12, 11), (12, 12)]
+TD M=12 r=5, bestreply: [(11, 12), (12, 11), (12, 12)]
+TD M=12 r=5, stay: []
+
+Part 5. Berge equilibrium (pure)
+PD: [(0, 0)] ; matching pennies: [] ; chicken: [(1, 1)] ; Z: [(1, 0)]
+TD M=6 r=2: [(6, 6)]
+TD M=12 r=5: [(12, 12)]

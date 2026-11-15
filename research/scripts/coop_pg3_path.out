@@ -1,0 +1,11 @@
+coop_pg3_path.py: a shortest sequence of verdict blocks reaching {CCC} in the three-player binary public goods
+a = 3/4: shortest path to {CCC} has 3 steps
+  from 8 profiles ['CCC', 'CCF', 'CFC', 'CFF', 'FCC', 'FCF', 'FFC', 'FFF'], block (1,), guarantees {1: Fraction(1, 1)} -> ['CCC', 'CCF', 'CFC', 'FCC', 'FCF', 'FFC', 'FFF']
+  from 7 profiles ['CCC', 'CCF', 'CFC', 'FCC', 'FCF', 'FFC', 'FFF'], block (1,), guarantees {1: Fraction(3, 2)} -> ['CCC', 'CCF', 'CFC', 'FCC', 'FCF', 'FFC']
+  from 6 profiles ['CCC', 'CCF', 'CFC', 'FCC', 'FCF', 'FFC'], block (2, 3), guarantees {2: Fraction(7, 4), 3: Fraction(7, 4)} -> ['CCC']
+  ex ante payoff under reasoning in turn (two contributors, free rider uniform): 11/6; full contribution: 9/4
+a = 11/20: shortest path to {CCC} has 3 steps
+  from 8 profiles ['CCC', 'CCF', 'CFC', 'CFF', 'FCC', 'FCF', 'FFC', 'FFF'], block (1,), guarantees {1: Fraction(1, 1)} -> ['CCC', 'CCF', 'CFC', 'FCC', 'FCF', 'FFC', 'FFF']
+  from 7 profiles ['CCC', 'CCF', 'CFC', 'FCC', 'FCF', 'FFC', 'FFF'], block (1,), guarantees {1: Fraction(11, 10)} -> ['CCC', 'CCF', 'CFC', 'FCC', 'FCF', 'FFC']
+  from 6 profiles ['CCC', 'CCF', 'CFC', 'FCC', 'FCF', 'FFC'], block (2, 3), guarantees {2: Fraction(31, 20), 3: Fraction(31, 20)} -> ['CCC']
+  ex ante payoff under reasoning in turn (two contributors, free rider uniform): 43/30; full contribution: 33/20

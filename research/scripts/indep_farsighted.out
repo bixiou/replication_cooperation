@@ -1,0 +1,95 @@
+======================================================================
+(a) Prisoner's dilemma (T,R,P,S) = (5,3,1,0)
+-- single movers
+   dominated by ('C', 'C'): []
+   dominated by ('C', 'D'): [('C', 'C')]
+   dominated by ('D', 'C'): [('C', 'C')]
+   dominated by ('D', 'D'): [('C', 'D'), ('D', 'C')]
+   LCS = [('C', 'C'), ('D', 'D')]
+   all farsighted stable sets (exhaustive over 16 subsets): [[('C', 'C'), ('D', 'D')]]
+-- joint moves
+   dominated by ('C', 'C'): [('C', 'D'), ('D', 'C'), ('D', 'D')]
+   dominated by ('C', 'D'): [('C', 'C')]
+   dominated by ('D', 'C'): [('C', 'C')]
+   dominated by ('D', 'D'): [('C', 'D'), ('D', 'C')]
+   LCS = [('C', 'C')]
+   all farsighted stable sets (exhaustive over 16 subsets): [[('C', 'C')]]
+======================================================================
+(b) Traveler's dilemma, claims 2..M, M = 10
+-- r = 2, single movers
+   LCS (39 profiles) = [(2, 2), (3, 3), (4, 4), (5, 5), (5, 6), (5, 7), (5, 8), (5, 9), (5, 10), (6, 5), (6, 6), (6, 7), (6, 8), (6, 9), (6, 10), (7, 5), (7, 6), (7, 7), (7, 8), (7, 9), (7, 10), (8, 5), (8, 6), (8, 7), (8, 8), (8, 9), (8, 10), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9), (9, 10), (10, 5), (10, 6), (10, 7), (10, 8), (10, 9), (10, 10)]
+   (M-1,M) in LCS: True;  (M,M) in LCS: True
+   [(10, 10)] stable set: internal True, external True
+   [(9, 10)] stable set: internal True, external True
+   [(10, 9)] stable set: internal True, external True
+   ALL farsighted stable sets (exhaustive backtracking, verified): 3
+     [(9, 10)]
+     [(10, 9)]
+     [(10, 10)]
+   U(G) = []; LCS subset IR: True; U subset LCS: True
+-- r = 2, joint moves
+   LCS (34 profiles) = [(5, 6), (5, 7), (5, 8), (5, 9), (5, 10), (6, 5), (6, 7), (6, 8), (6, 9), (6, 10), (7, 5), (7, 6), (7, 7), (7, 8), (7, 9), (7, 10), (8, 5), (8, 6), (8, 7), (8, 8), (8, 9), (8, 10), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9), (9, 10), (10, 5), (10, 6), (10, 7), (10, 8), (10, 9), (10, 10)]
+   (M-1,M) in LCS: True;  (M,M) in LCS: True
+   [(10, 10)] stable set: internal True, external True
+   [(9, 10)] stable set: internal True, external True
+   [(10, 9)] stable set: internal True, external True
+   ALL farsighted stable sets (exhaustive backtracking, verified): 3
+     [(9, 10)]
+     [(10, 9)]
+     [(10, 10)]
+   U(G) = []; LCS subset IR: True; U subset LCS: True
+-- r = 5, single movers
+   LCS (21 profiles) = [(2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (7, 8), (7, 9), (7, 10), (8, 7), (8, 8), (8, 9), (8, 10), (9, 7), (9, 8), (9, 9), (9, 10), (10, 7), (10, 8), (10, 9), (10, 10)]
+   (M-1,M) in LCS: True;  (M,M) in LCS: True
+   [(10, 10)] stable set: internal True, external True
+   [(9, 10)] stable set: internal True, external True
+   [(10, 9)] stable set: internal True, external True
+   ALL farsighted stable sets (exhaustive backtracking, verified): 3
+     [(9, 10)]
+     [(10, 9)]
+     [(10, 10)]
+   U(G) = []; LCS subset IR: True; U subset LCS: True
+-- r = 5, joint moves
+   LCS (21 profiles) = [(2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (7, 8), (7, 9), (7, 10), (8, 7), (8, 8), (8, 9), (8, 10), (9, 7), (9, 8), (9, 9), (9, 10), (10, 7), (10, 8), (10, 9), (10, 10)]
+   (M-1,M) in LCS: True;  (M,M) in LCS: True
+   [(10, 10)] stable set: internal True, external True
+   [(9, 10)] stable set: internal True, external True
+   [(10, 9)] stable set: internal True, external True
+   ALL farsighted stable sets (exhaustive backtracking, verified): 3
+     [(9, 10)]
+     [(10, 9)]
+     [(10, 10)]
+   U(G) = []; LCS subset IR: True; U subset LCS: True
+======================================================================
+(c) Indifference example: (0,0) at (a,b),(a,b'); (0,1) at (a',b); (1,1) at (a',b')
+   U(G) = [("a'", 'b'), ("a'", "b'")]; IR(G) = [('a', 'b'), ('a', "b'"), ("a'", 'b'), ("a'", "b'")]
+   explicit chain (a',b)->(a,b)->(a,b')->(a',b') valid: True
+-- single movers: (a',b) << (a',b'): True
+   dominated by ('a', 'b'): []
+   dominated by ('a', "b'"): []
+   dominated by ("a'", 'b'): []
+   dominated by ("a'", "b'"): [('a', 'b'), ('a', "b'"), ("a'", 'b')]
+   LCS = [("a'", "b'")];  (a',b) in LCS: False;  U subset LCS: False
+   stable sets: [[("a'", "b'")]];  (a',b) in some stable set: False
+-- joint moves: (a',b) << (a',b'): True
+   dominated by ('a', 'b'): []
+   dominated by ('a', "b'"): []
+   dominated by ("a'", 'b'): []
+   dominated by ("a'", "b'"): [('a', 'b'), ('a', "b'"), ("a'", 'b')]
+   LCS = [("a'", "b'")];  (a',b) in LCS: False;  U subset LCS: False
+   stable sets: [[("a'", "b'")]];  (a',b) in some stable set: False
+======================================================================
+(d) Unilaterality sanity checks on 2x2 classes
+-- 2x2 payoffs in {0,1,2} (6,561 games), single movers: {'n': 6561, 'lcs_empty': 0, 'lcs_notIR': 0, 'U_not_lcs': 224, 'viol': 224, 'ss_none': 0, 'ss_union_viol': 384, 'ss_some_viol': 528, 'ss_every_viol': 384, 'ss_notIR': 0, 'ss_U': 528}
+-- 2x2 payoffs in {0,1,2} (6,561 games), joint moves: {'n': 6561, 'lcs_empty': 0, 'lcs_notIR': 0, 'U_not_lcs': 216, 'viol': 216, 'ss_none': 0, 'ss_union_viol': 384, 'ss_some_viol': 528, 'ss_every_viol': 384, 'ss_notIR': 0, 'ss_U': 528}
+-- strict 2x2 (576 games), single movers: {'n': 576, 'lcs_empty': 0, 'lcs_notIR': 0, 'U_not_lcs': 0, 'viol': 0, 'ss_none': 0, 'ss_union_viol': 0, 'ss_some_viol': 48, 'ss_every_viol': 0, 'ss_notIR': 0, 'ss_U': 48}
+-- strict 2x2 (576 games), joint moves: {'n': 576, 'lcs_empty': 0, 'lcs_notIR': 0, 'U_not_lcs': 0, 'viol': 0, 'ss_none': 0, 'ss_union_viol': 0, 'ss_some_viol': 48, 'ss_every_viol': 0, 'ss_notIR': 0, 'ss_U': 48}
+-- 2x2 payoffs in {0,1,2,3} (65,536 games), single movers: {'n': 65536, 'lcs_empty': 0, 'lcs_notIR': 0, 'U_not_lcs': 1280, 'viol': 1280, 'ss_none': 0, 'ss_union_viol': 3200, 'ss_some_viol': 5600, 'ss_every_viol': 3200, 'ss_notIR': 0, 'ss_U': 5600}
+done
+======================================================================
+(e) A strict 2x2 game in which some farsighted stable set (single movers) drops a profile of U(G)
+   payoffs [((0, 0), (0, 0)), ((0, 1), (1, 1)), ((1, 0), (2, 3)), ((1, 1), (3, 2))]
+   U(G) = [(1, 0)]; LCS = [(1, 0), (1, 1)]; stable sets = [[(1, 0)], [(1, 1)]]
+(f) 2x2 payoffs in {0,1,2,3}, joint moves, LCS only
+   {'n': 65536, 'lcs_empty': 0, 'lcs_notIR': 0, 'U_not_lcs': 1152}
+done (e,f)

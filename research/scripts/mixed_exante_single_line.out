@@ -1,0 +1,118 @@
+== Part A: one-strategy players and single welfare criteria (exact) ==
+G2 payoffs (a,b),(a,b'),(a',b),(a',b'): [(Fraction(3, 1), Fraction(-3, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1)), (Fraction(-2, 1), Fraction(2, 1), Fraction(2, 1)), (Fraction(1, 1), Fraction(-1, 1), Fraction(3, 1))]
+no ties: True
+v1^m = 1/7 at p = 3/7 ; v2^m = -1/7 at q = 2/7 ; v3^m = 0
+u1 - v1 = 7 (p - 3/7)(q - 2/7) on the 1/7 grid: True
+so IR^m = {u1 = v1} = {p = 3/7} U {q = 2/7} (u2 = -u1), movers' gains (0,0) on it
+  (p,q) = (3/7,0): u = (1/7, -1/7, 15/7)
+  (p,q) = (3/7,1): u = (1/7, -1/7, 8/7)
+  (p,q) = (0,2/7): u = (1/7, -1/7, 19/7)
+  (p,q) = (1,2/7): u = (1/7, -1/7, 5/7)
+  (p,q) = (3/7,2/7): u = (1/7, -1/7, 13/7)
+  (p,q) = (11/14,2/7): u = (1/7, -1/7, 8/7)
+u3 on arm p=3/7: 15/7 - q: True
+u3 on arm q=2/7: 19/7 - 2p: True
+=> leximin over the movers predicts the whole cross, including (3/7,1) with u = (1/7,-1/7,8/7),
+   Pareto-dominated by (3/7,0) with u = (1/7,-1/7,15/7): PO_b fails in a game without ties.
+   Leximin over all players: maximizes u3 on the cross: (0,2/7) with u3 = 19/7 (single profile).
+G3 payoffs (a,b),(a,b'),(a',b),(a',b'): [(Fraction(4, 1), Fraction(4, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1), Fraction(1, 1)), (Fraction(0, 1), Fraction(1, 1), Fraction(2, 1)), (Fraction(3, 1), Fraction(3, 1), Fraction(3, 1))]
+no ties: True
+v^m = (Fraction(2, 1), Fraction(2, 1), Fraction(0, 1)) ; B = {(a,b)} (both movers get 4, their maximum, only there)
+sorted gains: (a,b) [Fraction(0, 1), Fraction(2, 1), Fraction(2, 1)]  (a',b') [Fraction(1, 1), Fraction(1, 1), Fraction(3, 1)]  -> (a',b') leximin-better: True
+=> the all-player leximin excludes the bliss profile (a,b): not unilateral (M), in a game without ties.
+   Nash product over all players: (a,b) gives 0 , (a',b') gives 3
+
+== Part B: attainable gain vectors for the welfarist impossibility (exact) ==
+G1': movers' payoffs constant 0, so B = every mixed profile and the movers' gains are (0,0) everywhere;
+  player 3's payoff (v3^m = 0) ranges over [0,3] (bilinear, continuous): sample 0 .. 3
+G2: on IR^m player 3's payoff ranges over [8/7,15/7] (arm p=3/7) and [5/7,19/7] (arm q=2/7),
+  so the attainable gain vectors are (0,0,z), z in [5/7,19/7], a subset of G1''s.
+  Any rule choosing from the attainable gain vectors with Sen's contraction property chooses all of
+  [5/7,19/7] in G2, since it chooses all of [0,3] in G1'; so it predicts (3/7,1), dominated.
+
+== Part C: ex ante perfect prediction on the mixed extension of prisoner's dilemmas (exact) ==
+PD (10, 3, 1, 0, 10, 3, 1, 0): from all profiles gamma_1 Fourny 1, credible 1 (P1 = 1); generous 10 (T1 = 10)
+  Laplace answers from all profiles: gamma = (11/2, 11/2); no profile of the 1/30 grid meets it: True; max over pure profiles of u1 + u2 = 10
+  E(c), c = (1, 1): commitments with answers 121/121; gamma_1 Fourny = 1, credible = 1, all equal c1: True; gamma_2 (both rules) = 1; generous gamma_1 = 23/3
+  E(c), c = (2, 2): commitments with answers 104/121; gamma_1 Fourny = 2, credible = 2, all equal c1: True; gamma_2 (both rules) = 2; generous gamma_1 = 1773/308
+  E(c), c = (29/10, 29/10): commitments with answers 83/121; gamma_1 Fourny = 29/10, credible = 29/10, all equal c1: True; gamma_2 (both rules) = 29/10; generous gamma_1 = 203/45
+PD (5, 3, 1, 0, 5, 3, 1, 0): from all profiles gamma_1 Fourny 1, credible 1 (P1 = 1); generous 5 (T1 = 5)
+  Laplace answers from all profiles: gamma = (3, 3); no profile of the 1/30 grid meets it: False; max over pure profiles of u1 + u2 = 6
+  E(c), c = (1, 1): commitments with answers 121/121; gamma_1 Fourny = 1, credible = 1, all equal c1: True; gamma_2 (both rules) = 1; generous gamma_1 = 13/3
+  E(c), c = (2, 2): commitments with answers 75/121; gamma_1 Fourny = 2, credible = 2, all equal c1: True; gamma_2 (both rules) = 2; generous gamma_1 = 11/3
+  E(c), c = (29/10, 29/10): commitments with answers 11/121; gamma_1 Fourny = 29/10, credible = 29/10, all equal c1: True; gamma_2 (both rules) = 29/10; generous gamma_1 = 46/15
+PD (6, 3, 1, 0, 6, 3, 1, 0): from all profiles gamma_1 Fourny 1, credible 1 (P1 = 1); generous 6 (T1 = 6)
+  Laplace answers from all profiles: gamma = (7/2, 7/2); no profile of the 1/30 grid meets it: True; max over pure profiles of u1 + u2 = 6
+  E(c), c = (1, 1): commitments with answers 121/121; gamma_1 Fourny = 1, credible = 1, all equal c1: True; gamma_2 (both rules) = 1; generous gamma_1 = 5
+  E(c), c = (2, 2): commitments with answers 85/121; gamma_1 Fourny = 2, credible = 2, all equal c1: True; gamma_2 (both rules) = 2; generous gamma_1 = 4
+  E(c), c = (29/10, 29/10): commitments with answers 27/121; gamma_1 Fourny = 29/10, credible = 29/10, all equal c1: True; gamma_2 (both rules) = 29/10; generous gamma_1 = 31/10
+PD (10, 3, 1, 0, 7, 5, 2, -1): from all profiles gamma_1 Fourny 1, credible 1 (P1 = 1); generous 10 (T1 = 10)
+  Laplace answers from all profiles: gamma = (11/2, 9/2); no profile of the 1/30 grid meets it: True; max over pure profiles of u1 + u2 = 9
+  E(c), c = (1, 2): commitments with answers 121/121; gamma_1 Fourny = 1, credible = 1, all equal c1: True; gamma_2 (both rules) = 2; generous gamma_1 = 13/2
+  E(c), c = (2, 7/2): commitments with answers 71/121; gamma_1 Fourny = 2, credible = 2, all equal c1: True; gamma_2 (both rules) = 7/2; generous gamma_1 = 19/4
+  E(c), c = (29/10, 49/10): commitments with answers 11/121; gamma_1 Fourny = 29/10, credible = 29/10, all equal c1: True; gamma_2 (both rules) = 49/10; generous gamma_1 = 187/60
+PD (4, 3, 2, 1, 9, 2, 1, -3): from all profiles gamma_1 Fourny 2, credible 2 (P1 = 2); generous 4 (T1 = 4)
+  Laplace answers from all profiles: gamma = (3, 5); no profile of the 1/30 grid meets it: True; max over pure profiles of u1 + u2 = 10
+  E(c), c = (2, 1): commitments with answers 121/121; gamma_1 Fourny = 2, credible = 2, all equal c1: True; gamma_2 (both rules) = 1; generous gamma_1 = 16/5
+  E(c), c = (5/2, 3/2): commitments with answers 83/121; gamma_1 Fourny = 5/2, credible = 5/2, all equal c1: True; gamma_2 (both rules) = 3/2; generous gamma_1 = 31/10
+  E(c), c = (29/10, 19/10): commitments with answers 28/121; gamma_1 Fourny = 29/10, credible = 29/10, all equal c1: True; gamma_2 (both rules) = 19/10; generous gamma_1 = 33437/11080
+=> E(P) is reached in one round and is a rest set for every verdict; (D,D) is in it.
+
+== Part D: Pareto-filtered rounds in the PD (10,3,1,0) ==
+grid 401x401: 533 nondominated points in IR^m; max |p+q-4/3| = 0.0017 (grid step 0.0025)
+  (p,q) = (1/3,1): u = (23/3, 1)
+  (p,q) = (2/3,2/3): u = (11/3, 11/3)
+  (p,q) = (1,1/3): u = (1, 23/3)
+on p + q = 4/3: u1 = 13 - 18p + 6p^2 (decreasing on [1/3,1]), u2 = -1/3 + 2p + 6p^2 (increasing)
+check at p = k/30: True
+=> each commitment p has one answer q = 4/3 - p on the set, gamma = (23/3, 23/3), the simultaneous step
+   is empty; truncation keeps the segment, player 1 first keeps (1/3,1) paying (23/3,1), the union keeps
+   both endpoints: none is {(2/3,2/3)}.
+
+== Part E: Nash product over IR^m vs (sigma*, sigma*) on symmetric 2x2 games in U* (numerical) ==
+games checked: 300; Nash product maximizer asymmetric and strictly above (f*-v)^2: 0; max gap 2.22e-05
+
+== Part F: Rong-Halpern M-PCE in G2 (exact, BU from Nash equilibria of the residual game) ==
+BU = (1/7, -1/7, 13/7)
+min(u1 - 1/7, u2 + 1/7) <= 0 with equality iff u1 = 1/7 (cross); so max of min_i(u_i - BU_i) is 0, reached
+on the cross where u3 >= 13/7: {(3/7,q): q <= 2/7} U {(p,2/7): p <= 3/7}
+  (3/7,0): u3 = 15/7, min gain = 0
+  (3/7,2/7): u3 = 13/7, min gain = 0
+  (0,2/7): u3 = 19/7, min gain = 0
+=> the M-PCE (3/7,2/7) is Pareto-dominated by the M-PCE (3/7,0): not every M-PCE is Pareto-optimal.
+three players: BU = (2,2,1) (player 1 commits to a, player 3's dominant Y, player 2 answers a; symmetric for player 2; player 3's Y gives 1); v^m = (0,0,1) (Y guarantees 1 to player 3; the others can be held to 0)
+  (a, a, 2/3 X + 1/3 Y): u = (2, 5/3, 2/3), min_i (u_i - BU_i) = -1/3
+  grid 101^3: max of min_i (u_i - BU_i) = -0.3350 at (p,q,r) = (1.00, 1.00, 0.67); player 3 gets 0.6650 there
+  every grid maximizer gives player 3 less than v_3^m = 1: True
+coordination (a,a) -> (2,2), (b,b) -> (1,1), mismatch (0,0); dummy gets 0, 10 at (b,b), 0: BU = (2,2,10); B = {(a,a)} with min_i (u_i - BU_i) = -10, while (b,b) has -1: B is not inside M-PCE
+
+== Part G: matching answers (equal normalized gains) in 2x2 games without ties (numerical) ==
+games: 2000; no equal-gain profile in IR^m: 87; max-min of normalized gains above e* (+5e-3): 278
+  player 1 payoffs (a,b),(a,b'),(a',b),(a',b') = [15, 90, 94, 39] player 2 = [67, 73, 1, 39] e* ~ 0.0145 max-min ~ 0.8803 at (np.float64(1.0), np.float64(0.0)) gains (0.8803, 1.0)
+  player 1 payoffs (a,b),(a,b'),(a',b),(a',b') = [20, 33, 67, 26] player 2 = [41, 99, 1, 72] e* ~ 0.0286 max-min ~ 0.0472 at (np.float64(1.0), np.float64(0.0)) gains (0.0472, 1.0)
+  player 1 payoffs (a,b),(a,b'),(a',b),(a',b') = [38, 52, 32, 41] player 2 = [83, 84, 86, 9] e* ~ 0.0083 max-min ~ 0.3247 at (np.float64(1.0), np.float64(0.0)) gains (1.0, 0.3247)
+
+== Part H: Hurwicz answers (ex ante perfect prediction, numerical) ==
+alpha = 0.9
+  PD (10,3,1,0)                                    converged  rounds    99  c = (3.6667, 3.6667)  spread of E(c) nan  leximin point (3.6667, 3.6667)  v^m (1.000, 1.000)
+  PD (5,3,1,0)                                     converged  rounds   174  c = (3.0000, 3.0000)  spread of E(c) 0.0000  leximin point (3.0000, 3.0000)  v^m (1.000, 1.000)
+  BoS (A,A)=0,(A,Y)=(2,3),(Y,A)=(3,2),(Y,Y)=1      overshoot  rounds     1  c = (1.5000, 1.5000)  spread of E(c) 1.5000  leximin point (3.0000, 2.0000)  v^m (1.500, 1.500)
+  Leader (A,Y)=(3,2),(Y,A)=(2,3)                   overshoot  rounds     1  c = (1.5000, 1.5000)  spread of E(c) 1.5000  leximin point (2.0000, 3.0000)  v^m (1.500, 1.500)
+  Chicken (A,A)=0,(A,Y)=(3,1),(Y,A)=(1,3),(Y,Y)=2  overshoot  rounds     1  c = (1.1000, 1.1000)  spread of E(c) 1.8000  leximin point (2.0000, 2.0000)  v^m (1.000, 1.000)
+  Matching pennies                                 converged  rounds     1  c = (0.0000, 0.0000)  spread of E(c) 0.0000  leximin point (0.0000, 0.0000)  v^m (0.000, 0.000)
+  Stag hunt (4,4),(0,3),(3,0),(3,3)                converged  rounds   148  c = (4.0000, 4.0000)  spread of E(c) 0.0000  leximin point (4.0000, 4.0000)  v^m (3.000, 3.000)
+alpha = 0.99
+  PD (10,3,1,0)                                    converged  rounds   986  c = (3.6667, 3.6667)  spread of E(c) nan  leximin point (3.6667, 3.6667)  v^m (1.000, 1.000)
+  PD (5,3,1,0)                                     converged  rounds  1606  c = (3.0000, 3.0000)  spread of E(c) 0.0000  leximin point (3.0000, 3.0000)  v^m (1.000, 1.000)
+  BoS (A,A)=0,(A,Y)=(2,3),(Y,A)=(3,2),(Y,Y)=1      overshoot  rounds     1  c = (1.5000, 1.5000)  spread of E(c) 1.5000  leximin point (3.0000, 2.0000)  v^m (1.500, 1.500)
+  Leader (A,Y)=(3,2),(Y,A)=(2,3)                   overshoot  rounds     1  c = (1.5000, 1.5000)  spread of E(c) 1.5000  leximin point (2.0000, 3.0000)  v^m (1.500, 1.500)
+  Chicken (A,A)=0,(A,Y)=(3,1),(Y,A)=(1,3),(Y,Y)=2  overshoot  rounds     1  c = (1.0100, 1.0100)  spread of E(c) 1.9800  leximin point (2.0000, 2.0000)  v^m (1.000, 1.000)
+  Matching pennies                                 converged  rounds     1  c = (0.0000, 0.0000)  spread of E(c) 0.0000  leximin point (0.0000, 0.0000)  v^m (0.000, 0.000)
+  Stag hunt (4,4),(0,3),(3,0),(3,3)                converged  rounds  1260  c = (4.0000, 4.0000)  spread of E(c) 0.0000  leximin point (4.0000, 4.0000)  v^m (3.000, 3.000)
+BoS, alpha = 0.9: final state E(c), c = (1.500000, 1.500000); (3/8, 3/8) pays (1.5625, 1.5625), in E(c): True, and is Pareto-dominated by (A,Y) paying (2, 3)
+BoS, alpha = 0.99: final state E(c), c = (1.500000, 1.500000); (3/8, 3/8) pays (1.5625, 1.5625), in E(c): True, and is Pareto-dominated by (A,Y) paying (2, 3)
+random 2x2 without ties (300, payoffs 0..99), alpha = 0.9: {'converged': 112, 'overshoot0': 24, 'overshoot': 164, 'cap': 0, 'empty': 0}; converged with E(c*) thin (spread < 0.5): 106; max |c* - leximin point| over converged: 67.59, median 0.00
+random 2x2 without ties (300, payoffs 0..99), alpha = 0.99: {'converged': 119, 'overshoot0': 19, 'overshoot': 162, 'cap': 0, 'empty': 0}; converged with E(c*) thin (spread < 0.5): 99; max |c* - leximin point| over converged: 50.88, median 0.00
+symmetric 2x2 in U* (100), alpha = 0.9: {'converged': 68, 'overshoot0': 32, 'overshoot': 0, 'cap': 0, 'empty': 0}; final thresholds within 0.01 of (f*, f*): 68
+symmetric 2x2 in U* (100), alpha = 0.99: {'converged': 69, 'overshoot0': 31, 'overshoot': 0, 'cap': 0, 'empty': 0}; final thresholds within 0.01 of (f*, f*): 69
+

@@ -1,0 +1,68 @@
+Part 1. Invariant fixed points E(c) = {u_1 >= c, u_2 >= c} of complete self-consistency
+   PD (5,3,1,0): largest symmetric payoff c with E(c) nonempty: mixed 3.0000 (grid 1/1000), correlated 3.0000
+      c-ranges of fixed points (202 values of c): mixed [(1.0, 3.0)]; correlated [(1.0, 3.0)]
+      m < c with a nonempty section (should not happen): mixed 0, correlated 0
+   PD (10,3,1,0): largest symmetric payoff c with E(c) nonempty: mixed 3.6667 (grid 1/1000), correlated 5.0000
+      c-ranges of fixed points (204 values of c): mixed [(1.0, 3.6667)]; correlated [(1.0, 3.0)]
+      m < c with a nonempty section (should not happen): mixed 0, correlated 0
+   chicken: largest symmetric payoff c with E(c) nonempty: mixed 2.0000 (grid 1/1000), correlated 2.0000
+      c-ranges of fixed points (201 values of c): mixed [(1.5, 2.0)]; correlated [(1.0125, 2.0)]
+      m < c with a nonempty section (should not happen): mixed 0, correlated 0
+   G_e, e = 1/2: largest symmetric payoff c with E(c) nonempty: mixed 1.1429 (grid 1/1000), correlated 2.0000
+      c-ranges of fixed points (202 values of c): mixed [(1.0125, 1.1429)]; correlated []
+      m < c with a nonempty section (should not happen): mixed 0, correlated 0
+   Leader: largest symmetric payoff c with E(c) nonempty: mixed 2.0000 (grid 1/1000), correlated 2.5000
+      c-ranges of fixed points (202 values of c): mixed []; correlated []
+      m < c with a nonempty section (should not happen): mixed 0, correlated 0
+   Battle of the sexes: largest symmetric payoff c with E(c) nonempty: mixed 2.0000 (grid 1/1000), correlated 2.5000
+      c-ranges of fixed points (202 values of c): mixed []; correlated [(1.0, 1.0)]
+      m < c with a nonempty section (should not happen): mixed 0, correlated 0
+   PD (5,3,1,0), c = P = 1, exact: section of a commitment p and its guarantee
+      p = 0: q in [0, 0], inf u_1 = u_1(p, 0) = 1, u_2 there = 1
+      p = 1/4: q in [1/15, 4/5], inf u_1 = u_1(p, 1/15) = 1, u_2 there = 23/12
+      p = 1/2: q in [1/7, 1], inf u_1 = u_1(p, 1/7) = 1, u_2 there = 39/14
+      p = 1: q in [1/3, 1], inf u_1 = u_1(p, 1/3) = 1, u_2 there = 13/3
+      so E(1) = {u >= (1, 1)}, which contains mutual defection (p = q = 0), is a fixed point
+
+Part 2. The trilemma with mixed profiles
+   Leader (AA (0,0), AY (3,2), YA (2,3), YY (1,1)); u_1(p,q) = 1 + 2p + q - 4pq, u_2(p,q) = 1 + p + 2q - 4pq
+   identities at q = 3/7: u_1(1,q) = 12/7 = 3(1-q), u_2(1,q) = 8/7 = 2(1-q), u_1(0,q) = 10/7 = 1 + q; formula check on a 11x11 grid: True
+   Leader: grid profiles (step 1/100) not strictly dominated by a grid profile: 2; first and last [(0.0, 1.0), (1.0, 0.0)] ... [(0.0, 1.0), (1.0, 0.0)]; symmetric ones: []
+   Battle of the sexes: grid profiles (step 1/100) not strictly dominated by a grid profile: 2; first and last [(0.0, 1.0), (1.0, 0.0)] ... [(0.0, 1.0), (1.0, 0.0)]; symmetric ones: []
+   G_e, e = 1/2: grid profiles (step 1/100) not strictly dominated by a grid profile: 35; first and last [(0.0, 1.0), (0.35, 0.5)] ... [(0.51, 0.35), (1.0, 0.0)]; symmetric ones: [0.43]
+   chicken: grid profiles (step 1/100) not strictly dominated by a grid profile: 201; first and last [(0.0, 0.0), (0.0, 0.01)] ... [(0.99, 0.0), (1.0, 0.0)]; symmetric ones: [0.0]
+   Fourny rounds with mixed and correlated profiles (player 1's guarantee per round)
+      Leader, mixed: [1.5, 2.25, 'empty'] (largest symmetric payoff 2.0000)
+      Leader, correlated: [1.0, 1.5, 2.25, 'no nonempty section: no constraint, set unchanged'] (largest symmetric payoff 2.5000)
+      PD (5,3,1,0), mixed: [1.0, 1.0, 'fixed'] (largest symmetric payoff 3.0000)
+      PD (5,3,1,0), correlated: [1.0, 1.0, 'fixed'] (largest symmetric payoff 3.0000)
+      chicken, mixed: [1.0, 3.0, 'empty'] (largest symmetric payoff 2.0000)
+      chicken, correlated: [1.0, 3.0, 'empty'] (largest symmetric payoff 2.0000)
+
+Part 3. Theorem 2 with mixed predictions (beliefs averaged over the answerer's previous mixture)
+   PD (5, 3, 1, 0), theta = 1/3: 2401 parameter vectors (alpha_1, alpha_2, beta_1, beta_2) in ['0', '1/10', '1/3', '103/300', '1/2', '9/10', '1']^4; "Z_PD has a mixed prediction iff alpha_1 <= theta" fails in 0
+      counts by (alpha_1, what Z_PD keeps on the grid of step 1/20): [(('0 < alpha_1 <= theta', "only (a,b')"), 686), (('alpha_1 = 0', 'also mixed'), 1), (('alpha_1 = 0', "only (a,b')"), 342), (('alpha_1 > theta', 'none'), 1372)]
+      PD itself with alpha = beta = 1: mixed predictions on the grid [(Fraction(13, 20), Fraction(13, 20)), (Fraction(13, 20), Fraction(7, 10)), (Fraction(7, 10), Fraction(13, 20)), (Fraction(7, 10), Fraction(7, 10)), (Fraction(7, 10), Fraction(3, 4)), (Fraction(7, 10), Fraction(4, 5)), (Fraction(7, 10), Fraction(17, 20)), (Fraction(7, 10), Fraction(9, 10)), (Fraction(3, 4), Fraction(7, 10)), (Fraction(3, 4), Fraction(3, 4)), (Fraction(3, 4), Fraction(4, 5)), (Fraction(3, 4), Fraction(17, 20)), (Fraction(3, 4), Fraction(9, 10)), (Fraction(3, 4), Fraction(19, 20)), (Fraction(3, 4), Fraction(1, 1)), (Fraction(4, 5), Fraction(7, 10)), (Fraction(4, 5), Fraction(3, 4)), (Fraction(4, 5), Fraction(4, 5)), (Fraction(4, 5), Fraction(17, 20)), (Fraction(4, 5), Fraction(9, 10)), (Fraction(4, 5), Fraction(19, 20)), (Fraction(4, 5), Fraction(1, 1)), (Fraction(17, 20), Fraction(7, 10)), (Fraction(17, 20), Fraction(3, 4)), (Fraction(17, 20), Fraction(4, 5)), (Fraction(17, 20), Fraction(17, 20)), (Fraction(17, 20), Fraction(9, 10)), (Fraction(17, 20), Fraction(19, 20)), (Fraction(17, 20), Fraction(1, 1)), (Fraction(9, 10), Fraction(7, 10)), (Fraction(9, 10), Fraction(3, 4)), (Fraction(9, 10), Fraction(4, 5)), (Fraction(9, 10), Fraction(17, 20)), (Fraction(9, 10), Fraction(9, 10)), (Fraction(9, 10), Fraction(19, 20)), (Fraction(9, 10), Fraction(1, 1)), (Fraction(19, 20), Fraction(3, 4)), (Fraction(19, 20), Fraction(4, 5)), (Fraction(19, 20), Fraction(17, 20)), (Fraction(19, 20), Fraction(9, 10)), (Fraction(19, 20), Fraction(19, 20)), (Fraction(19, 20), Fraction(1, 1)), (Fraction(1, 1), Fraction(3, 4)), (Fraction(1, 1), Fraction(4, 5)), (Fraction(1, 1), Fraction(17, 20)), (Fraction(1, 1), Fraction(9, 10)), (Fraction(1, 1), Fraction(19, 20)), (Fraction(1, 1), Fraction(1, 1))]; mutual defection ruled out whenever max(alpha_1, alpha_2) > theta: True
+   PD (10, 3, 1, 0), theta = 1/3: 2401 parameter vectors (alpha_1, alpha_2, beta_1, beta_2) in ['0', '1/10', '1/3', '103/300', '1/2', '9/10', '1']^4; "Z_PD has a mixed prediction iff alpha_1 <= theta" fails in 0
+      counts by (alpha_1, what Z_PD keeps on the grid of step 1/20): [(('0 < alpha_1 <= theta', "only (a,b')"), 686), (('alpha_1 = 0', 'also mixed'), 1), (('alpha_1 = 0', "only (a,b')"), 342), (('alpha_1 > theta', 'none'), 1372)]
+      PD itself with alpha = beta = 1: mixed predictions on the grid [(Fraction(3, 4), Fraction(3, 4)), (Fraction(3, 4), Fraction(4, 5)), (Fraction(4, 5), Fraction(3, 4)), (Fraction(4, 5), Fraction(4, 5)), (Fraction(4, 5), Fraction(17, 20)), (Fraction(4, 5), Fraction(9, 10)), (Fraction(17, 20), Fraction(4, 5)), (Fraction(17, 20), Fraction(17, 20)), (Fraction(17, 20), Fraction(9, 10)), (Fraction(17, 20), Fraction(19, 20)), (Fraction(17, 20), Fraction(1, 1)), (Fraction(9, 10), Fraction(4, 5)), (Fraction(9, 10), Fraction(17, 20)), (Fraction(9, 10), Fraction(9, 10)), (Fraction(9, 10), Fraction(19, 20)), (Fraction(9, 10), Fraction(1, 1)), (Fraction(19, 20), Fraction(17, 20)), (Fraction(19, 20), Fraction(9, 10)), (Fraction(19, 20), Fraction(19, 20)), (Fraction(19, 20), Fraction(1, 1)), (Fraction(1, 1), Fraction(17, 20)), (Fraction(1, 1), Fraction(9, 10)), (Fraction(1, 1), Fraction(19, 20)), (Fraction(1, 1), Fraction(1, 1))]; mutual defection ruled out whenever max(alpha_1, alpha_2) > theta: True
+   PD (4, 3, 2, 0), theta = 2/3: 2401 parameter vectors (alpha_1, alpha_2, beta_1, beta_2) in ['0', '1/10', '1/2', '2/3', '203/300', '9/10', '1']^4; "Z_PD has a mixed prediction iff alpha_1 <= theta" fails in 0
+      counts by (alpha_1, what Z_PD keeps on the grid of step 1/20): [(('0 < alpha_1 <= theta', "only (a,b')"), 1029), (('alpha_1 = 0', 'also mixed'), 1), (('alpha_1 = 0', "only (a,b')"), 342), (('alpha_1 > theta', 'none'), 1029)]
+      PD itself with alpha = beta = 1: mixed predictions on the grid [(Fraction(3, 4), Fraction(3, 4)), (Fraction(3, 4), Fraction(4, 5)), (Fraction(4, 5), Fraction(3, 4)), (Fraction(4, 5), Fraction(4, 5)), (Fraction(4, 5), Fraction(17, 20)), (Fraction(4, 5), Fraction(9, 10)), (Fraction(4, 5), Fraction(19, 20)), (Fraction(4, 5), Fraction(1, 1)), (Fraction(17, 20), Fraction(4, 5)), (Fraction(17, 20), Fraction(17, 20)), (Fraction(17, 20), Fraction(9, 10)), (Fraction(17, 20), Fraction(19, 20)), (Fraction(17, 20), Fraction(1, 1)), (Fraction(9, 10), Fraction(4, 5)), (Fraction(9, 10), Fraction(17, 20)), (Fraction(9, 10), Fraction(9, 10)), (Fraction(9, 10), Fraction(19, 20)), (Fraction(9, 10), Fraction(1, 1)), (Fraction(19, 20), Fraction(4, 5)), (Fraction(19, 20), Fraction(17, 20)), (Fraction(19, 20), Fraction(9, 10)), (Fraction(19, 20), Fraction(19, 20)), (Fraction(19, 20), Fraction(1, 1)), (Fraction(1, 1), Fraction(4, 5)), (Fraction(1, 1), Fraction(17, 20)), (Fraction(1, 1), Fraction(9, 10)), (Fraction(1, 1), Fraction(19, 20)), (Fraction(1, 1), Fraction(1, 1))]; mutual defection ruled out whenever max(alpha_1, alpha_2) > theta: True
+
+Part 4. Nash equilibria of transformed games
+   weights (l_ii, l_ij) = (1, 1): PDs (T,3,1,0), T in {5, 10, 50, 1000}, where (C,C) is not an equilibrium of the transformed game: [10, 50, 1000]
+   weights (l_ii, l_ij) = (1, 3): PDs (T,3,1,0), T in {5, 10, 50, 1000}, where (C,C) is not an equilibrium of the transformed game: [50, 1000]
+   weights (l_ii, l_ij) = (1, 10): PDs (T,3,1,0), T in {5, 10, 50, 1000}, where (C,C) is not an equilibrium of the transformed game: [50, 1000]
+   weights (l_ii, l_ij) = (0, 1): PDs (T,3,1,0), T in {5, 10, 50, 1000}, where (C,C) is not an equilibrium of the transformed game: []
+   PD (5, 3, 1, 0): altruistic equilibria (p, q = probabilities of C) [(Fraction(1, 1), Fraction(1, 1))]
+   PD (10, 3, 1, 0): altruistic equilibria (p, q = probabilities of C) [(Fraction(1, 1), Fraction(1, 1))]
+   PD (100, 3, 2, 1): altruistic equilibria (p, q = probabilities of C) [(Fraction(1, 1), Fraction(1, 1))]
+   TD, M = 3..12, r in {1/2, 1, 2, 5} (1760 comparisons): for player 1 maximizing player 2's payoff, the claim M gives strictly more than a claim k < M against every y >= k and as much against y < k: True
+   Z_PD for (.,3,1,0): altruistic equilibria [(Fraction(0, 1), Fraction(1, 1))] (p = prob of a, q = prob of b); player 1 gets [Fraction(0, 1)], her security level is 2; a' and b are strictly dominated
+   PD (5, 3, 1, 0), altruism under the security constraint: against q = 0 the strategies p on the grid 1/10 with u_1 >= P are [Fraction(0, 1)], so (D,D) is an equilibrium
+   PD (10, 3, 1, 0), altruism under the security constraint: against q = 0 the strategies p on the grid 1/10 with u_1 >= P are [Fraction(0, 1)], so (D,D) is an equilibrium
+
+Part 5. The commitment game of the mutual-commitment PTE at E_1 = {CC, DD} in the PD
+   PD (5, 3, 1, 0): player 1's commitment payoffs min(section minimum, u_1(t, y)), rows and columns C, D: [[3, 0], [1, 1]]; Nash equilibria (p, q = probabilities of C) [(Fraction(1, 1), Fraction(1, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 3), Fraction(1, 3))]; Fourny's best commitment (largest section minimum): C
+   PD (10, 3, 1, 0): player 1's commitment payoffs min(section minimum, u_1(t, y)), rows and columns C, D: [[3, 0], [1, 1]]; Nash equilibria (p, q = probabilities of C) [(Fraction(1, 1), Fraction(1, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 3), Fraction(1, 3))]; Fourny's best commitment (largest section minimum): C

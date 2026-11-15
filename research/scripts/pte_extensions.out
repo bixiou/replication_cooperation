@@ -1,0 +1,71 @@
+Part 1. Pure profiles: Fourny weak, strict, truncation, fixed points
+Prisoner's dilemma (5,3,1,0), 0 = C:
+   weak (Fourny) path sizes [4, 2, 1] ; limit ['CC']
+   strict path sizes [4, 1, 0] ; limit []
+   truncation (last nonempty iterate) ['CC']
+   fixed points of T, impossible strategies ignore: [['CC'], ['CD'], ['DC']]
+   fixed points of T, impossible strategies worst: [['CC']]
+Chicken (Fourny Figure 24), rows C/D, columns A/B:
+   weak (Fourny) path sizes [4, 3, 0] ; limit []
+   strict path sizes [4, 1, 0] ; limit []
+   truncation (last nonempty iterate) ['CB', 'DA', 'DB']
+   fixed points of T, impossible strategies ignore: [['CB'], ['DA'], ['DB']]
+   fixed points of T, impossible strategies worst: [['CB'], ['DA'], ['DB']]
+   chicken: round-2 thresholds [np.float64(3.0), np.float64(3.0)] ; leader values (credible, K complete) [np.float64(3.0), np.float64(3.0)]
+Battle of the sexes, general position:
+   weak (Fourny) path sizes [4, 2, 0] ; limit []
+   strict path sizes [4, 2, 0] ; limit []
+   truncation (last nonempty iterate) [(0, 0), (1, 1)]
+   fixed points of T, impossible strategies ignore: [[(0, 0)], [(1, 1)]]
+   fixed points of T, impossible strategies worst: [[(0, 0)], [(1, 1)]]
+   BoS: leader values [np.float64(3.0), np.float64(3.0)]
+Battle of the sexes with ties (2,1),(0,0),(0,0),(1,2):
+   weak (Fourny) path sizes [4] ; limit [(0, 0), (0, 1), (1, 0), (1, 1)]
+   strict path sizes [4, 2, 0] ; limit []
+   truncation (last nonempty iterate) [(0, 0), (0, 1), (1, 0), (1, 1)]
+   fixed points of T, impossible strategies ignore: [[(0, 0)], [(1, 1)], [(0, 0), (0, 1), (1, 0), (1, 1)]]
+   fixed points of T, impossible strategies worst: [[(0, 0)], [(1, 1)], [(0, 0), (0, 1), (1, 0), (1, 1)]]
+Matching pennies:
+   weak (Fourny) path sizes [4] ; limit [(0, 0), (0, 1), (1, 0), (1, 1)]
+   strict path sizes [4, 0] ; limit []
+   truncation (last nonempty iterate) [(0, 0), (0, 1), (1, 0), (1, 1)]
+   fixed points of T, impossible strategies ignore: [[(0, 0), (1, 1)], [(0, 1), (1, 0)], [(0, 0), (0, 1), (1, 0), (1, 1)]]
+   fixed points of T, impossible strategies worst: [[(0, 0), (1, 1)], [(0, 1), (1, 0)], [(0, 0), (0, 1), (1, 0), (1, 1)]]
+Z: zero-sum, strictly dominant strategies (row 0, column 1):
+   weak (Fourny) path sizes [4, 1] ; limit [(0, 1)]
+   strict path sizes [4, 0] ; limit []
+   truncation (last nonempty iterate) [(0, 1)]
+   fixed points of T, impossible strategies ignore: [[(0, 0)], [(0, 1)], [(1, 0)], [(1, 1)]]
+   fixed points of T, impossible strategies worst: [[(0, 1)]]
+Traveler M=6 r=2: weak path sizes [25, 11, 3, 1]; limit [(6, 6)]; truncation [(6, 6)]; singleton fixed points (impossible = worst) [(5, 6), (6, 5), (6, 6)]
+Traveler M=12 r=2: weak path sizes [121, 83, 51, 27, 11, 3, 1]; limit [(12, 12)]; truncation [(12, 12)]; singleton fixed points (impossible = worst) [(11, 12), (12, 11), (12, 12)]
+Traveler M=12 r=5: weak path sizes [121, 41, 6, 1]; limit [(12, 12)]; truncation [(12, 12)]; singleton fixed points (impossible = worst) [(11, 12), (12, 11), (12, 12)]
+Traveler M=20 r=3: weak path sizes [361, 259, 172, 103, 52, 19, 4, 1]; limit [(20, 20)]; truncation [(20, 20)]; singleton fixed points (impossible = worst) [(19, 20), (20, 19), (20, 20)]
+
+Part 2. Existence on random games (payoffs i.i.d. uniform integers; "ties" = range 0..3, else distinct ranks)
+2 players (2, 2), no ties, 4000 games: weak PTE set nonempty in 3582 (singleton in 3582); strict nonempty in 0; truncation nonempty in 4000; a fixed point (IR Pareto class) found in 4000
+2 players (2, 2), ties, 4000 games: weak PTE set nonempty in 3827 (singleton in 2060); strict nonempty in 0; truncation nonempty in 4000; a fixed point (IR Pareto class) found in 4000
+2 players (3, 3), no ties, 4000 games: weak PTE set nonempty in 2723 (singleton in 2723); strict nonempty in 0; truncation nonempty in 4000
+2 players (3, 3), ties, 4000 games: weak PTE set nonempty in 3709 (singleton in 1563); strict nonempty in 0; truncation nonempty in 4000
+3 players (2, 2, 2), no ties, 2000 games: weak PTE set nonempty in 1245 (singleton in 1245); strict nonempty in 0; truncation nonempty in 2000; a fixed point (IR Pareto class) found in 2000
+3 players (2, 2, 2), ties, 2000 games: weak PTE set nonempty in 1904 (singleton in 540); strict nonempty in 0; truncation nonempty in 2000; a fixed point (IR Pareto class) found in 2000
+2 players (4, 4), no ties, 1000 games: weak PTE set nonempty in 620 (singleton in 620); strict nonempty in 0; truncation nonempty in 1000
+2 players (4, 4), ties, 1000 games: weak PTE set nonempty in 960 (singleton in 286); strict nonempty in 0; truncation nonempty in 1000
+
+Part 3. Mixed profiles on a grid (2x2), step 1/400, thresholds lowered by the grid tolerance
+Exact, prisoner's dilemma (5,3,1,0): u_1(p,q) = 1 - p + 4q - pq (p, q = probabilities of C). Round 1: m = (1,1).
+  The section of p in E_1 is q in [p/(4-p), 4p/(1+p)]; u_1 increases in q, so its infimum is u_1(p, p/(4-p)) = 1
+  for every p: m stays (1,1) and E_1 = {u_1 >= 1, u_2 >= 1} is the limit. It contains (D,D) and (C,C).
+  check p=0: q=0.0000, u_1 = 1.000000, q <= 4p/(1+p): True
+  check p=0.25: q=0.0667, u_1 = 1.000000, q <= 4p/(1+p): True
+  check p=0.5: q=0.1429, u_1 = 1.000000, q <= 4p/(1+p): True
+  check p=1: q=0.3333, u_1 = 1.000000, q <= 4p/(1+p): True
+Prisoner's dilemma: rounds (m_1, m_2, surviving grid points) [(np.float64(1.0), np.float64(1.0), 114327), (np.float64(1.0), np.float64(1.0), 114327)]
+Chicken: rounds (m_1, m_2, surviving grid points) [(np.float64(1.0), np.float64(1.0), 106147), (np.float64(2.955), np.float64(2.955), 0), ('empty', None)]
+Battle of the sexes, general position: rounds (m_1, m_2, surviving grid points) [(np.float64(1.5), np.float64(1.5), 47089), (np.float64(1.5), np.float64(2.485), 4370), (np.float64(1.825), np.float64(2.485), 1711), (np.float64(1.825), np.float64(2.81), 616), (np.float64(1.9325), np.float64(2.81), 299), (np.float64(1.9325), np.float64(2.92), 135), (np.float64(1.97), np.float64(2.92), 85), (np.float64(1.97), np.float64(2.955), 55), (np.float64(1.98), np.float64(2.955), 46), (np.float64(1.98), np.float64(2.965), 38), (np.float64(1.985), np.float64(2.965), 34), (np.float64(1.985), np.float64(2.97), 31), (np.float64(1.985), np.float64(2.97), 31)]
+Battle of the sexes with ties: rounds (m_1, m_2, surviving grid points) [(np.float64(0.665), np.float64(0.665), 64513), (np.float64(1.31), np.float64(1.31), 0), ('empty', None)]
+Matching pennies: rounds (m_1, m_2, surviving grid points) [(np.float64(0.0), np.float64(0.0), 9029), (np.float64(0.0), np.float64(0.0), 9029)]
+Z: rounds (m_1, m_2, surviving grid points) [(np.float64(3.0), np.float64(-3.0), 6506), (np.float64(3.0), np.float64(-3.0), 6506)]
+
+Part 4. Correlated profiles, chicken, round 2: player 1 committing to C faces the distributions on row C with u_2 >= 1 (round-1 threshold), i.e. mu(CB) * 1 >= 1, so mu = CB and u_1 = 3 = her largest payoff; by symmetry m = (3,3), while u_1 + u_2 <= 4 at every distribution: no correlated profile survives.
+   chicken: largest u_1 + u_2 over profiles 4.0

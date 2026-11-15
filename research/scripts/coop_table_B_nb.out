@@ -1,0 +1,10 @@
+symmetric 3x3 ranking games in which copying pays: 123648
+  of which the Nash product predicts only asymmetric profiles: 864
+first such game, u_1 rows: [[1, 2, 5], [7, 4, 8], [9, 3, 6]]
+  payoffs: [((0, 0), (1, 1)), ((0, 1), (2, 7)), ((0, 2), (5, 9)), ((1, 0), (7, 2)), ((1, 1), (4, 4)), ((1, 2), (8, 3)), ((2, 0), (9, 5)), ((2, 1), (3, 8)), ((2, 2), (6, 6))]
+  security levels [4, 4]; best symmetric profile (2, 2)
+  IR profile (0, 2) payoffs (5, 9) product 5 min gain 1
+  IR profile (1, 1) payoffs (4, 4) product 0 min gain 0
+  IR profile (2, 0) payoffs (9, 5) product 5 min gain 1
+  IR profile (2, 2) payoffs (6, 6) product 4 min gain 2
+  Nash product: [(0, 2), (2, 0)]; maximin of gains: [(2, 2)]; copying pays: True

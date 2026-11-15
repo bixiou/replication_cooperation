@@ -1,0 +1,47 @@
+coop_schedule_char.py: orders of reasoning by blocks and fixed sequences of verdicts (Online Appendix, Section S4).
+
+== 1. Weak orders of reasoning
+n = 2: 3 ordered partitions; 1 with a block of two or more players, of which 1 end empty on the embedded G_e; 2 into singletons, of which 2 are nonempty on every embedded G_e
+n = 3: 13 ordered partitions; 7 with a block of two or more players, of which 7 end empty on the embedded G_e; 6 into singletons, of which 6 are nonempty on every embedded G_e
+n = 4: 75 ordered partitions; 51 with a block of two or more players, of which 51 end empty on the embedded G_e; 24 into singletons, of which 24 are nonempty on every embedded G_e
+singleton rounds (sequential perfect prediction) on 300 random games of shape (2, 2), payoffs 0..3, all orders: 600 runs, 0 empty
+singleton rounds (sequential perfect prediction) on 300 random games of shape (3, 3), payoffs 0..3, all orders: 600 runs, 0 empty
+singleton rounds (sequential perfect prediction) on 300 random games of shape (2, 2, 2), payoffs 0..3, all orders: 1800 runs, 0 empty
+singleton rounds (sequential perfect prediction) on 300 random games of shape (2, 2, 2, 2), payoffs 0..3, all orders: 7200 runs, 0 empty
+
+== 2. No lapping
+n = 2, L = 2: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 2, L = 3: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 2, L = 4: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 2, L = 5: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 2, L = 6: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 2, L = 7: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 2, L = 8: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 2, L = 9: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 2, L = 10: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 2, L = 11: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 2, L = 12: 2 sequences with no lapping in which every player occurs; round-robin sequences 2; not round-robin: 0; round-robin failing the condition: 0
+n = 3, L = 3: 6 sequences with no lapping in which every player occurs; round-robin sequences 6; not round-robin: 0; round-robin failing the condition: 0
+n = 3, L = 4: 6 sequences with no lapping in which every player occurs; round-robin sequences 6; not round-robin: 0; round-robin failing the condition: 0
+n = 3, L = 5: 6 sequences with no lapping in which every player occurs; round-robin sequences 6; not round-robin: 0; round-robin failing the condition: 0
+n = 3, L = 6: 6 sequences with no lapping in which every player occurs; round-robin sequences 6; not round-robin: 0; round-robin failing the condition: 0
+n = 3, L = 7: 6 sequences with no lapping in which every player occurs; round-robin sequences 6; not round-robin: 0; round-robin failing the condition: 0
+n = 3, L = 8: 6 sequences with no lapping in which every player occurs; round-robin sequences 6; not round-robin: 0; round-robin failing the condition: 0
+n = 3, L = 9: 6 sequences with no lapping in which every player occurs; round-robin sequences 6; not round-robin: 0; round-robin failing the condition: 0
+n = 3, L = 10: 6 sequences with no lapping in which every player occurs; round-robin sequences 6; not round-robin: 0; round-robin failing the condition: 0
+n = 4, L = 4: 24 sequences with no lapping in which every player occurs; round-robin sequences 24; not round-robin: 0; round-robin failing the condition: 0
+n = 4, L = 5: 24 sequences with no lapping in which every player occurs; round-robin sequences 24; not round-robin: 0; round-robin failing the condition: 0
+n = 4, L = 6: 24 sequences with no lapping in which every player occurs; round-robin sequences 24; not round-robin: 0; round-robin failing the condition: 0
+n = 4, L = 7: 24 sequences with no lapping in which every player occurs; round-robin sequences 24; not round-robin: 0; round-robin failing the condition: 0
+n = 4, L = 8: 24 sequences with no lapping in which every player occurs; round-robin sequences 24; not round-robin: 0; round-robin failing the condition: 0
+n = 4, L = 9: 24 sequences with no lapping in which every player occurs; round-robin sequences 24; not round-robin: 0; round-robin failing the condition: 0
+ABBA (0,1,1,0,0,1,1,0) has no lapping: False
+
+== 3. A symmetric 3-player game separating the six orders
+found after 120 random draws; f(own, others) = {(0, (0, 0)): 1, (0, (0, 1)): 2, (0, (0, 2)): 4, (0, (1, 1)): 5, (0, (1, 2)): 9, (0, (2, 2)): 9, (1, (0, 0)): 5, (1, (0, 1)): 6, (1, (0, 2)): 8, (1, (1, 1)): 2, (1, (1, 2)): 3, (1, (2, 2)): 0, (2, (0, 0)): 7, (2, (0, 1)): 5, (2, (0, 2)): 1, (2, (1, 1)): 5, (2, (1, 2)): 7, (2, (2, 2)): 1}
+  order (1, 2, 3): [(3, 1, 2)]
+  order (1, 3, 2): [(3, 2, 1)]
+  order (2, 1, 3): [(1, 3, 2)]
+  order (2, 3, 1): [(2, 3, 1)]
+  order (3, 1, 2): [(1, 2, 3)]
+  order (3, 2, 1): [(2, 1, 3)]

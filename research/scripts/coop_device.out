@@ -1,0 +1,46 @@
+Part 1. Necessity: the trilemma witnesses (pure profiles; strategy 0 = A, 1 = Y)
+   G_e, e = 1/2: |Aut| 2; invariant sets (set, self-consistent, has a Pareto-optimal profile): [([(0, 0)], True, False), ([(1, 1)], True, False), ([(0, 0), (1, 1)], False, False), ([(0, 1), (1, 0)], False, True), ([(0, 0), (0, 1), (1, 0)], False, True), ([(0, 1), (1, 0), (1, 1)], False, True), ([(0, 0), (0, 1), (1, 0), (1, 1)], False, True)]; device necessary: True; SPP by order {(0, 1): ((1, 0),), (1, 0): ((0, 1),)}; RJ by order {(0, 1): ((0, 1),), (1, 0): ((1, 0),)}
+   Leader AY (3,2): |Aut| 2; invariant sets (set, self-consistent, has a Pareto-optimal profile): [([(0, 0)], True, False), ([(1, 1)], True, False), ([(0, 0), (1, 1)], False, False), ([(0, 1), (1, 0)], False, True), ([(0, 0), (0, 1), (1, 0)], False, True), ([(0, 1), (1, 0), (1, 1)], False, True), ([(0, 0), (0, 1), (1, 0), (1, 1)], False, True)]; device necessary: True; SPP by order {(0, 1): ((1, 0),), (1, 0): ((0, 1),)}; RJ by order {(0, 1): ((0, 1),), (1, 0): ((1, 0),)}
+   BoS AY (2,3): |Aut| 2; invariant sets (set, self-consistent, has a Pareto-optimal profile): [([(0, 0)], True, False), ([(1, 1)], True, False), ([(0, 0), (1, 1)], False, False), ([(0, 1), (1, 0)], False, True), ([(0, 0), (0, 1), (1, 0)], False, True), ([(0, 1), (1, 0), (1, 1)], False, True), ([(0, 0), (0, 1), (1, 0), (1, 1)], False, True)]; device necessary: True; SPP by order {(0, 1): ((1, 0),), (1, 0): ((0, 1),)}; RJ by order {(0, 1): ((1, 0),), (1, 0): ((0, 1),)}
+   chicken (A = dare): |Aut| 2; invariant sets (set, self-consistent, has a Pareto-optimal profile): [([(0, 0)], True, False), ([(1, 1)], True, True), ([(0, 0), (1, 1)], False, True), ([(0, 1), (1, 0)], False, True), ([(0, 0), (0, 1), (1, 0)], False, True), ([(0, 1), (1, 0), (1, 1)], False, True), ([(0, 0), (0, 1), (1, 0), (1, 1)], False, True)]; device necessary: False; SPP by order {(0, 1): ((1, 0),), (1, 0): ((0, 1),)}; RJ by order {(0, 1): ((0, 1),), (1, 0): ((1, 0),)}
+
+Part 2. Device covariance: realization in the relabeled game under the relabeled order = image
+   (2, 2): 2000 games (half with payoff ties), random relabelings, every order: failures {'SPP': 0, 'RJ': 0}
+   (3, 3): 1000 games (half with payoff ties), random relabelings, every order: failures {'SPP': 0, 'RJ': 0}
+   (2, 3): 1000 games (half with payoff ties), random relabelings, every order: failures {'SPP': 0, 'RJ': 0}
+   (2, 2, 2): 1000 games (half with payoff ties), random relabelings, every order: failures {'SPP': 0, 'RJ': 0}
+   (3, 2, 2): 500 games (half with payoff ties), random relabelings, every order: failures {'SPP': 0, 'RJ': 0}
+
+Part 3. Where the device is used, against where it is necessary
+   strict ordinal 2x2 games (all): 576 games, 48 with a nontrivial automorphism; device necessary in 8; realizations differ across orders: SPP 44, RJ 60; among the necessary ones, differ: SPP 8, RJ 8
+   random symmetric 3x3 games with rankings: 300 games, 300 with a nontrivial automorphism; device necessary in 68; realizations differ across orders: SPP 108, RJ 104; among the necessary ones, differ: SPP 68, RJ 68
+   random symmetric 3x3 games with payoffs 0..3: 300 games, 300 with a nontrivial automorphism; device necessary in 11; realizations differ across orders: SPP 34, RJ 20; among the necessary ones, differ: SPP 11, RJ 11
+   random 3x3 games with rankings: 300 games, 0 with a nontrivial automorphism; device necessary in 0; realizations differ across orders: SPP 52, RJ 106; among the necessary ones, differ: SPP 0, RJ 0
+   random 2x2x2 games with rankings: 300 games, 0 with a nontrivial automorphism; device necessary in 0; realizations differ across orders: SPP 134, RJ 112; among the necessary ones, differ: SPP 0, RJ 0
+
+Part 4. Ex ante payoffs of the uniform lottery when every realization is a single profile
+   chicken (3,1),(1,3),(2,2): realizations {(0, 1): ((1, 0),), (1, 0): ((0, 1),)}; ex ante payoffs ['2', '2']
+   Aumann's chicken (7,2),(2,7),(6,6): realizations {(0, 1): ((1, 0),), (1, 0): ((0, 1),)}; ex ante payoffs ['9/2', '9/2']
+   (2, 2) rankings, 2000 games: every realization a single profile in 2000; of these, realizations differ in 170, and the ex ante payoff vector is strictly dominated by a pure profile in 0
+   (3, 3) rankings, 1000 games: every realization a single profile in 1000; of these, realizations differ in 170, and the ex ante payoff vector is strictly dominated by a pure profile in 12
+   (2, 2, 2) rankings, 500 games: every realization a single profile in 500; of these, realizations differ in 223, and the ex ante payoff vector is strictly dominated by a pure profile in 6
+
+Part 5. Verdict processes with random blocks (DR-V)
+   (2, 2) rankings: 10000 runs (5 random schedules per game): set not an upper contour set at some step 0; empty limit 935; nonempty limit not completely self-consistent 0, missing U(G) 0, not individually rational 247
+   (2, 2) payoffs 0..3: 10000 runs (5 random schedules per game): set not an upper contour set at some step 0; empty limit 310; nonempty limit not completely self-consistent 0, missing U(G) 0, not individually rational 62
+   (3, 3) rankings: 5000 runs (5 random schedules per game): set not an upper contour set at some step 0; empty limit 1055; nonempty limit not completely self-consistent 0, missing U(G) 0, not individually rational 92
+   (3, 3) payoffs 0..3: 5000 runs (5 random schedules per game): set not an upper contour set at some step 0; empty limit 193; nonempty limit not completely self-consistent 0, missing U(G) 0, not individually rational 12
+   (2, 2, 2) rankings: 5000 runs (5 random schedules per game): set not an upper contour set at some step 0; empty limit 1056; nonempty limit not completely self-consistent 0, missing U(G) 0, not individually rational 69
+   (2, 2, 2) payoffs 0..3: 5000 runs (5 random schedules per game): set not an upper contour set at some step 0; empty limit 133; nonempty limit not completely self-consistent 0, missing U(G) 0, not individually rational 8
+   (3, 3, 2) rankings: 1500 runs (5 random schedules per game): set not an upper contour set at some step 0; empty limit 444; nonempty limit not completely self-consistent 0, missing U(G) 0, not individually rational 8
+   (3, 3, 2) payoffs 0..3: 1500 runs (5 random schedules per game): set not an upper contour set at some step 0; empty limit 29; nonempty limit not completely self-consistent 0, missing U(G) 0, not individually rational 0
+   G_e, e = 1/2: symmetric schedule (both verdicts at every step), path (set, guarantees): [([(0, 1), (1, 0), (1, 1)], ['1/2', '1/2']), ([], ['3', '3'])]
+   Leader: symmetric schedule (both verdicts at every step), path (set, guarantees): [([(0, 1), (1, 0), (1, 1)], ['1', '1']), ([], ['3', '3'])]
+   BoS: symmetric schedule (both verdicts at every step), path (set, guarantees): [([(0, 1), (1, 0), (1, 1)], ['1', '1']), ([(0, 1), (1, 0)], ['2', '2']), ([], ['3', '3'])]
+
+Part 6. Reachable rest points of the verdicts (exact)
+   576 strict 2x2 games: no invariant nonempty reachable rest point in 12; player-swapping automorphism and empty PTE limit in 12; the two conditions agree in 576 games; reachable nonempty rest points not completely self-consistent: 0
+   chicken: reachable sets [(), ((0, 1),), ((1, 0),), ((0, 1), (1, 0), (1, 1)), ((0, 0), (0, 1), (1, 0), (1, 1))]; nonempty reachable rest points [((0, 1),), ((1, 0),)]
+   G_e, e = 1/2: reachable sets [(), ((0, 1),), ((1, 0),), ((0, 1), (1, 0), (1, 1)), ((0, 0), (0, 1), (1, 0), (1, 1))]; nonempty reachable rest points [((0, 1),), ((1, 0),)]
+   Leader: reachable sets [(), ((0, 1),), ((1, 0),), ((0, 1), (1, 0), (1, 1)), ((0, 0), (0, 1), (1, 0), (1, 1))]; nonempty reachable rest points [((0, 1),), ((1, 0),)]
+   BoS: reachable sets [(), ((0, 1),), ((1, 0),), ((0, 1), (1, 0)), ((0, 1), (1, 0), (1, 1)), ((0, 0), (0, 1), (1, 0), (1, 1))]; nonempty reachable rest points [((0, 1),), ((1, 0),)]

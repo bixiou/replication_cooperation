@@ -1,0 +1,38 @@
+Part 1. PTE limit versus the credible joint set J* (complete knowledge, no opacity) and iterated J*
+   PD (5,3,1,0): PTE [(0, 0)]; J* [(0, 0), (1, 1)] (leader values [1, 1]); iterated J* [(0, 0)]
+   chicken: PTE []; J* [] (leader values [3, 3]); iterated J* []
+   TD M=6 r=2: PTE [(4, 4)]; J* [(1, 1), (2, 2), (3, 3), (3, 4), (4, 3), (4, 4)] (leader values [3, 3]); iterated J* [(4, 4)]
+   TD M=12 r=2: PTE [(10, 10)]; J* [(7, 7), (8, 8), (9, 9), (9, 10), (10, 9), (10, 10)] (leader values [9, 9]); iterated J* [(10, 10)]
+   TD M=12 r=5: PTE [(10, 10)]; J* 9 profiles (leader values [6, 6]); iterated J* [(10, 10)]
+   (2, 2), random rankings, 2000 games: PTE limit = iterated J* limit in 2000; PTE nonempty 1779, iterated J* nonempty 1779; PTE limit inside J* in 2000
+   (2, 2), payoffs 0..3, 2000 games: PTE limit = iterated J* limit in 1779; PTE nonempty 1907, iterated J* nonempty 1971; PTE limit inside J* in 1864
+   (3, 3), random rankings, 2000 games: PTE limit = iterated J* limit in 1580; PTE nonempty 1352, iterated J* nonempty 1546; PTE limit inside J* in 1936
+   (3, 3), payoffs 0..3, 2000 games: PTE limit = iterated J* limit in 1561; PTE nonempty 1867, iterated J* nonempty 1930; PTE limit inside J* in 1745
+   (2, 3), random rankings, 2000 games: PTE limit = iterated J* limit in 1825; PTE nonempty 1558, iterated J* nonempty 1659; PTE limit inside J* in 1978
+   (2, 3), payoffs 0..3, 2000 games: PTE limit = iterated J* limit in 1688; PTE nonempty 1880, iterated J* nonempty 1954; PTE limit inside J* in 1820
+   (4, 4), random rankings, 2000 games: PTE limit = iterated J* limit in 1351; PTE nonempty 1204, iterated J* nonempty 1422; PTE limit inside J* in 1855
+   (4, 4), payoffs 0..3, 2000 games: PTE limit = iterated J* limit in 1482; PTE nonempty 1896, iterated J* nonempty 1916; PTE limit inside J* in 1702
+
+Part 2. Trilemma: invariant self-consistent sets (0 = A aggressive, 1 = Y yield)
+   G_e with e = 1/10: 2 symmetries, orbits [[(0, 0)], [(0, 1), (1, 0)], [(1, 1)]]; invariant self-consistent sets [[(0, 0)], [(1, 1)]]; each contains an undominated profile: [False, False]; patchwork predicts [(1, 1)], PTE limit [], truncation [(0, 1), (1, 0), (1, 1)]
+   G_e with e = 1/2: 2 symmetries, orbits [[(0, 0)], [(0, 1), (1, 0)], [(1, 1)]]; invariant self-consistent sets [[(0, 0)], [(1, 1)]]; each contains an undominated profile: [False, False]; patchwork predicts [(1, 1)], PTE limit [], truncation [(0, 1), (1, 0), (1, 1)]
+   G_e with e = 9/10: 2 symmetries, orbits [[(0, 0)], [(0, 1), (1, 0)], [(1, 1)]]; invariant self-consistent sets [[(0, 0)], [(1, 1)]]; each contains an undominated profile: [False, False]; patchwork predicts [(1, 1)], PTE limit [], truncation [(0, 1), (1, 0), (1, 1)]
+   chicken: invariant self-consistent sets [[(0, 0)], [(1, 1)]]
+   random symmetric (2, 2) games, payoffs in 0..3, 3000 games: PTE limit empty in 190; every invariant self-consistent set consists of strictly dominated profiles in 48; same among individually rational sets in 48
+   random symmetric (2, 2) games, payoffs in 0..9, 3000 games: PTE limit empty in 460; every invariant self-consistent set consists of strictly dominated profiles in 262; same among individually rational sets in 262
+   random symmetric (3, 3) games, payoffs in 0..3, 1500 games: PTE limit empty in 80; every invariant self-consistent set consists of strictly dominated profiles in 9; same among individually rational sets in 11
+   random symmetric (3, 3) games, payoffs in 0..9, 1500 games: PTE limit empty in 300; every invariant self-consistent set consists of strictly dominated profiles in 128; same among individually rational sets in 144
+
+Part 3. Candidate rules on random games (existence, self-consistency, U <= phi <= IR, weak efficiency)
+   3200 games (2x2, 3x3, 2x3, 2x2x2; random rankings or payoffs 0..3):
+   PTE: nonempty 2719, self-consistent 2719, U <= phi <= IR 2719, contains an undominated profile 2719
+   truncation: nonempty 3200, self-consistent 2719, U <= phi <= IR 3200, contains an undominated profile 3200
+   patchwork: nonempty 3200, self-consistent 3200, U <= phi <= IR 3200, contains an undominated profile 3057
+   PROP: nonempty 3200, self-consistent 3075, U <= phi <= IR 3200, contains an undominated profile 3200
+   PTE: (C,C) alone in 3 PDs [True, True, True]; (M,M) alone in 4 TDs [True, True, True, True]; chicken []
+   truncation: (C,C) alone in 3 PDs [True, True, True]; (M,M) alone in 4 TDs [True, True, True, True]; chicken [(0, 1), (1, 0), (1, 1)]
+   patchwork: (C,C) alone in 3 PDs [True, True, True]; (M,M) alone in 4 TDs [True, True, True, True]; chicken [(1, 1)]
+   PROP: (C,C) alone in 3 PDs [True, True, True]; (M,M) alone in 4 TDs [True, True, True, True]; chicken [(1, 1)]
+
+Part 4. Pareto efficiency of the PTE limit
+   singleton limits 2322, strictly dominated 0; set-valued limits 1091, containing a strictly dominated profile 309

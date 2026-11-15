@@ -1,0 +1,15 @@
+-- symmetric 3x3 ranking games (all 362,880)
+   bad: (EX, holds) -> count {(True, True): 16944, (True, False): 220896, (False, True): 125040, (False, False): 0}
+   ROWMIN: (EX, holds) -> count {(True, True): 220896, (True, False): 16944, (False, True): 0, (False, False): 125040}
+   GB: (EX, holds) -> count {(True, True): 237624, (True, False): 216, (False, True): 12912, (False, False): 112128}
+   MIN: (EX, holds) -> count {(True, True): 226512, (True, False): 11328, (False, True): 0, (False, False): 125040}
+   windows jumped, by carrier (EX games with a bad strategy): {'self': 1440, 'z': 12348, 'other': 3180}
+   labelled 2x2 restriction types: 10368 classes, 2136 with both existence and emptiness
+   first pair with the same restriction types: rows [[1, 2, 4], [5, 7, 6], [8, 9, 3]] and rows [[1, 2, 5], [4, 8, 6], [7, 9, 3]]
+   adjacent-swap pair: rows [[1, 2, 4], [5, 8, 6], [7, 9, 3]] (empty limit) and rows [[1, 2, 5], [4, 8, 6], [7, 9, 3]] (limit {(z,z)}), payoffs 4 and 5 exchanged; thresholds [5, 9] and [4, 7]
+-- random symmetric 4x4 games without ties (20,000, seed 20261106)
+   bad: (EX, holds) -> count {(True, True): 1622, (True, False): 10549, (False, True): 7829, (False, False): 0}
+   ROWMIN: (EX, holds) -> count {(True, True): 10549, (True, False): 1622, (False, True): 0, (False, False): 7829}
+   GB: (EX, holds) -> count {(True, True): 12146, (True, False): 25, (False, True): 1201, (False, False): 6628}
+   MIN: (EX, holds) -> count {(True, True): 10781, (True, False): 1390, (False, True): 0, (False, False): 7829}
+   windows jumped, by carrier (EX games with a bad strategy): {'z': 1051, 'other': 485, 'self': 151}

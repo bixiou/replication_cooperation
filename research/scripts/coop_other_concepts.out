@@ -1,0 +1,120 @@
+coop_other_concepts.py: further concepts of the typology, pure strategies unless stated.
+G0: U(G0) = [('a', 'b'), ('a', "b'")]  IR(G0) = [('a', 'b'), ('a', "b'")]
+PD(5, 3, 1, 0): security levels [1, 1], pure NE [('D', 'D')], U = [], |IR| = 2
+PD(7, 3, 1, 0): security levels [1, 1], pure NE [('D', 'D')], U = [], |IR| = 2
+TD(M=10,r=2): security levels [2, 2], pure NE [(2, 2)], U = [], |IR| = 51
+TD(M=10,r=5): security levels [2, 2], pure NE [(2, 2)], U = [], |IR| = 21
+
+== 1. Similarity-based cooperative equilibrium (Oesterheld et al. 2023, Theorem 3, Proposition 16)
+PD(5, 3, 1, 0): mixed minimax [1, 1] (pure maximin = pure minimax); union over diff functions, pure part: 2 profiles: [('C', 'C'), ('D', 'D')]; = IR(G): True; contains pure NE: True
+TD(M=10,r=2): mixed minimax [2, 2] (pure maximin = pure minimax); union over diff functions, pure part: 51 profiles: [(2, 2), (3, 3), (4, 4), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (4, 10), (5, 4), (5, 5), (5, 6)] ...; = IR(G): True; contains pure NE: True
+TD(M=10,r=5): mixed minimax [2, 2] (pure maximin = pure minimax); union over diff functions, pure part: 21 profiles: [(2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (7, 8), (7, 9), (7, 10), (8, 7), (8, 8), (8, 9)] ...; = IR(G): True; contains pure NE: True
+
+== 2. Evidential equilibrium (al-Nowaihi and Dhami 2015)
+PD(5, 3, 1, 0), identity SPF: EE [('C', 'C')], consistent [('C', 'C')]
+PD(7, 3, 1, 0), identity SPF: EE [('C', 'C')], consistent [('C', 'C')]
+TD(M=10,r=2), identity SPF: EE [(10, 10)], consistent [(10, 10)]
+TD(M=10,r=5), identity SPF: EE [(10, 10)], consistent [(10, 10)]
+G0 with the identification a<->b, a'<->b': EE [('a', 'b')], consistent [('a', 'b')]; U<=phi: False (U=[('a', 'b'), ('a', "b'")]), phi<=IR: True
+G0 with the identification a<->b', a'<->b: EE [('a', "b'")], consistent [('a', "b'")]; U<=phi: False (U=[('a', 'b'), ('a', "b'")]), phi<=IR: True
+coordination (1,0)/(0,1) on the diagonal, identity SPF, pure: EE [('a', 'b')], consistent []
+  mixed, grid of step 1/1000: player 1's optimum p(a) = 1, player 2's optimum q(a) = 0; a consistent EE needs p = q: False
+PD(5, 3, 1, 0): union over all pure SPF pairs of consistent EE: 2 profiles: [('C', 'C'), ('D', 'D')]; equals IR(G): True
+TD(M=5,r=2): union over all pure SPF pairs of consistent EE: 6 profiles: [(2, 2), (3, 3), (4, 4), (4, 5), (5, 4), (5, 5)]; equals IR(G): True
+
+== 3. Magical thinking (Daley and Sadowski 2017), F uniform on [0,1]
+PD(5, 3, 1, 0): cutoff alpha* = 0.438447; Pr(C,C) = 0.3153, Pr(D,D) = 0.1922, Pr(one cooperates alone) = 0.4924
+  cross-check with the Section 5.2 fixed point: Pr(D) = 0.438447 (residual 4.8e-15)
+PD(7, 3, 1, 0): cutoff alpha* = 0.542573; Pr(C,C) = 0.2092, Pr(D,D) = 0.2944, Pr(one cooperates alone) = 0.4964
+  cross-check with the Section 5.2 fixed point: Pr(D) = 0.542573 (residual 1.3e-15)
+TD(M=10,r=2): equilibrium distribution of claims (residual 7.8e-16; a second run with damping 0.005 differs by at most 1.2e-14, residual 7.7e-15):
+  2:0.0000, 3:0.0000, 4:0.0000, 5:0.0000, 6:0.0000, 7:0.0000, 8:0.2066, 9:0.3203, 10:0.4731
+  Pr(M,M) = 0.2238; Pr(2,2) = 0.0000; mean claim = 9.267
+TD(M=10,r=5): equilibrium distribution of claims (residual 1.8e-06; a second run with damping 0.005 differs by at most 3.9e-07, residual 4.1e-15):
+  2:0.0000, 3:0.0000, 4:0.0082, 5:0.1918, 6:0.0182, 7:0.1940, 8:0.0638, 9:0.2227, 10:0.3013
+  Pr(M,M) = 0.0908; Pr(2,2) = 0.0000; mean claim = 7.987
+
+== 4. Selfishness level (Apt and Schafer 2014)
+PD(5, 3, 1, 0): selfishness level 2; social optima with their thresholds {('C', 'C'): '2'}; induced selection [('C', 'C')]; selected optima are pure NE of G(level): True
+PD(7, 3, 1, 0): selfishness level 1/5; social optima with their thresholds {('C', 'D'): '1/5', ('D', 'C'): '1/5'}; induced selection [('C', 'D'), ('D', 'C')]; selected optima are pure NE of G(level): True
+TD(M=10,r=2): selfishness level 1/2; social optima with their thresholds {(10, 10): '1/2'}; induced selection [(10, 10)]; selected optima are pure NE of G(level): True
+TD(M=10,r=5): selfishness level 2; social optima with their thresholds {(10, 10): '2'}; induced selection [(10, 10)]; selected optima are pure NE of G(level): True
+TD(M=100,r=2): selfishness level 1/2; social optima with their thresholds {(100, 100): '1/2'}; induced selection [(100, 100)]; selected optima are pure NE of G(level): True
+TD(M=100,r=5): selfishness level 2; social optima with their thresholds {(100, 100): '2'}; induced selection [(100, 100)]; selected optima are pure NE of G(level): True
+matching pennies: selfishness level inf; social optima with their thresholds {('H', 'H'): 'inf', ('H', 'T'): 'inf', ('T', 'H'): 'inf', ('T', 'T'): 'inf'}; induced selection none
+G0: selfishness level 0; social optima with their thresholds {('a', "b'"): '0'}; induced selection [('a', "b'")]; selected optima are pure NE of G(level): True
+chicken: selfishness level 0; social optima with their thresholds {('A', 'Y'): '0', ('Y', 'A'): '0', ('Y', 'Y'): 'inf'}; induced selection [('A', 'Y'), ('Y', 'A')]; selected optima are pure NE of G(level): True
+G0: induced selection [('a', "b'")]; U<=phi: False (U=[('a', 'b'), ('a', "b'")]), phi<=IR: True
+
+== 5. Nash-2 equilibrium (Sandomirskaia 2019), complete reflection network
+PD(5, 3, 1, 0): 2 profiles: [('C', 'C'), ('D', 'D')]; U<=phi: True (U=[]), phi<=IR: True
+PD(7, 3, 1, 0): 2 profiles: [('C', 'C'), ('D', 'D')]; U<=phi: True (U=[]), phi<=IR: True
+TD(M=10,r=2): 37 profiles: [(2, 2), (3, 3), (4, 4), (5, 5), (5, 6), (5, 7), (5, 8), (5, 9), (6, 5), (6, 6), (6, 7), (6, 8), (6, 9), (6, 10), (7, 5), (7, 6), (7, 7), (7, 8), (7, 9), (7, 10), (8, 5), (8, 6), (8, 7), (8, 8), (8, 9), (8, 10), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9), (9, 10), (10, 6), (10, 7), (10, 8), (10, 9), (10, 10)]; U<=phi: True (U=[]), phi<=IR: True
+TD(M=10,r=5): 15 profiles: [(2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (8, 9), (8, 10), (9, 8), (9, 9), (9, 10), (10, 8), (10, 9), (10, 10)]; U<=phi: True (U=[]), phi<=IR: True
+matching pennies: 0 profiles: []; U<=phi: True (U=[]), phi<=IR: True
+G0: 2 profiles: [('a', 'b'), ('a', "b'")]; U<=phi: True (U=[('a', 'b'), ('a', "b'")]), phi<=IR: True
+chicken: 2 profiles: [('A', 'Y'), ('Y', 'A')]; U<=phi: True (U=[]), phi<=IR: True
+all 65,536 2x2 games with payoffs in 0..3: 392 without a Nash-2 equilibrium; 0 violations of U <= NE-2 <= IR. Strict 2x2 games: 0 of 576 without one.
+
+== 6. Farsighted stability: indirect domination (Chwe 1994), largest consistent set, farsighted stable sets
+PD(5, 3, 1, 0), individual moves: LCS [('C', 'C'), ('D', 'D')]; stable sets [[('C', 'C'), ('D', 'D')]] (search complete: True)
+PD(5, 3, 1, 0), coalitional moves: LCS [('C', 'C')]; stable sets [[('C', 'C')]] (search complete: True)
+PD(7, 3, 1, 0), individual moves: LCS [('C', 'C'), ('D', 'D')]; stable sets [[('C', 'C'), ('D', 'D')]] (search complete: True)
+PD(7, 3, 1, 0), coalitional moves: LCS [('C', 'C')]; stable sets [[('C', 'C')]] (search complete: True)
+TD(M=10,r=2), individual moves: LCS 39 profiles: [(2, 2), (3, 3), (4, 4), (5, 5), (5, 6), (5, 7), (5, 8), (5, 9), (5, 10), (6, 5), (6, 6), (6, 7), (6, 8), (6, 9), (6, 10), (7, 5), (7, 6), (7, 7), (7, 8), (7, 9), (7, 10), (8, 5), (8, 6), (8, 7), (8, 8), (8, 9), (8, 10), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9), (9, 10), (10, 5), (10, 6), (10, 7), (10, 8), (10, 9), (10, 10)]
+  (M,M) in LCS: True; (M-1,M) in LCS: True; (2,2) in LCS: True; U<=phi: True (U=[]), phi<=IR: True
+  {(M,M)} is a farsighted stable set: True; stable sets found: 3 (search complete: True); first ones: [[(9, 10)], [(10, 9)], [(10, 10)]]
+TD(M=10,r=2), coalitional moves: LCS 34 profiles: [(5, 6), (5, 7), (5, 8), (5, 9), (5, 10), (6, 5), (6, 7), (6, 8), (6, 9), (6, 10), (7, 5), (7, 6), (7, 7), (7, 8), (7, 9), (7, 10), (8, 5), (8, 6), (8, 7), (8, 8), (8, 9), (8, 10), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9), (9, 10), (10, 5), (10, 6), (10, 7), (10, 8), (10, 9), (10, 10)]
+  (M,M) in LCS: True; (M-1,M) in LCS: True; (2,2) in LCS: False; U<=phi: True (U=[]), phi<=IR: True
+  {(M,M)} is a farsighted stable set: True; stable sets found: 3 (search complete: True); first ones: [[(9, 10)], [(10, 9)], [(10, 10)]]
+TD(M=10,r=5), individual moves: LCS 21 profiles: [(2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (7, 8), (7, 9), (7, 10), (8, 7), (8, 8), (8, 9), (8, 10), (9, 7), (9, 8), (9, 9), (9, 10), (10, 7), (10, 8), (10, 9), (10, 10)]
+  (M,M) in LCS: True; (M-1,M) in LCS: True; (2,2) in LCS: True; U<=phi: True (U=[]), phi<=IR: True
+  {(M,M)} is a farsighted stable set: True; stable sets found: 3 (search complete: True); first ones: [[(9, 10)], [(10, 9)], [(10, 10)]]
+TD(M=10,r=5), coalitional moves: LCS 21 profiles: [(2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (7, 8), (7, 9), (7, 10), (8, 7), (8, 8), (8, 9), (8, 10), (9, 7), (9, 8), (9, 9), (9, 10), (10, 7), (10, 8), (10, 9), (10, 10)]
+  (M,M) in LCS: True; (M-1,M) in LCS: True; (2,2) in LCS: True; U<=phi: True (U=[]), phi<=IR: True
+  {(M,M)} is a farsighted stable set: True; stable sets found: 3 (search complete: True); first ones: [[(9, 10)], [(10, 9)], [(10, 10)]]
+G0, individual moves: LCS [('a', 'b'), ('a', "b'")]; U<=phi: True (U=[('a', 'b'), ('a', "b'")]), phi<=IR: True; stable sets [[('a', "b'")]]
+matching pennies, individual moves: LCS [('H', 'H'), ('H', 'T'), ('T', 'H'), ('T', 'T')]; stable sets [[('H', 'H'), ('T', 'T')], [('H', 'T'), ('T', 'H')]] (search complete: True)
+G0, coalitional moves: LCS [('a', 'b'), ('a', "b'")]; U<=phi: True (U=[('a', 'b'), ('a', "b'")]), phi<=IR: True; stable sets [[('a', "b'")]]
+matching pennies, coalitional moves: LCS [('H', 'H'), ('H', 'T'), ('T', 'H'), ('T', 'T')]; stable sets [[('H', 'H'), ('T', 'T')], [('H', 'T'), ('T', 'H')]] (search complete: True)
+individual moves, all 65,536 2x2 games with payoffs 0..3: LCS empty in 0, U not in LCS in 1280, LCS not in IR in 0; strict 2x2 games without a farsighted stable set: 0 of 576
+  random 3x3 games, payoffs uniform in 0..3, 300 draws: 0 with an empty LCS or outside U <= LCS <= IR
+coalitional moves, all 65,536 2x2 games with payoffs 0..3: LCS empty in 0, U not in LCS in 1152, LCS not in IR in 0; strict 2x2 games without a farsighted stable set: 0 of 576
+  random 3x3 games, payoffs uniform in 0..3, 300 draws: 0 with an empty LCS or outside U <= LCS <= IR
+G1 (rows of player 1, columns of player 2): u(0,0) = u(0,1) = (0,0), u(1,0) = (0,1), u(1,1) = (1,1)
+  G1, individual moves: U = [(1, 0), (1, 1)], LCS [(1, 1)]; (1,1) >> (0,0): True; stable sets [[(1, 1)]]; U<=phi: False (U=[(1, 0), (1, 1)]), phi<=IR: True
+  G1, coalitional moves: U = [(1, 0), (1, 1)], LCS [(1, 1)]; (1,1) >> (0,0): True; stable sets [[(1, 1)]]; U<=phi: False (U=[(1, 0), (1, 1)]), phi<=IR: True
+individual moves: 2x2 games with payoffs 0..3 without a farsighted stable set: 0 of 65,536; first one: None
+  random 3x3 games, payoffs 0..3, 300 draws: 0 without a farsighted stable set (complete searches); first: None
+coalitional moves: 2x2 games with payoffs 0..3 without a farsighted stable set: 0 of 65,536; first one: None
+  random 3x3 games, payoffs 0..3, 300 draws: 0 without a farsighted stable set (complete searches); first: None
+
+== 7. Berge equilibrium (Haller 2024)
+PD(5, 3, 1, 0): Berge [('C', 'C')]; U<=phi: True (U=[]), phi<=IR: True
+TD(M=10,r=2): Berge [(10, 10)]; U<=phi: True (U=[]), phi<=IR: True
+TD(M=10,r=5): Berge [(10, 10)]; U<=phi: True (U=[]), phi<=IR: True
+matching pennies: Berge []; U<=phi: True (U=[]), phi<=IR: True
+G0: Berge [('a', "b'")]; U<=phi: False (U=[('a', 'b'), ('a', "b'")]), phi<=IR: True
+Haller p. 857 three-player game: pure Berge equilibria []
+Haller p. 845 game (I), the dual of a PD: Berge [('IN', 'IN')] with payoffs [(3, 3)]; security levels [4, 4]; U<=phi: False (U=[('OUT', 'OUT')]), phi<=IR: False
+PD(5, 3, 1, 0), cooperative orientation v_i = u_i + u_j (Haller p. 849): pure NE 1 profiles: [('C', 'C')]
+PD(7, 3, 1, 0), cooperative orientation v_i = u_i + u_j (Haller p. 849): pure NE 2 profiles: [('C', 'D'), ('D', 'C')]
+TD(M=10,r=2), cooperative orientation v_i = u_i + u_j (Haller p. 849): pure NE 9 profiles: [(2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10)]
+TD(M=10,r=5), cooperative orientation v_i = u_i + u_j (Haller p. 849): pure NE 9 profiles: [(2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10)]
+
+== 8. Perfect prediction equilibrium (Fourny, Reiche and Dupuy) of the sequential game, order pi
+PD(5, 3, 1, 0), order [0, 1]: PPE quick [('D', 'C')], principles [('D', 'C')], exhaustive [('D', 'C')], sequential pp (paper) [('C', 'C')], PTE limit [('C', 'C')]; IR [('C', 'C'), ('D', 'D')]
+PD(5, 3, 1, 0), order [1, 0]: PPE quick [('C', 'D')], principles [('C', 'D')], exhaustive [('C', 'D')], sequential pp (paper) [('C', 'C')], PTE limit [('C', 'C')]; IR [('C', 'C'), ('D', 'D')]
+PD(7, 3, 1, 0), order [0, 1]: PPE quick [('D', 'C')], principles [('D', 'C')], exhaustive [('D', 'C')], sequential pp (paper) [('C', 'C')], PTE limit [('C', 'C')]; IR [('C', 'C'), ('D', 'D')]
+PD(7, 3, 1, 0), order [1, 0]: PPE quick [('C', 'D')], principles [('C', 'D')], exhaustive [('C', 'D')], sequential pp (paper) [('C', 'C')], PTE limit [('C', 'C')]; IR [('C', 'C'), ('D', 'D')]
+chicken, order [0, 1]: PPE quick [('A', 'Y')], principles [('A', 'Y')], exhaustive [('A', 'Y')], sequential pp (paper) [('Y', 'A')], PTE limit []; IR [('A', 'Y'), ('Y', 'A'), ('Y', 'Y')]
+chicken, order [1, 0]: PPE quick [('Y', 'A')], principles [('Y', 'A')], exhaustive [('Y', 'A')], sequential pp (paper) [('A', 'Y')], PTE limit []; IR [('A', 'Y'), ('Y', 'A'), ('Y', 'Y')]
+G_e(e=1/2), order [0, 1]: PPE quick [('A', 'Y')], principles [('A', 'Y')], exhaustive [('A', 'Y')], sequential pp (paper) [('Y', 'A')], PTE limit []; IR [('A', 'Y'), ('Y', 'A'), ('Y', 'Y')]
+G_e(e=1/2), order [1, 0]: PPE quick [('Y', 'A')], principles [('Y', 'A')], exhaustive [('Y', 'A')], sequential pp (paper) [('A', 'Y')], PTE limit []; IR [('A', 'Y'), ('Y', 'A'), ('Y', 'Y')]
+TD(M=10,r=2), order [0, 1]: PPE by the principles: [(9, 10)]; exhaustive [(9, 10)]; sequential pp [(10, 10)]
+TD(M=10,r=2), order [1, 0]: PPE by the principles: [(10, 9)]; exhaustive [(10, 9)]; sequential pp [(10, 10)]
+TD(M=10,r=5), order [0, 1]: PPE by the principles: [(9, 10)]; exhaustive [(9, 10)]; sequential pp [(10, 10)]
+TD(M=10,r=5), order [1, 0]: PPE by the principles: [(10, 9)]; exhaustive [(10, 9)]; sequential pp [(10, 10)]
+576 strict 2x2 games x 2 orders: {'runs': 1152, 'agree': 1152, 'ppe_none': 0, 'not_IR': 256, 'eq_seq': 768, 'pte_nonempty': 1032, 'ppe_eq_pte': 744}
+random strict games (3, 3), 500 games, all orders: {'runs': 1000, 'agree': 1000, 'not_IR': 316, 'eq_seq': 454}
+random strict games (2, 2, 2), 200 games, all orders: {'runs': 1200, 'agree': 1200, 'not_IR': 358, 'eq_seq': 516}

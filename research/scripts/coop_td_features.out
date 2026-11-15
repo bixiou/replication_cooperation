@@ -1,0 +1,57 @@
+coop_td_features.py: which feature of the traveler's dilemma makes reasoning select the symmetric optimum?
+-- named games: premise (Cp), (CpPO)
+   PD (5,3,1,0): symmetric True, (Cp) True, (CpPO) True; SPP12 [(0, 0)], RPP12 [(0, 0)], PTE [(0, 0)]
+   stag hunt (4,0;3,3): symmetric True, (Cp) True, (CpPO) True; SPP12 [(0, 0)], RPP12 [(0, 0)], PTE [(0, 0)]
+   Aumann's chicken: symmetric True, (Cp) False, (CpPO) False; SPP12 [(0, 1)], RPP12 [(1, 0)], PTE []
+   G_e, e = 1/2: symmetric True, (Cp) False, (CpPO) False; SPP12 [(0, 1)], RPP12 [(1, 0)], PTE []
+   battle of the sexes: symmetric True, (Cp) False, (CpPO) False; SPP12 [(1, 0)], RPP12 [(1, 0)], PTE []
+   TD M = 5, r = 2: (Cp) True
+   TD M = 5, r = 3: (Cp) True
+   TD M = 10, r = 2: (Cp) True
+   TD M = 10, r = 3: (Cp) True
+-- symmetric strict 2x2: 24 games
+   (Cp) premise in 16; ET failures: SPP12 0, SPP21 0, RPP12 0, RPP21 0, PTE 0, truncPTE 0, NB 0, MG 0, alphacore 0
+   (CpPO) premise in 18; ET failures: SPP12 0, SPP21 0, RPP12 0, RPP21 0, PTE 0, truncPTE 0, NB 0, MG 0, alphacore 0
+   (Cpw) premise in 16; ET failures: SPP12 0, SPP21 0, RPP12 0, RPP21 0, PTE 0, truncPTE 0, NB 0, MG 0, alphacore 0
+-- symmetric 2x2, payoffs in {0,...,4}: 625 games
+   (Cp) premise in 425; ET failures: SPP12 80, SPP21 80, RPP12 80, RPP21 80, PTE 80, truncPTE 80, NB 0, MG 0, alphacore 0
+      first failure of SPP12: u_1 rows [[0, 0], [0, 1]], prediction [(0, 0), (0, 1), (1, 0), (1, 1)]
+      first failure of RPP12: u_1 rows [[0, 0], [0, 1]], prediction [(0, 0), (0, 1), (1, 0), (1, 1)]
+      first failure of PTE: u_1 rows [[0, 0], [0, 1]], prediction [(0, 0), (0, 1), (1, 0), (1, 1)]
+   (CpPO) premise in 495; ET failures: SPP12 140, SPP21 140, RPP12 120, RPP21 120, PTE 120, truncPTE 120, NB 0, MG 0, alphacore 40
+      first failure of SPP12: u_1 rows [[0, 0], [0, 1]], prediction [(0, 0), (0, 1), (1, 0), (1, 1)]
+      first failure of RPP12: u_1 rows [[0, 0], [0, 1]], prediction [(0, 0), (0, 1), (1, 0), (1, 1)]
+      first failure of PTE: u_1 rows [[0, 0], [0, 1]], prediction [(0, 0), (0, 1), (1, 0), (1, 1)]
+   (Cpw) premise in 485; ET failures: SPP12 140, SPP21 140, RPP12 140, RPP21 140, PTE 140, truncPTE 140, NB 0, MG 0, alphacore 40
+-- traveler's dilemmas: 54 games
+   (Cp) premise in 54; ET failures: SPP12 0, SPP21 0, RPP12 0, RPP21 0, PTE 0, truncPTE 0, NB 0, MG 0, alphacore 27
+   (CpPO) premise in 54; ET failures: SPP12 0, SPP21 0, RPP12 0, RPP21 0, PTE 0, truncPTE 0, NB 0, MG 0, alphacore 27
+   (Cpw) premise in 54; ET failures: SPP12 0, SPP21 0, RPP12 0, RPP21 0, PTE 0, truncPTE 0, NB 0, MG 0, alphacore 27
+-- symmetric PDs: 15 games
+   (Cp) premise in 15; ET failures: SPP12 0, SPP21 0, RPP12 0, RPP21 0, PTE 0, truncPTE 0, NB 0, MG 0, alphacore 0
+   (CpPO) premise in 15; ET failures: SPP12 0, SPP21 0, RPP12 0, RPP21 0, PTE 0, truncPTE 0, NB 0, MG 0, alphacore 0
+   (Cpw) premise in 15; ET failures: SPP12 0, SPP21 0, RPP12 0, RPP21 0, PTE 0, truncPTE 0, NB 0, MG 0, alphacore 0
+-- random symmetric 4x4 ranking games (2,000, seed 4): 2000 games
+   (Cp) premise in 286; ET failures: SPP12 0, RPP12 0, PTE 0, NB 4, MG 0
+   (CpPO) premise in 1010; ET failures: SPP12 13, RPP12 8, PTE 8, NB 18, MG 0
+      first failure of SPP12: u_1 rows [[15, 2, 8, 7], [5, 1, 12, 10], [13, 3, 4, 11], [16, 9, 6, 14]], prediction [(0, 3)]
+      first failure of RPP12: u_1 rows [[3, 5, 12, 1], [9, 14, 16, 7], [8, 13, 6, 11], [10, 15, 2, 4]], prediction [(1, 2)]
+      first failure of PTE: u_1 rows [[3, 5, 12, 1], [9, 14, 16, 7], [8, 13, 6, 11], [10, 15, 2, 4]], prediction []
+   (Cpw) premise in 286; ET failures: SPP12 0, RPP12 0, PTE 0, NB 4, MG 0
+-- all symmetric 3x3 ranking games: 362880 games
+   (Cp) premise in 123648; ET failures: SPP12 0, SPP21 0, RPP12 0, PTE 0, NB 1236, MG 0
+   (CpPO) premise in 214560; ET failures: SPP12 1674, SPP21 1674, RPP12 1254, PTE 1254, NB 3024, MG 0
+      first failure of SPP12: u_1 rows [[1, 2, 5], [6, 3, 8], [9, 4, 7]], prediction [(0, 2)]
+      first failure of RPP12: u_1 rows [[1, 2, 5], [6, 3, 8], [9, 4, 7]], prediction [(2, 0)]
+      first failure of PTE: u_1 rows [[1, 2, 5], [6, 3, 8], [9, 4, 7]], prediction []
+   (Cpw) premise in 123648; ET failures: SPP12 0, SPP21 0, RPP12 0, PTE 0, NB 1236, MG 0
+
+== Section 2: the tie-robust version (Cpe)
+-- symmetric 2x2, payoffs in {0,...,4}: 625 games
+   (Cpe) premise in 330; ET failures: SPP12 30, SPP21 30, RPP12 30, RPP21 30, PTE 30, truncPTE 30, NB 0, MG 0, alphacore 0
+-- traveler's dilemmas: 54 games
+   (Cpe) premise in 54; ET failures: SPP12 0, SPP21 0, RPP12 0, RPP21 0, PTE 0, truncPTE 0, NB 0, MG 0, alphacore 27
+-- symmetric 3x3, payoffs in {0,1,2}: 19683 games
+   (Cpe) premise in 2533; ET failures: SPP12 928, SPP21 928, RPP12 928, PTE 928, truncPTE 928, NB 0, MG 0
+-- all symmetric 3x3 ranking games: 362880 games
+   (Cpe) premise in 123648; ET failures: SPP12 0, RPP12 0, PTE 0

@@ -1,0 +1,35 @@
+Part 1. Exact rates on 2x2 games.
+  strict games: 576; PTE limit nonempty: 516; some SPP order misses the nonempty limit: 8
+  games with payoffs in 0..3: 65536; PTE limit nonempty: 62644; nonempty and more than one profile: 28976
+Part 2. Without indifference, nonempty self-consistent sets are single profiles.
+  (game, nonempty subset) pairs checked: 8640; self-consistent with more than one profile: 0
+Part 3. The unilateral column (Lemma 1).
+  G0: U = [(0, 0), (0, 1)], IR = [(0, 0), (0, 1)], security levels [1, 0], BU [2, 1]
+    Nash product: [(0, 1)]; contains (a,b) = (0,0): False
+    maximin of gains: [(0, 1)]; contains (a,b) = (0,0): False
+    sum of payoffs: [(0, 1)]; contains (a,b) = (0,0): False
+    optimin (pure): [(0, 1)]; contains (a,b) = (0,0): False
+    PCE (pure): [(0, 1)]; contains (a,b) = (0,0): False
+    maximum PCE (pure): [(0, 1)]; contains (a,b) = (0,0): False
+    mutual advantage (security reference): [(0, 1)]; contains (a,b) = (0,0): False
+    alpha-core: [(0, 0), (0, 1)]; contains (a,b) = (0,0): True
+    strong equilibrium: [(0, 0), (0, 1)]; contains (a,b) = (0,0): True
+    credible alpha-core: [(0, 0), (0, 1)]; contains (a,b) = (0,0): True
+  (2, 2) rankings: 2000 games (844 with U nonempty); failures of U <= phi <= IR: {'alpha_core': 0, 'strong_eq': 0, 'credible_alpha_core': 0}
+  (2, 2) ties: 2000 games (1506 with U nonempty); failures of U <= phi <= IR: {'alpha_core': 0, 'strong_eq': 0, 'credible_alpha_core': 0}
+  (3, 3) rankings: 1000 games (175 with U nonempty); failures of U <= phi <= IR: {'alpha_core': 0, 'strong_eq': 0, 'credible_alpha_core': 0}
+  (3, 3) ties: 1000 games (606 with U nonempty); failures of U <= phi <= IR: {'alpha_core': 0, 'strong_eq': 0, 'credible_alpha_core': 0}
+  (2, 2, 2) rankings: 500 games (30 with U nonempty); failures of U <= phi <= IR: {'alpha_core': 0, 'strong_eq': 0}
+  (2, 2, 2) ties: 500 games (153 with U nonempty); failures of U <= phi <= IR: {'alpha_core': 0, 'strong_eq': 0}
+Part 4. Random-label patch and reachable rest points.
+  chicken: reachable sets [(), ((0, 1),), ((1, 0),), ((0, 1), (1, 0), (1, 1)), ((0, 0), (0, 1), (1, 0), (1, 1))]; rest points [(), ((0, 1),), ((1, 0),)]
+    label patch over the 24 orders of profiles: {((0, 1),): 8, ((1, 0),): 8, ((1, 1),): 8}
+    [(0, 1)]: completely self-consistent True; reachable rest point True
+    [(1, 0)]: completely self-consistent True; reachable rest point True
+    [(1, 1)]: completely self-consistent True; reachable rest point False
+  G_e, e = 1/2: reachable sets [(), ((0, 1),), ((1, 0),), ((0, 1), (1, 0), (1, 1)), ((0, 0), (0, 1), (1, 0), (1, 1))]; rest points [(), ((0, 1),), ((1, 0),)]
+    label patch over the 24 orders of profiles: {((0, 1),): 12, ((1, 0),): 12}
+    [(0, 1)]: completely self-consistent True; reachable rest point True
+    [(1, 0)]: completely self-consistent True; reachable rest point True
+Part 5. W(own, other) = min(own, other) in transformed prisoner's dilemmas.
+  2000 random PDs: (C,C) and (D,D) both equilibria in 2000

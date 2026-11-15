@@ -1,0 +1,42 @@
+== (A) Formal VBE, pure strategies ==
+PD (5,3,1,0)    tie=sup worst payoffs {(0, 0): ('0', '0'), (0, 1): ('0', '1'), (1, 0): ('1', '0'), (1, 1): ('1', '1')} feasible [(1, 1)] status quo ('1', '1') VBE [(1, 1)] self-consistent (True, (1, 1))
+PD (5,3,1,0)    tie=inf worst payoffs {(0, 0): ('0', '0'), (0, 1): ('0', '1'), (1, 0): ('1', '0'), (1, 1): ('1', '1')} feasible [(1, 1)] status quo ('1', '1') VBE [(1, 1)] self-consistent (True, (1, 1))
+G_1/10          tie=sup worst payoffs {(0, 0): ('0', '0'), (0, 1): ('3', '1'), (1, 0): ('1', '3'), (1, 1): ('1/10', '1/10')} feasible [(0, 1), (1, 0)] status quo ('1', '1') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+G_1/10          tie=inf worst payoffs {(0, 0): ('0', '0'), (0, 1): ('3', '1'), (1, 0): ('1', '3'), (1, 1): ('1/10', '1/10')} feasible [(0, 1), (1, 0)] status quo ('1', '1') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+G_1/2           tie=sup worst payoffs {(0, 0): ('0', '0'), (0, 1): ('3', '1'), (1, 0): ('1', '3'), (1, 1): ('1/2', '1/2')} feasible [(0, 1), (1, 0)] status quo ('1', '1') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+G_1/2           tie=inf worst payoffs {(0, 0): ('0', '0'), (0, 1): ('3', '1'), (1, 0): ('1', '3'), (1, 1): ('1/2', '1/2')} feasible [(0, 1), (1, 0)] status quo ('1', '1') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+G_9/10          tie=sup worst payoffs {(0, 0): ('0', '0'), (0, 1): ('3', '1'), (1, 0): ('1', '3'), (1, 1): ('9/10', '9/10')} feasible [(0, 1), (1, 0)] status quo ('1', '1') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+G_9/10          tie=inf worst payoffs {(0, 0): ('0', '0'), (0, 1): ('3', '1'), (1, 0): ('1', '3'), (1, 1): ('9/10', '9/10')} feasible [(0, 1), (1, 0)] status quo ('1', '1') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+chicken         tie=sup worst payoffs {(0, 0): ('0', '0'), (0, 1): ('3', '1'), (1, 0): ('1', '3'), (1, 1): ('1', '1')} feasible [(0, 1), (1, 0)] status quo ('1', '1') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+chicken         tie=inf worst payoffs {(0, 0): ('0', '0'), (0, 1): ('3', '1'), (1, 0): ('1', '3'), (1, 1): ('1', '1')} feasible [(0, 1), (1, 0)] status quo ('1', '1') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+Aumann chicken  tie=sup worst payoffs {(0, 0): ('0', '0'), (0, 1): ('7', '2'), (1, 0): ('2', '7'), (1, 1): ('2', '2')} feasible [(0, 1), (1, 0)] status quo ('2', '2') VBE [(0, 1), (1, 0)] self-consistent (False, (7, 7))
+Aumann chicken  tie=inf worst payoffs {(0, 0): ('0', '0'), (0, 1): ('7', '2'), (1, 0): ('2', '7'), (1, 1): ('2', '2')} feasible [(0, 1), (1, 0)] status quo ('2', '2') VBE [(0, 1), (1, 0)] self-consistent (False, (7, 7))
+Leader          tie=sup worst payoffs {(0, 0): ('0', '0'), (0, 1): ('3', '2'), (1, 0): ('2', '3'), (1, 1): ('1', '1')} feasible [(0, 1), (1, 0)] status quo ('2', '2') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+Leader          tie=inf worst payoffs {(0, 0): ('0', '0'), (0, 1): ('3', '2'), (1, 0): ('2', '3'), (1, 1): ('1', '1')} feasible [(0, 1), (1, 0)] status quo ('2', '2') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+BoS             tie=sup worst payoffs {(0, 0): ('0', '0'), (0, 1): ('2', '3'), (1, 0): ('3', '2'), (1, 1): ('1', '1')} feasible [(0, 1), (1, 0)] status quo ('2', '2') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+BoS             tie=inf worst payoffs {(0, 0): ('0', '0'), (0, 1): ('2', '3'), (1, 0): ('3', '2'), (1, 1): ('1', '1')} feasible [(0, 1), (1, 0)] status quo ('2', '2') VBE [(0, 1), (1, 0)] self-consistent (False, (3, 3))
+Traveler's dilemma, claims 2..M: VBE (sup and inf tie-breaks); code T = top claims only, L = lowest only, B = both
+  r=5/4  3:L 4:L 5:T 6:T 7:T 8:T 9:T 10:T 11:T 12:T 13:T 14:T 15:T 16:T 17:T 18:T 19:T 20:T
+  r=3/2  3:L 4:L 5:T 6:T 7:T 8:T 9:T 10:T 11:T 12:T 13:T 14:T 15:T 16:T 17:T 18:T 19:T 20:T
+  r=2  3:L 4:L 5:B 6:T 7:T 8:T 9:T 10:T 11:T 12:T 13:T 14:T 15:T 16:T 17:T 18:T 19:T 20:T
+  r=5/2  3:L 4:L 5:L 6:T 7:T 8:T 9:T 10:T 11:T 12:T 13:T 14:T 15:T 16:T 17:T 18:T 19:T 20:T
+  r=3  3:L 4:L 5:L 6:B 7:T 8:T 9:T 10:T 11:T 12:T 13:T 14:T 15:T 16:T 17:T 18:T 19:T 20:T
+  r=7/2  3:L 4:L 5:L 6:L 7:T 8:T 9:T 10:T 11:T 12:T 13:T 14:T 15:T 16:T 17:T 18:T 19:T 20:T
+  r=5  3:L 4:L 5:L 6:L 7:L 8:B 9:T 10:T 11:T 12:T 13:T 14:T 15:T 16:T 17:T 18:T 19:T 20:T
+  r=6  3:L 4:L 5:L 6:L 7:L 8:L 9:B 10:T 11:T 12:T 13:T 14:T 15:T 16:T 17:T 18:T 19:T 20:T
+  mismatches with the rule (T if M>r+3, L if M<r+3, B if M=r+3): 0
+== (B) Mixed profiles ==
+Leader grid 1001^2: profiles not strictly improved upon for both by (A,Y) or (Y,A): [(np.float64(0.0), np.float64(1.0)), (np.float64(1.0), np.float64(0.0))] count 2
+   max u1 3.0 attained at [(np.float64(1.0), np.float64(0.0))] ; max u2 3.0 at [(np.float64(0.0), np.float64(1.0))]
+   max over grid of min(u1,u2): 2.0 at [(np.float64(0.0), np.float64(1.0)), (np.float64(1.0), np.float64(0.0))]
+BoS grid 1001^2: profiles not strictly improved upon for both by (A,Y) or (Y,A): [(np.float64(0.0), np.float64(1.0)), (np.float64(1.0), np.float64(0.0))] count 2
+   max u1 3.0 attained at [(np.float64(0.0), np.float64(1.0))] ; max u2 3.0 at [(np.float64(1.0), np.float64(0.0))]
+   max over grid of min(u1,u2): 2.0 at [(np.float64(0.0), np.float64(1.0)), (np.float64(1.0), np.float64(0.0))]
+G_1/2: u at (3/7,3/7) exact: ('8/7', '8/7') ; grid max of min(u1,u2): 1.1428565 8/7 = 1.1428571428571428 ; grid points giving both more than 8/7: 0
+   refined max of min(u1,u2): (np.float64(1.14285714125), (np.float64(0.42855), np.float64(0.42855)))
+Prop 3(iii): for p on a grid, (p, smallest q in section on grid 1/2000, min u1 on section): [('0', '0', '1'), ('1/20', '13/1000', '20027/20000'), ('1/10', '13/500', '5007/5000'), ('3/20', '39/1000', '20003/20000'), ('1/5', '53/1000', '5007/5000'), ('1/4', '67/1000', '801/800')] ... [('19/20', '623/2000', '40003/40000'), ('1', '667/2000', '2001/2000')]
+   exact: u1(p, p/(4-p)) = ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1']
+W: mixed security levels 5/2 36/7
+G*: mixed security level 548/283 with ['106/283', '98/283', '79/283'] ; uniform mixture guarantees 4/3
+PD (10,3,1,0) with m: ties False ; PTE rounds (guarantees, set): [(('1', '1'), [(0, 0), (0, 2), (1, 1), (2, 0), (2, 2)]), (('167/50', '167/50'), [(2, 2)]), (('167/50', '167/50'), [(2, 2)])] ; (m,m) pays 167/50
+Leader: mixed security level (grid 1e-5): 1.5 ; union {(A,Y),(Y,A)} guarantees: player 1 commits to A -> u1(A,Y) = 3 , (Y,A) gives her 2

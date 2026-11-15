@@ -1,0 +1,138 @@
+-- PO, strict 2x2: 576 games without ties
+   SPP12: PO fails in 0; empty in 0
+   SPP21: PO fails in 0; empty in 0
+   RPP12: PO fails in 0; empty in 0
+   RPP21: PO fails in 0; empty in 0
+   UNION_S: PO fails in 0; empty in 0
+   UNION_R: PO fails in 0; empty in 0
+   PTE: PO fails in 0; empty in 60
+   truncPTE: PO fails in 20; empty in 0; first failure [((0, 0), (1, 1)), ((0, 1), (3, 2)), ((1, 0), (2, 4)), ((1, 1), (4, 3))], prediction [(0, 1), (1, 0), (1, 1)]
+   NB: PO fails in 0; empty in 0
+   MG: PO fails in 0; empty in 0
+   MGU: PO fails in 0; empty in 0
+   alphacore: PO fails in 0; empty in 0
+   credcore: PO fails in 0; empty in 60
+   LCS1: PO fails in 72; empty in 0; first failure [((0, 0), (1, 1)), ((0, 1), (3, 2)), ((1, 0), (2, 4)), ((1, 1), (4, 3))], prediction [(0, 1), (1, 0), (1, 1)]
+   LCS2: PO fails in 24; empty in 0; first failure [((0, 0), (1, 1)), ((0, 1), (3, 2)), ((1, 0), (2, 4)), ((1, 1), (4, 3))], prediction [(0, 1), (1, 0), (1, 1)]
+   Berge: PO fails in 64; empty in 72; first failure [((0, 0), (1, 1)), ((0, 1), (2, 3)), ((1, 0), (3, 4)), ((1, 1), (4, 2))], prediction [(0, 1)]
+   team: PO fails in 0; empty in 0
+   Nash: PO fails in 64; empty in 72; first failure [((0, 0), (1, 1)), ((0, 1), (3, 4)), ((1, 0), (2, 3)), ((1, 1), (4, 2))], prediction [(1, 0)]
+-- PO, random 3x3 ranking games (seed 20261104): 3000 games without ties
+   SPP12: PO fails in 0; empty in 0
+   SPP21: PO fails in 0; empty in 0
+   RPP12: PO fails in 0; empty in 0
+   RPP21: PO fails in 0; empty in 0
+   UNION_S: PO fails in 0; empty in 0
+   UNION_R: PO fails in 0; empty in 0
+   PTE: PO fails in 0; empty in 962
+   truncPTE: PO fails in 717; empty in 0; first failure [((0, 0), (3, 9)), ((0, 1), (4, 6)), ((0, 2), (6, 4)), ((1, 0), (1, 7)), ((1, 1), (5, 8)), ((1, 2), (9, 2)), ((2, 0), (8, 1)), ((2, 1), (2, 3)), ((2, 2), (7, 5))], prediction [(0, 0), (0, 1), (0, 2), (1, 1), (2, 2)]
+   NB: PO fails in 0; empty in 0
+   MG: PO fails in 0; empty in 0
+   MGU: PO fails in 0; empty in 0
+   alphacore: PO fails in 0; empty in 0
+   credcore: PO fails in 0; empty in 540
+   LCS1: PO fails in 1768; empty in 0; first failure [((0, 0), (4, 9)), ((0, 1), (2, 8)), ((0, 2), (7, 4)), ((1, 0), (3, 5)), ((1, 1), (6, 7)), ((1, 2), (8, 3)), ((2, 0), (1, 1)), ((2, 1), (9, 2)), ((2, 2), (5, 6))], prediction [(0, 0), (0, 2), (1, 1), (1, 2), (2, 2)]
+   LCS2: PO fails in 1245; empty in 0; first failure [((0, 0), (4, 9)), ((0, 1), (2, 8)), ((0, 2), (7, 4)), ((1, 0), (3, 5)), ((1, 1), (6, 7)), ((1, 2), (8, 3)), ((2, 0), (1, 1)), ((2, 1), (9, 2)), ((2, 2), (5, 6))], prediction [(0, 0), (0, 2), (1, 1), (1, 2), (2, 2)]
+   Berge: PO fails in 545; empty in 658; first failure [((0, 0), (9, 9)), ((0, 1), (1, 2)), ((0, 2), (4, 8)), ((1, 0), (5, 5)), ((1, 1), (7, 1)), ((1, 2), (2, 7)), ((2, 0), (6, 4)), ((2, 1), (8, 3)), ((2, 2), (3, 6))], prediction [(0, 0), (2, 1)]
+   team: PO fails in 0; empty in 0
+   Nash: PO fails in 556; empty in 620; first failure [((0, 0), (5, 3)), ((0, 1), (1, 2)), ((0, 2), (8, 4)), ((1, 0), (3, 7)), ((1, 1), (9, 9)), ((1, 2), (4, 8)), ((2, 0), (2, 6)), ((2, 1), (6, 5)), ((2, 2), (7, 1))], prediction [(0, 2), (1, 1)]
+-- PO, G_e: 1 games without ties
+   SPP12: PO fails in 0; empty in 0
+   SPP21: PO fails in 0; empty in 0
+   RPP12: PO fails in 0; empty in 0
+   RPP21: PO fails in 0; empty in 0
+   UNION_S: PO fails in 0; empty in 0
+   UNION_R: PO fails in 0; empty in 0
+   PTE: PO fails in 0; empty in 1
+   truncPTE: PO fails in 1; empty in 0; first failure [((0, 0), (Fraction(1, 2), Fraction(1, 2))), ((0, 1), (1, 3)), ((1, 0), (3, 1)), ((1, 1), (0, 0))], prediction [(0, 0), (0, 1), (1, 0)]
+   NB: PO fails in 0; empty in 0
+   MG: PO fails in 0; empty in 0
+   MGU: PO fails in 0; empty in 0
+   alphacore: PO fails in 0; empty in 0
+   credcore: PO fails in 0; empty in 1
+   LCS1: PO fails in 0; empty in 0
+   LCS2: PO fails in 0; empty in 0
+   Berge: PO fails in 0; empty in 0
+   team: PO fails in 0; empty in 0
+   Nash: PO fails in 0; empty in 0
+   superrational: PO fails in 1; empty in 0; first failure [((0, 0), (Fraction(1, 2), Fraction(1, 2))), ((0, 1), (1, 3)), ((1, 0), (3, 1)), ((1, 1), (0, 0))], prediction [(0, 0)]
+-- ETc, symmetric strict 2x2: 16 symmetric games without ties in which copying pays
+   SPP12: ETc fails in 0; empty in 0
+   SPP21: ETc fails in 0; empty in 0
+   RPP12: ETc fails in 0; empty in 0
+   RPP21: ETc fails in 0; empty in 0
+   UNION_S: ETc fails in 0; empty in 0
+   UNION_R: ETc fails in 0; empty in 0
+   PTE: ETc fails in 0; empty in 0
+   truncPTE: ETc fails in 0; empty in 0
+   NB: ETc fails in 0; empty in 0
+   MG: ETc fails in 0; empty in 0
+   MGU: ETc fails in 0; empty in 0
+   alphacore: ETc fails in 0; empty in 0
+   credcore: ETc fails in 0; empty in 0
+   LCS1: ETc fails in 8; empty in 0; first failure: u_1 rows [[2, 3], [1, 4]], prediction [(0, 0), (1, 1)]
+   LCS2: ETc fails in 0; empty in 0
+   Berge: ETc fails in 10; empty in 0; first failure: u_1 rows [[1, 2], [4, 3]], prediction [(0, 1), (1, 0)]
+   team: ETc fails in 2; empty in 0; first failure: u_1 rows [[1, 2], [4, 3]], prediction [(0, 1), (1, 0), (1, 1)]
+   Nash: ETc fails in 8; empty in 0; first failure: u_1 rows [[2, 3], [1, 4]], prediction [(0, 0), (1, 1)]
+   superrational: ETc fails in 0; empty in 0
+-- ETc, symmetric strict PDs, payoffs in {0,...,5}: 15 symmetric games without ties in which copying pays
+   SPP12: ETc fails in 0; empty in 0
+   SPP21: ETc fails in 0; empty in 0
+   RPP12: ETc fails in 0; empty in 0
+   RPP21: ETc fails in 0; empty in 0
+   UNION_S: ETc fails in 0; empty in 0
+   UNION_R: ETc fails in 0; empty in 0
+   PTE: ETc fails in 0; empty in 0
+   truncPTE: ETc fails in 0; empty in 0
+   NB: ETc fails in 0; empty in 0
+   MG: ETc fails in 0; empty in 0
+   MGU: ETc fails in 0; empty in 0
+   alphacore: ETc fails in 0; empty in 0
+   credcore: ETc fails in 0; empty in 0
+   LCS1: ETc fails in 15; empty in 0; first failure: u_1 rows [[2, 0], [3, 1]], prediction [(0, 0), (1, 1)]
+   LCS2: ETc fails in 0; empty in 0
+   Berge: ETc fails in 0; empty in 0
+   team: ETc fails in 3; empty in 0; first failure: u_1 rows [[2, 0], [4, 1]], prediction [(0, 0), (0, 1), (1, 0)]
+   Nash: ETc fails in 15; empty in 0; first failure: u_1 rows [[2, 0], [3, 1]], prediction [(1, 1)]
+   superrational: ETc fails in 0; empty in 0
+-- ETc, perturbed traveler's dilemmas (seed 7): 24 symmetric games without ties in which copying pays
+   SPP12: ETc fails in 0; empty in 0
+   SPP21: ETc fails in 0; empty in 0
+   RPP12: ETc fails in 0; empty in 0
+   RPP21: ETc fails in 0; empty in 0
+   UNION_S: ETc fails in 0; empty in 0
+   UNION_R: ETc fails in 0; empty in 0
+   PTE: ETc fails in 0; empty in 0
+   truncPTE: ETc fails in 0; empty in 0
+   NB: ETc fails in 0; empty in 0
+   MG: ETc fails in 0; empty in 0
+   MGU: ETc fails in 0; empty in 0
+   alphacore: ETc fails in 17; empty in 0; first failure: u_1 rows [[Fraction(2009, 1000), Fraction(877, 250), Fraction(3513, 1000), Fraction(351, 100)], [Fraction(251, 500), Fraction(3001, 1000), Fraction(903, 200), Fraction(4503, 1000)], [Fraction(101, 200), Fraction(3, 2), Fraction(1001, 250), Fraction(2753, 500)], [Fraction(507, 1000), Fraction(1511, 1000), Fraction(1257, 500), Fraction(1253, 250)]], prediction [(2, 3), (3, 2), (3, 3)]
+   credcore: ETc fails in 17; empty in 0; first failure: u_1 rows [[Fraction(2009, 1000), Fraction(877, 250), Fraction(3513, 1000), Fraction(351, 100)], [Fraction(251, 500), Fraction(3001, 1000), Fraction(903, 200), Fraction(4503, 1000)], [Fraction(101, 200), Fraction(3, 2), Fraction(1001, 250), Fraction(2753, 500)], [Fraction(507, 1000), Fraction(1511, 1000), Fraction(1257, 500), Fraction(1253, 250)]], prediction [(2, 3), (3, 2), (3, 3)]
+   LCS1: ETc fails in 24; empty in 0; first failure: u_1 rows [[Fraction(401, 200), Fraction(1751, 500), Fraction(3503, 1000)], [Fraction(127, 250), Fraction(3, 1), Fraction(563, 125)], [Fraction(507, 1000), Fraction(753, 500), Fraction(4001, 1000)]], prediction [(0, 0), (1, 1), (2, 2)]
+   LCS2: ETc fails in 17; empty in 0; first failure: u_1 rows [[Fraction(2009, 1000), Fraction(877, 250), Fraction(3513, 1000), Fraction(351, 100)], [Fraction(251, 500), Fraction(3001, 1000), Fraction(903, 200), Fraction(4503, 1000)], [Fraction(101, 200), Fraction(3, 2), Fraction(1001, 250), Fraction(2753, 500)], [Fraction(507, 1000), Fraction(1511, 1000), Fraction(1257, 500), Fraction(1253, 250)]], prediction [(1, 1), (2, 2), (2, 3), (3, 2), (3, 3)]
+   Berge: ETc fails in 0; empty in 0
+   team: ETc fails in 0; empty in 0
+   Nash: ETc fails in 24; empty in 0; first failure: u_1 rows [[Fraction(401, 200), Fraction(1751, 500), Fraction(3503, 1000)], [Fraction(127, 250), Fraction(3, 1), Fraction(563, 125)], [Fraction(507, 1000), Fraction(753, 500), Fraction(4001, 1000)]], prediction [(0, 0)]
+   superrational: ETc fails in 0; empty in 0
+-- ETc, all symmetric 3x3 ranking games: 123648 symmetric games without ties in which copying pays
+   SPP12: ETc fails in 0; empty in 0
+   SPP21: ETc fails in 0; empty in 0
+   RPP12: ETc fails in 0; empty in 0
+   RPP21: ETc fails in 0; empty in 0
+   UNION_S: ETc fails in 0; empty in 0
+   UNION_R: ETc fails in 0; empty in 0
+   PTE: ETc fails in 0; empty in 0
+   truncPTE: ETc fails in 0; empty in 0
+   NB: ETc fails in 1236; empty in 0; first failure: u_1 rows [[1, 2, 3], [4, 7, 9], [8, 6, 5]], prediction [(1, 1), (1, 2), (2, 1)]
+   MG: ETc fails in 0; empty in 0
+   MGU: ETc fails in 0; empty in 0
+   alphacore: ETc fails in 22506; empty in 0; first failure: u_1 rows [[1, 2, 3], [4, 5, 7], [6, 9, 8]], prediction [(1, 2), (2, 1), (2, 2)]
+   credcore: ETc fails in 3372; empty in 0; first failure: u_1 rows [[1, 2, 5], [6, 4, 8], [9, 3, 7]], prediction [(0, 2), (2, 0), (2, 2)]
+   LCS1: ETc fails in 105108; empty in 0; first failure: u_1 rows [[1, 2, 3], [4, 5, 7], [6, 9, 8]], prediction [(1, 2), (2, 1), (2, 2)]
+   LCS2: ETc fails in 22506; empty in 0; first failure: u_1 rows [[1, 2, 3], [4, 5, 7], [6, 9, 8]], prediction [(1, 2), (2, 1), (2, 2)]
+   Berge: ETc fails in 96996; empty in 5064; first failure: u_1 rows [[1, 2, 3], [4, 5, 6], [7, 9, 8]], prediction [(1, 2), (2, 1)]
+   team: ETc fails in 11040; empty in 0; first failure: u_1 rows [[1, 2, 3], [4, 5, 6], [8, 9, 7]], prediction [(1, 2), (2, 1)]
+   Nash: ETc fails in 90234; empty in 2862; first failure: u_1 rows [[1, 2, 3], [4, 6, 7], [8, 5, 9]], prediction [(1, 1), (2, 2)]
+   superrational: ETc fails in 0; empty in 0

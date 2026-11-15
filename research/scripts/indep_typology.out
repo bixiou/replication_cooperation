@@ -1,0 +1,201 @@
+==============================================================================
+PART A. Worked examples of Section 8 and S7
+==============================================================================
+
+A1. Game (1,1) at (a,b), (2,1) at (a,b'), (0,0) at (a',b), (a',b'); rows a,a' = 0,1; cols b,b' = 0,1
+  U(G): [(0, 0), (0, 1)]
+  IR(G): [(0, 0), (0, 1)]
+  PCE (pure commitments): [(0, 1)]
+  Nash product: [(0, 1)]
+  maximin of gains: [(0, 1)]
+  mutual advantage (security): [(0, 1)]
+  optimin: [(0, 1)]
+  sum of payoffs: [(0, 1)]
+  leader values with mixed commitments (grid 1/200), best answer for the leader: (Fraction(2, 1), Fraction(1, 1))
+  MPCE: max of min gain over mixed (grid 1/200), value and maximizers (p=Pr a, q=Pr b): (Fraction(0, 1), [(Fraction(1, 1), Fraction(0, 1))], 1)
+
+A2. Symmetric game: (A,B),(B,A) give both their largest payoff 3, (B,B)=2, (A,A)=1
+  symmetric: True
+  U(G): [(0, 1), (1, 0)]
+  superrational: [(1, 1)]
+
+A3. Z_PD for (T,R,P,S)=(5,3,1,0); rows a,a'; cols b,b'
+  player 1 payoffs: [[3, 2], [0, -1]]
+  security levels: (2, -2)
+  Berge (= Nash of the altruistic game with 2 players): [(1, 0)]
+  Nash of altruistic game: [(1, 0)]
+  IR(G): [(0, 1)]
+  pure Nash: [(0, 1)]
+
+A4. Game G whose swap is the PD (5,3,1,0); strategies C=0, D=1
+  payoffs G: [[(3, 3), (5, 0)], [(0, 5), (1, 1)]]
+  no ties: True
+  security levels: (3, 3)
+  Berge: [(1, 1)]
+  (D,D) Pareto-optimal: False
+
+A5. Symmetric game, player 1: 1 at (a,a), 2 at (a,b), 4 at (b,a), 3 at (b,b)
+  no ties / symmetric / copying pays: (True, True, True)
+  best symmetric: [1]
+  Berge: [(0, 1), (1, 0)]
+
+A6. Matching pennies
+  Berge: []
+  Nash-2 (weak test, Sandomirskaia Def. 1): []
+  Nash-2 with a strict test (contrast): [(0, 0), (0, 1), (1, 0), (1, 1)]
+  pure Nash: []
+
+A7. Chicken (A=0, Y=1)
+  credible alpha-core: []
+  alpha-core: [(0, 1), (1, 0), (1, 1)]
+  PTE limit: []
+  RPP (1,2), (2,1): ([(0, 1)], [(1, 0)])
+  SPP (1,2), (2,1): ([(1, 0)], [(0, 1)])
+  mixed Nash: Pr(A) each, crash probability, crash payoff vs security: (Fraction(1, 2), Fraction(1, 4), (0, (1, 1)))
+
+A8. Prisoner's dilemma (5,3,1,0); C=0, D=1
+  pure Nash: [(1, 1)]
+  strong eq: []
+  alpha-core: [(0, 0)]
+  credible alpha-core: [(0, 0)]
+  Nash-2: [(0, 0), (1, 1)]
+  optimin: [(1, 1)]
+  PCE pure: [(0, 0), (1, 1)]
+  Berge: [(0, 0)]
+  team: [(0, 0)]
+  MG: [(0, 0)]
+  NB: [(0, 0)]
+  MA: [(0, 0)]
+  PTE: [(0, 0)]
+  superrational: [(0, 0)]
+  LCS single movers: [(0, 0), (1, 1)]
+  LCS joint moves: [(0, 0)]
+  farsighted stable sets single: [{(1, 1), (0, 0)}]
+  farsighted stable sets joint: [{(0, 0)}]
+
+A9. Prisoner's dilemma (7,3,1,0), T+S=7 > 2R=6
+  team: [(0, 1), (1, 0)]
+  MA pure: [(0, 0)]
+  MG: [(0, 0)]
+  superrational pure: [(0, 0)]
+
+A10. Symmetric game, player 1: row a (1,2), row b (3,4)
+  no ties / symmetric / copying pays: (True, True, True)
+  b strictly dominant for player 1: True
+  only rationalizable profile (b,b) gives each her largest payoff: ((4, 4), 4, 4)
+
+A11. 1x1 game
+  MA (security): set()
+  no ties / symmetric / copying pays: (True, True, True)
+
+A12. Nash product counterexample (Proposition 9)
+  no ties / symmetric / copying pays: (True, True, True)
+  security: (4, 4)
+  IR: [(0, 2), (1, 1), (2, 0), (2, 2)]
+  NB: [(0, 2), (2, 0)]
+  MG: [(2, 2)]
+  best symmetric: [2]
+
+A13. G_e, e=1/2
+  no ties: True
+  superrational: [(1, 1)]
+  (Y,Y) Pareto-optimal: False
+  truncation: [(0, 1), (1, 0), (1, 1)]
+  RPP (1,2)/(2,1): ([(0, 1)], [(1, 0)])
+  union: [(0, 1), (1, 0)]
+
+A14. Farsighted examples (rows a,a'; cols b,b')
+  tie game U(G): [(1, 0), (1, 1)]
+  (a',b) indirectly dominated by (a',b') (single movers): True
+  LCS single / joint: ([(1, 1)], [(1, 1)])
+  farsighted stable sets single / joint: ([{(1, 1)}], [{(1, 1)}])
+  no-tie game: no ties: True
+  no-tie game U(G): [(1, 0)]
+  farsighted stable sets single / joint: ([{(1, 0)}, {(1, 1)}], [{(1, 0)}, {(1, 1)}])
+  LCS single / joint: ([(1, 0), (1, 1)], [(1, 0), (1, 1)])
+
+A15. Perturbed traveler's dilemmas (symmetric, no ties): does the (credible) alpha-core keep (M-1,M)?
+  M=7 r=3/2 draw 0: no ties True, symmetric True, copying pays True, best symmetric claim 7, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(7, 7)], MA [(7, 7)]
+  M=7 r=3/2 draw 1: no ties True, symmetric True, copying pays True, best symmetric claim 7, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(7, 7)], MA [(7, 7)]
+  M=7 r=3/2 draw 2: no ties True, symmetric True, copying pays True, best symmetric claim 7, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(7, 7)], MA [(7, 7)]
+  M=8 r=2 draw 0: no ties True, symmetric True, copying pays True, best symmetric claim 8, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(8, 8)], MA [(8, 8)]
+  M=8 r=2 draw 1: no ties True, symmetric True, copying pays True, best symmetric claim 8, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(8, 8)], MA [(8, 8)]
+  M=8 r=2 draw 2: no ties True, symmetric True, copying pays True, best symmetric claim 8, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(8, 8)], MA [(8, 8)]
+  M=9 r=5/2 draw 0: no ties True, symmetric True, copying pays True, best symmetric claim 9, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(9, 9)], MA [(9, 9)]
+  M=9 r=5/2 draw 1: no ties True, symmetric True, copying pays True, best symmetric claim 9, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(9, 9)], MA [(9, 9)]
+  M=9 r=5/2 draw 2: no ties True, symmetric True, copying pays True, best symmetric claim 9, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(9, 9)], MA [(9, 9)]
+  M=10 r=3 draw 0: no ties True, symmetric True, copying pays True, best symmetric claim 10, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(10, 10)], MA [(10, 10)]
+  M=10 r=3 draw 1: no ties True, symmetric True, copying pays True, best symmetric claim 10, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(10, 10)], MA [(10, 10)]
+  M=10 r=3 draw 2: no ties True, symmetric True, copying pays True, best symmetric claim 10, (M-1,M) in alpha-core True, in credible True, strong eq [], PTE [(10, 10)], MA [(10, 10)]
+
+A16. Traveler's dilemmas, M=2..10, r in {1/2,1,3/2,2,3,5}: which concepts give (M,M) alone
+  traveler's dilemmas checked: 54
+  failures (empty dict = none): {}
+
+==============================================================================
+PART B. Constructed tests
+==============================================================================
+
+B1. Three players vote for A, B or C; an alternative with two votes wins, otherwise D
+  pure alpha-core: []
+  pure alpha-core after a tie-breaking perturbation of size < 0.01: []
+
+B2. Multiplicative Kantian equilibrium on [1,2]^2 with truncation, u1=-(x1+x2), u2=x1+x2
+  equilibria on the grid: []
+
+B3. PD (5,3,1,0): mixed profile (C, 2/3 C + 1/3 D) [the example after Oesterheld et al. Theorem 3]
+  expected payoffs: (Fraction(2, 1), Fraction(11, 3))
+  mixed minimax of each player (other defects): P: 1
+  pure security levels: (1, 1)
+  support profiles and payoffs: [((0, 0), (3, 3)), ((0, 1), (0, 5))]
+
+==============================================================================
+PART C. Exhaustive checks
+==============================================================================
+
+C1. The 576 strict 2x2 games
+  number of games: 576
+  games where a predicted profile is Pareto-dominated, per concept: {'strong eq': 0, 'alpha-core': 0, 'credible alpha-core': 0, 'MG': 0, 'NB': 0, 'MA': 0, 'team': 0, 'PTE limit': 0, 'RPP(1,2)': 0, 'RPP(2,1)': 0, 'SPP(1,2)': 0, 'SPP(2,1)': 0, 'union': 0, 'pure Nash': 64, 'Nash-2': 96, 'Berge': 64, 'optimin': 60, 'truncation': 20, 'PCE pure': 4, 'LCS single': 72, 'LCS joint': 24}
+  [U not in phi, phi not in IR] counts: {'pure Nash': [0, 0], 'Nash-2': [0, 0], 'strong eq': [0, 0], 'alpha-core': [0, 0], 'credible alpha-core': [0, 0], 'PTE limit': [0, 0], 'truncation': [0, 0], 'RPP(1,2)': [0, 0], 'RPP(2,1)': [0, 0], 'SPP(1,2)': [0, 0], 'SPP(2,1)': [0, 0], 'union': [0, 0], 'LCS single': [0, 0], 'LCS joint': [0, 0]}
+  games with a nonempty prediction: {'PTE limit': 516, 'credible alpha-core': 516, 'strong eq': 476, 'Nash-2': 576, 'Berge': 504, 'pure Nash': 504}
+  RPP prediction depends on the order (games): 60
+  SPP prediction depends on the order (games): 44
+  PTE nonempty but some SPP order misses it (games): 8
+  RPP/SPP predictions not completely self-consistent rest points (count): 0
+
+C2. The 65,536 2x2 games with payoffs in {0,1,2,3} (ties allowed)
+  number of games: 65536
+  [U not in phi, phi not in IR] counts: {'pure Nash': [0, 0], 'Nash-2': [0, 0], 'strong eq': [0, 0], 'alpha-core': [0, 0], 'credible alpha-core': [0, 0], 'PTE limit': [0, 0], 'truncation': [0, 0], 'RPP(1,2)': [0, 0], 'RPP(2,1)': [0, 0], 'SPP(1,2)': [0, 0], 'SPP(2,1)': [0, 0], 'union': [0, 0], 'Berge': [17600, 17900], 'optimin': [6000, 0], 'MG': [3200, 0], 'NB': [3200, 0], 'MA': [25392, 0], 'team': [7688, 7288], 'PCE pure': [6000, 0], 'LCS single': [1280, 0], 'LCS joint': [1152, 0]}
+  PTE limit nonempty / with more than one profile: (62644, 28976)
+
+==============================================================================
+PART D. Mixed strategies
+==============================================================================
+
+D1. PD (7, 3, 1, 0), 2R=6, T+S=7
+  stationary point of the common payoff f(x)=u(x,x): 5/6
+  max over mixed (p,q) on grid 1/120 of min(u1,u2), maximizers: (Fraction(37, 12), 3.0833333333333335, [(Fraction(5, 6), Fraction(5, 6))])
+  superrational mixture (grid 1/120): best f and x: (Fraction(37, 12), Fraction(5, 6))
+  MA objective = (min(u1,u2)-P)/(T-P): same maximizers as min(u1,u2): True
+
+D1. PD (5, 3, 1, 0), 2R=6, T+S=5
+  stationary point of the common payoff f(x)=u(x,x): 3/2
+  max over mixed (p,q) on grid 1/120 of min(u1,u2), maximizers: (Fraction(3, 1), 3.0, [(Fraction(1, 1), Fraction(1, 1))])
+  superrational mixture (grid 1/120): best f and x: (Fraction(3, 1), Fraction(1, 1))
+  MA objective = (min(u1,u2)-P)/(T-P): same maximizers as min(u1,u2): True
+
+D1. PD (6, 3, 1, 0), 2R=6, T+S=6
+  stationary point of the common payoff f(x)=u(x,x): 1
+  max over mixed (p,q) on grid 1/120 of min(u1,u2), maximizers: (Fraction(3, 1), 3.0, [(Fraction(1, 1), Fraction(1, 1))])
+  superrational mixture (grid 1/120): best f and x: (Fraction(3, 1), Fraction(1, 1))
+  MA objective = (min(u1,u2)-P)/(T-P): same maximizers as min(u1,u2): True
+
+D2. Multiplicative Kantian equilibria of the mixed extension of the PD (grid 1/60 on profiles)
+  PD (7, 3, 1, 0) truncation=False: equilibria on the grid: [(Fraction(0, 1), Fraction(0, 1)), (Fraction(5, 6), Fraction(5, 6))]
+  PD (7, 3, 1, 0) truncation=True: equilibria on the grid: [(Fraction(0, 1), Fraction(0, 1)), (Fraction(5, 6), Fraction(5, 6))]
+  PD (5, 3, 1, 0) truncation=False: equilibria on the grid: [(Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(1, 1)), (Fraction(31, 60), Fraction(1, 1)), (Fraction(8, 15), Fraction(1, 1)), (Fraction(11, 20), Fraction(1, 1)), (Fraction(17, 30), Fraction(1, 1)), (Fraction(7, 12), Fraction(1, 1)), (Fraction(3, 5), Fraction(1, 1)), (Fraction(37, 60), Fraction(1, 1)), (Fraction(19, 30), Fraction(1, 1)), (Fraction(13, 20), Fraction(1, 1)), (Fraction(2, 3), Fraction(1, 1)), (Fraction(41, 60), Fraction(1, 1)), (Fraction(7, 10), Fraction(1, 1)), (Fraction(43, 60), Fraction(1, 1)), (Fraction(11, 15), Fraction(1, 1)), (Fraction(3, 4), Fraction(1, 1)), (Fraction(23, 30), Fraction(1, 1)), (Fraction(47, 60), Fraction(1, 1)), (Fraction(4, 5), Fraction(1, 1)), (Fraction(49, 60), Fraction(1, 1)), (Fraction(5, 6), Fraction(1, 1)), (Fraction(17, 20), Fraction(1, 1)), (Fraction(13, 15), Fraction(1, 1)), (Fraction(53, 60), Fraction(1, 1)), (Fraction(9, 10), Fraction(1, 1)), (Fraction(11, 12), Fraction(1, 1)), (Fraction(14, 15), Fraction(1, 1)), (Fraction(19, 20), Fraction(1, 1)), (Fraction(29, 30), Fraction(1, 1)), (Fraction(59, 60), Fraction(1, 1)), (Fraction(1, 1), Fraction(1, 2)), (Fraction(1, 1), Fraction(31, 60)), (Fraction(1, 1), Fraction(8, 15)), (Fraction(1, 1), Fraction(11, 20)), (Fraction(1, 1), Fraction(17, 30)), (Fraction(1, 1), Fraction(7, 12)), (Fraction(1, 1), Fraction(3, 5)), (Fraction(1, 1), Fraction(37, 60)), (Fraction(1, 1), Fraction(19, 30)), (Fraction(1, 1), Fraction(13, 20)), (Fraction(1, 1), Fraction(2, 3)), (Fraction(1, 1), Fraction(41, 60)), (Fraction(1, 1), Fraction(7, 10)), (Fraction(1, 1), Fraction(43, 60)), (Fraction(1, 1), Fraction(11, 15)), (Fraction(1, 1), Fraction(3, 4)), (Fraction(1, 1), Fraction(23, 30)), (Fraction(1, 1), Fraction(47, 60)), (Fraction(1, 1), Fraction(4, 5)), (Fraction(1, 1), Fraction(49, 60)), (Fraction(1, 1), Fraction(5, 6)), (Fraction(1, 1), Fraction(17, 20)), (Fraction(1, 1), Fraction(13, 15)), (Fraction(1, 1), Fraction(53, 60)), (Fraction(1, 1), Fraction(9, 10)), (Fraction(1, 1), Fraction(11, 12)), (Fraction(1, 1), Fraction(14, 15)), (Fraction(1, 1), Fraction(19, 20)), (Fraction(1, 1), Fraction(29, 30)), (Fraction(1, 1), Fraction(59, 60)), (Fraction(1, 1), Fraction(1, 1))]
+  PD (5, 3, 1, 0) truncation=True: equilibria on the grid: [(Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(1, 1))]
+
+D3. Magical thinking, PD (5,3,1,0), types uniform on [0,1]
+  cutoff type, Pr(other cooperates), Pr(mutual cooperation): (0.4384471871911698, 0.5615528128088302, 0.31534156157350907)
+  closed form (5-sqrt(17))/2 and ((sqrt(17)-3)/2)^2: (0.4384471871911697, 0.3153415615735092)

@@ -1,0 +1,6 @@
+A. farsighted sample: 1245/3000 = 0.4150; 95% Wilson interval [0.397, 0.433]
+B. symmetric 3x3 ranking games: 362880; empty limit: 125040; of these, with a nonempty reachable rest point mapped to itself by the exchange: 7824
+C. strict 2x2 games: 576; with a nonempty reachable rest point not contained in IR(G): 236
+   example (1,1), (2,4) / (3,3), (4,2): IR(G) = [(1, 0), (1, 1)]; nonempty reachable rest points [((0, 1),), ((1, 0),)]
+   resolved perfect prediction, order (0, 1): [(1, 0)]
+   resolved perfect prediction, order (1, 0): [(1, 0)]

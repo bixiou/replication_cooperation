@@ -1,0 +1,24 @@
+== W ==
+player 1: payoffs [4, 1, 9, 2, 3, 5], no ties: True
+player 2: payoffs [4, 6, 5, 8, 3, 1], no ties: True
+Pareto-optimal pure profiles: (a,b'') paying (9, 5), (a',b) paying (2, 8)
+mixed security levels: player 1 5/2 (rows (1/4, 3/4)), player 2 36/7 (columns (3/7, 4/7, 0))
+(a,b'') gives player 1 9 >= 5/2 and player 2 5 < 36/7
+(a',b) gives player 1 2 < 5/2 and player 2 8 >= 36/7
+supports (products of the players' supports) made only of Pareto-optimal profiles: {a} x {b''}, {a'} x {b}
+each such support is a single profile outside IR^m: True
+
+== G* ==
+player 1 payoffs (rows a, b, c): [[-1, 10, -5], [-3, -2, 11], [12, -4, 0]]
+no ties: player 1 True ; player 2 True
+  (a,b) pays (10,-3); player 2 copies: -3 -> -1
+  (a,c) pays (-5,12); player 1 copies: -5 -> 0
+  (b,a) pays (-3,10); player 1 copies: -3 -> -1
+  (b,c) pays (11,-4); player 2 copies: -4 -> -2
+  (c,a) pays (12,-5); player 2 copies: -5 -> 0
+  (c,b) pays (-4,11); player 1 copies: -4 -> -2
+copying pays: True
+best symmetric profile (c,c) gives each player 0
+uniform mixture against a, b, c: ['8/3', '4/3', '2'] so it guarantees 4/3
+exact mixed security level 548/283 = 1.9364, attained by (106/283, 98/283, 79/283)
+(c,c) in IR^m: False

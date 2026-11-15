@@ -1,0 +1,178 @@
+Part 1. Prisoner's dilemmas: Phi, RPP^m (both orders) and the union predict (C,C) alone.
+  500 PDs (300 symmetric from a half-integer grid in [-2,10], 68 of them with T+S>2R; 200 asymmetric with thirds): Phi ends at the fixed point {(C,C)}, P_K = {(C,C)}; RPP^m under both orders rests at {(C,C)}.
+  PD (10,3,1,0): F_0=[(0, 0), (0, 1), (1, 0), (1, 1)] g=['1', '1'] | F_1=[(0, 0), (1, 1)] g=['3', '3'] | F_2=[(0, 0)] g=['3', '3']
+  Variant 'F_(k+1) = union of supports of P_k' on PD (10,3,1,0): F_1 = [(0, 0), (0, 1), (1, 0), (1, 1)], end=fixed, g=['1', '1']: the variant stalls at the first round (mutual defection kept).
+
+Part 2. Traveler's dilemmas, claims 2..M: Phi and RPP^m predict (M,M) alone; mixed commitments never raise a
+  guarantee above the pure one along the rounds (both computed at every round).
+  M=3: r in {11/10, 3/2, 2, 7/3, 3, 9/2, M+1}: Phi = RPP^m = {(M,M)}, rounds = 3 for r=2; mixed guarantee = pure guarantee at every round.
+  M=4: r in {11/10, 3/2, 2, 7/3, 3, 9/2, M+1}: Phi = RPP^m = {(M,M)}, rounds = 3 for r=2; mixed guarantee = pure guarantee at every round.
+  M=5: r in {11/10, 3/2, 2, 7/3, 3, 9/2, M+1}: Phi = RPP^m = {(M,M)}, rounds = 4 for r=2; mixed guarantee = pure guarantee at every round.
+  M=6: r in {11/10, 3/2, 2, 7/3, 3, 9/2, M+1}: Phi = RPP^m = {(M,M)}, rounds = 4 for r=2; mixed guarantee = pure guarantee at every round.
+  M=7: r in {11/10, 3/2, 2, 7/3, 3, 9/2, M+1}: Phi = RPP^m = {(M,M)}, rounds = 5 for r=2; mixed guarantee = pure guarantee at every round.
+  M=8: r in {11/10, 3/2, 2, 7/3, 3, 9/2, M+1}: Phi = RPP^m = {(M,M)}, rounds = 5 for r=2; mixed guarantee = pure guarantee at every round.
+
+Part 3. Named games (pure profile labels: 0 = first strategy).
+  matching pennies: v^m=['0', '0']; Phi: K=0 end=mixed-stop g=['0', '0'] pure members=[]; checks ok
+     rounds: F_0=[(0, 0), (0, 1), (1, 0), (1, 1)] g=['0', '0']
+     pure PTE limit=[(0, 0), (0, 1), (1, 0), (1, 1)], pure truncation=[(0, 0), (0, 1), (1, 0), (1, 1)]; RPP^m order (1,2): mixed-stop F=[(0, 0), (0, 1), (1, 0), (1, 1)]; order (2,1): mixed-stop F=[(0, 0), (0, 1), (1, 0), (1, 1)]
+  chicken (A first): v^m=['1', '1']; Phi: K=0 end=trunc g=['1', '1'] pure members=[(0, 1), (1, 0), (1, 1)]; checks ok
+     rounds: F_0=[(0, 0), (0, 1), (1, 0), (1, 1)] g=['1', '1'] | F_1=[(0, 1), (1, 0), (1, 1)] g=['3', '3']
+     pure PTE limit=[], pure truncation=[(0, 1), (1, 0), (1, 1)]; RPP^m order (1,2): rest F=[(0, 1)]; order (2,1): rest F=[(1, 0)]
+  battle of the sexes (A first): v^m=['3/2', '3/2']; Phi: K=0 end=trunc g=['3/2', '3/2'] pure members=[(0, 1), (1, 0)]; checks ok
+     rounds: F_0=[(0, 0), (0, 1), (1, 0), (1, 1)] g=['3/2', '3/2'] | F_1=[(0, 1), (1, 0)] g=['3', '3']
+     pure PTE limit=[], pure truncation=[(0, 1), (1, 0)]; RPP^m order (1,2): rest F=[(1, 0)]; order (2,1): rest F=[(0, 1)]
+  Leader (A first): v^m=['3/2', '3/2']; Phi: K=0 end=trunc g=['3/2', '3/2'] pure members=[(0, 1), (1, 0)]; checks ok
+     rounds: F_0=[(0, 0), (0, 1), (1, 0), (1, 1)] g=['3/2', '3/2'] | F_1=[(0, 1), (1, 0)] g=['3', '3']
+     pure PTE limit=[], pure truncation=[(0, 1), (1, 0), (1, 1)]; RPP^m order (1,2): rest F=[(0, 1)]; order (2,1): rest F=[(1, 0)]
+  G_e, e=1/2: v^m=['6/7', '6/7']; Phi: K=0 end=trunc g=['6/7', '6/7'] pure members=[(0, 1), (1, 0)]; checks ok
+     rounds: F_0=[(0, 0), (0, 1), (1, 0), (1, 1)] g=['6/7', '6/7'] | F_1=[(0, 1), (1, 0)] g=['3', '3']
+     pure PTE limit=[], pure truncation=[(0, 1), (1, 0), (1, 1)]; RPP^m order (1,2): rest F=[(0, 1)]; order (2,1): rest F=[(1, 0)]
+  Aumann chicken (6,6): v^m=['2', '2']; Phi: K=0 end=trunc g=['2', '2'] pure members=[(0, 1), (1, 0), (1, 1)]; checks ok
+     rounds: F_0=[(0, 0), (0, 1), (1, 0), (1, 1)] g=['2', '2'] | F_1=[(0, 1), (1, 0), (1, 1)] g=['7', '7']
+     pure PTE limit=[], pure truncation=[(0, 1), (1, 0), (1, 1)]; RPP^m order (1,2): rest F=[(0, 1)]; order (2,1): rest F=[(1, 0)]
+  ties example (a,b),(a,b'),(a',b),(a',b'): v^m=['0', '0']; Phi: K=0 end=fixed g=['0', '0'] pure members=[(0, 0), (0, 1), (1, 0), (1, 1)]; checks ok
+     rounds: F_0=[(0, 0), (0, 1), (1, 0), (1, 1)] g=['0', '0']
+     pure PTE limit=[(0, 0), (0, 1), (1, 0), (1, 1)], pure truncation=[(0, 0), (0, 1), (1, 0), (1, 1)]; RPP^m order (1,2): rest F=[(0, 0), (0, 1), (1, 0), (1, 1)]; order (2,1): rest F=[(0, 0), (0, 1), (1, 0), (1, 1)]
+  BoS with ties (2,1),(0,0),(0,0),(1,2): v^m=['2/3', '2/3']; Phi: K=0 end=trunc g=['2/3', '2/3'] pure members=[(0, 0), (1, 1)]; checks ok
+     rounds: F_0=[(0, 0), (0, 1), (1, 0), (1, 1)] g=['2/3', '2/3'] | F_1=[(0, 0), (1, 1)] g=['2', '2']
+     pure PTE limit=[(0, 0), (0, 1), (1, 0), (1, 1)], pure truncation=[(0, 0), (0, 1), (1, 0), (1, 1)]; RPP^m order (1,2): rest F=[(0, 0)]; order (2,1): rest F=[(1, 1)]
+  stag hunt (4,4),(0,3),(3,0),(3,3): v^m=['3', '3']; Phi: K=2 end=fixed g=['4', '4'] pure members=[(0, 0)]; checks ok
+     rounds: F_0=[(0, 0), (0, 1), (1, 0), (1, 1)] g=['3', '3'] | F_1=[(0, 0), (1, 1)] g=['4', '4'] | F_2=[(0, 0)] g=['4', '4']
+     pure PTE limit=[(0, 0)], pure truncation=[(0, 0)]; RPP^m order (1,2): rest F=[(0, 0)]; order (2,1): rest F=[(0, 0)]
+
+Part 4. The guarantee is a supremum that a single commitment need not attain.
+  F = {(a,y1),(b,y1),(a,y2)}, u_1(a,y1)=2, u_1(b,y1)=0, u_1(a,y2)=0 (player 2's payoffs 0).
+  g_1(F) = 2; attained by a commitment: False. Pure a guarantees 0 (answer y2), pure b 0; a mixture (1-e)a + e b rules out y2 and guarantees 2(1-e).
+
+Part 5. All strict 2x2 games (pairs of strict rankings 1..4): Phi's end types, RPP^m, comparisons.
+  RPP^m mixed-stop: 64
+  RPP^m rest: 1088
+  RPP^m used the order: 120
+  fixed: 484
+  mixed-stop: 32
+  pte nonempty: 516
+  pte nonempty, PTE limit outside IR^m: 48
+  pte nonempty, Phi fixed at the PTE limit: 468
+  trunc: 60
+  (RPP^m counts are over 576 games x 2 orders; every rest point is a single pure profile, Pareto-optimal among pure profiles and completely self-consistent.)
+
+Part 6. Random games with ties (payoffs 0..3), checks of B inside Phi inside IR^m and nonemptiness.
+  ((1, 2, 2), 'fixed K=0', True): 1
+  ((1, 2, 2), 'fixed K>=1', True): 46
+  ((1, 2, 2), 'trunc K=0', False): 3
+  ((1, 3), 'RPP^m rest'): 100
+  ((1, 3), 'fixed K=0', True): 6
+  ((1, 3), 'fixed K>=1', True): 44
+  ((2, 2), 'RPP^m mixed-stop'): 22
+  ((2, 2), 'RPP^m rest'): 778
+  ((2, 2), 'fixed K=0', True): 16
+  ((2, 2), 'fixed K>=1', True): 344
+  ((2, 2), 'mixed-stop K=0', True): 11
+  ((2, 2), 'trunc K=0', True): 29
+  ((2, 2, 2), 'fixed K=0', True): 2
+  ((2, 2, 2), 'fixed K>=1', True): 115
+  ((2, 2, 2), 'trunc K=0', False): 28
+  ((2, 2, 2), 'trunc K>=1', False): 5
+  ((2, 2, 3), 'fixed K>=1', True): 29
+  ((2, 2, 3), 'trunc K=0', False): 10
+  ((2, 2, 3), 'trunc K>=1', False): 1
+  ((2, 3), 'RPP^m mixed-stop'): 18
+  ((2, 3), 'RPP^m rest'): 582
+  ((2, 3), 'fixed K=0', True): 2
+  ((2, 3), 'fixed K>=1', True): 265
+  ((2, 3), 'mixed-stop K=0', True): 9
+  ((2, 3), 'trunc K=0', True): 24
+  ((3, 1), 'RPP^m rest'): 100
+  ((3, 1), 'fixed K=0', True): 5
+  ((3, 1), 'fixed K>=1', True): 45
+  ((3, 3), 'RPP^m mixed-stop'): 10
+  ((3, 3), 'RPP^m rest'): 590
+  ((3, 3), 'fixed K>=1', True): 256
+  ((3, 3), 'mixed-stop K=0', True): 4
+  ((3, 3), 'mixed-stop K>=1', True): 1
+  ((3, 3), 'trunc K=0', True): 39
+  games failing a check: 0 of 1340
+  LP values certified by exact primal = dual: 42298, by vertex enumeration: 0
+
+Part 7. Random strict games (each player ranks the profiles strictly; 3x3: 300 games, 2x2x2: 100 games):
+  Phi against the PTE limit, Psi (pure branch) and Phi_Q; Pareto optimality of the pure members.
+  (3, 3)    Phi != PTE inside IR^m: a mixed guarantee above the pure one after round 0: False: 23
+  (3, 3)    Phi != PTE inside IR^m: a mixed guarantee above the pure one after round 0: True: 18
+  (3, 3) PTE nonempty; inside IR^m False; Phi = PTE False; Psi = PTE False: 3
+  (3, 3) PTE nonempty; inside IR^m True; Phi = PTE False; Psi = PTE False: 26
+  (3, 3) PTE nonempty; inside IR^m True; Phi = PTE False; Psi = PTE True: 15
+  (3, 3) PTE nonempty; inside IR^m True; Phi = PTE True; Psi = PTE True: 160
+  (3, 3) Phi end fixed, K=>=1: 185
+  (3, 3) Phi end mixed-stop, K=0: 2
+  (3, 3) Phi end trunc, K=0: 113
+  (3, 3) Phi pure members all Pareto-optimal: False: 70
+  (3, 3) Phi pure members all Pareto-optimal: True: 230
+  (3, 3) Phi_Q pure members all Pareto-optimal: False: 70
+  (3, 3) Phi_Q pure members all Pareto-optimal: True: 230
+  (3, 3) Psi pure branch applies: False: 2
+  (3, 3) Psi pure branch applies: True: 298
+  (3, 3) RPP^m end mixed-stop: 4
+  (3, 3) RPP^m end rest: 596
+  (2, 2, 2)    Phi != PTE inside IR^m: a mixed guarantee above the pure one after round 0: False: 4
+  (2, 2, 2)    Phi != PTE inside IR^m: a mixed guarantee above the pure one after round 0: True: 10
+  (2, 2, 2) PTE nonempty; inside IR^m False; Phi = PTE False; Psi = PTE False: 4
+  (2, 2, 2) PTE nonempty; inside IR^m True; Phi = PTE False; Psi = PTE False: 7
+  (2, 2, 2) PTE nonempty; inside IR^m True; Phi = PTE False; Psi = PTE True: 7
+  (2, 2, 2) PTE nonempty; inside IR^m True; Phi = PTE True; Psi = PTE True: 47
+  (2, 2, 2) Phi end fixed, K=>=1: 61
+  (2, 2, 2) Phi end trunc, K=0: 38
+  (2, 2, 2) Phi end trunc, K=>=1: 1
+  (2, 2, 2) Phi pure members all Pareto-optimal: False: 8
+  (2, 2, 2) Phi pure members all Pareto-optimal: True: 92
+  (2, 2, 2) Phi_Q pure members all Pareto-optimal: False: 8
+  (2, 2, 2) Phi_Q pure members all Pareto-optimal: True: 92
+  (2, 2, 2) Psi pure branch applies: True: 100
+
+Part 8. The variant Phi_some (an answer is possible if SOME realization stays in F; uses payoffs outside F).
+  F = {(a,y1),(b,y2)}, u_1 = 1 on F and 10 at the two excluded profiles: pure guarantees 1, Phi_some guarantee 11/2, Phi guarantee 1.
+  Phi_some in the TDs M=3..7, r in {3/2,2,7/3,5} and four PDs: (M,M) and (C,C) alone; failures: 0
+  Phi_some on 450 random games with ties (2x2, 3x3, 2x2x2): g(F_0) = v^m, guarantees nondecreasing, bliss profiles kept, final guarantees >= v^m; failures: 0
+
+Part 9. Variants 6 (own coin ex ante, others' realizations worst; rounds on mixed profiles, truncation;
+  floating-point LPs, tolerance 1e-9: numerical) and 1 (recurrent perfect prediction: closed classes of the
+  graph of departures on pure worlds; exact guarantees, relative-interior attainment by float LP).
+  TD, r in {11/10, 3/2, 2, 7/3, 3, M+1}: Seed 1 ends at {(M,M)} for M = 3..8; Seed 6 ends at the fixed point {(M,M)} for M = 3..6.
+  PD (5,3,1,0), (10,3,1,0), (7/2,3,1,-2), (4,3,2,1): Seeds 1 and 6 end at {(C,C)}.
+  PD (10,3,1,0) with the named coin m = 9/10 C + 1/10 D (strategies C, m, D): Phi fixed [(1, 1)]; Seed 1 W* = [(1, 1)]; Seed 6 fixed support pairs [((1,), (1,))], thresholds [3.34, 3.34]: all three at (m,m) (167/50 each).
+  matching pennies: Seed 1 W* = [(0, 0), (0, 1), (1, 0), (1, 1)], closed classes [[(0, 0), (0, 1), (1, 0), (1, 1)]], stationary laws (uniform departures) [({(0, 0): '1/4', (0, 1): '1/4', (1, 0): '1/4', (1, 1): '1/4'}, ['0', '0'])]; Seed 6 fixed, thresholds [-0.0, -0.0], support pairs [((0, 1), (0, 1))]
+  chicken: Seed 1 W* = [(0, 1), (1, 0)], closed classes [[(0, 1), (1, 0)]], stationary laws (uniform departures) [({(0, 1): '1/2', (1, 0): '1/2'}, ['2', '2'])]; Seed 6 trunc, thresholds [1.0, 1.0], support pairs [((0,), (1,)), ((1,), (0,)), ((1,), (1,)), ((1,), (0, 1)), ((0, 1), (1,))]
+  battle of the sexes: Seed 1 W* = [(0, 1), (1, 0)], closed classes [[(0, 1), (1, 0)]], stationary laws (uniform departures) [({(0, 1): '1/2', (1, 0): '1/2'}, ['5/2', '5/2'])]; Seed 6 trunc, thresholds [1.5, 1.5], support pairs [((0,), (1,)), ((1,), (0,)), ((0, 1), (0, 1))]
+  G_e, e=1/2: Seed 1 W* = [(0, 1), (1, 0)], closed classes [[(0, 1), (1, 0)]], stationary laws (uniform departures) [({(0, 1): '1/2', (1, 0): '1/2'}, ['2', '2'])]; Seed 6 trunc, thresholds [0.8571, 0.8571], support pairs [((0,), (1,)), ((1,), (0,)), ((0, 1), (0, 1))]
+  BoS with ties: Seed 1 W* = [(0, 0), (1, 1)], closed classes [[(0, 0), (1, 1)]], stationary laws (uniform departures) [({(0, 0): '1/2', (1, 1): '1/2'}, ['3/2', '3/2'])]; Seed 6 trunc, thresholds [0.6667, 0.6667], support pairs [((0,), (0,)), ((1,), (1,)), ((0, 1), (0, 1))]
+  ((2, 2), 'Seed 1: guarantee not attained at some round (edges from near-optimal supports)', False): 183
+  ((2, 2), 'Seed 1: guarantee not attained at some round (edges from near-optimal supports)', True): 17
+  ((2, 2), 'Seed 1: pure bliss profiles inside W*', True): 200
+  ((2, 2), 'Seed 1: some product profile over W* in IR^m (exact)', True): 200
+  ((2, 2), 'Seed 1: stationary law of a cycle class gives each at least v^m', False): 2
+  ((2, 2), 'Seed 1: stationary law of a cycle class gives each at least v^m', True): 18
+  ((2, 2), 'Seed 6 end', 'fixed'): 185
+  ((2, 2), 'Seed 6 end', 'trunc'): 15
+  ((2, 3), 'Seed 1: guarantee not attained at some round (edges from near-optimal supports)', False): 90
+  ((2, 3), 'Seed 1: guarantee not attained at some round (edges from near-optimal supports)', True): 10
+  ((2, 3), 'Seed 1: pure bliss profiles inside W*', True): 100
+  ((2, 3), 'Seed 1: some product profile over W* in IR^m (exact)', True): 100
+  ((2, 3), 'Seed 1: stationary law of a cycle class gives each at least v^m', False): 2
+  ((2, 3), 'Seed 1: stationary law of a cycle class gives each at least v^m', True): 8
+  ((2, 3), 'Seed 6 end', 'fixed'): 91
+  ((2, 3), 'Seed 6 end', 'trunc'): 9
+  ((3, 3), 'Seed 1: guarantee not attained at some round (edges from near-optimal supports)', False): 124
+  ((3, 3), 'Seed 1: guarantee not attained at some round (edges from near-optimal supports)', True): 26
+  ((3, 3), 'Seed 1: pure bliss profiles inside W*', True): 150
+  ((3, 3), 'Seed 1: some product profile over W* in IR^m (exact)', True): 150
+  ((3, 3), 'Seed 1: stationary law of a cycle class gives each at least v^m', False): 1
+  ((3, 3), 'Seed 1: stationary law of a cycle class gives each at least v^m', True): 16
+  ((3, 3), 'Seed 6 end', 'fixed'): 51
+  ((3, 3), 'Seed 6 end', 'trunc'): 4
+  Seed 1 example: payoffs {(0, 0): (0,3), (0, 1): (2,0), (1, 0): (2,2), (1, 1): (1,3)}, v^m = ['4/3', '9/4'], cycle class [(0, 0), (0, 1), (1, 0), (1, 1)], stationary {(0, 0): 1/4, (0, 1): 1/4, (1, 0): 1/4, (1, 1): 1/4}, expected payoffs ['5/4', '2']
+
+Part 10. Variant 12, first round: worlds meeting the pure security levels, product lotteries over them
+  meeting the mixed security levels. A game where that set is empty (exact):
+  payoffs (a,c) (3,0), (a,d) (1,19/10), (b,c) (0,3), (b,d) (3,0): pure security ['1', '0'], mixed security ['9/5', '57/49'], worlds [(0, 0), (0, 1), (1, 1)], lotteries over them meeting v^m: False (exact: True); so the seed's first round is empty and its truncation returns every mixed profile.
+  random games with payoffs 0..3 (400: 2x2, 2x3, 3x3): first round nonempty in 400.
+EXIT 0

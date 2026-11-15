@@ -1,0 +1,218 @@
+coop_general_properties.py: can "cooperation in the PD and the TD" be replaced by general properties?
+
+== 1. Lemmas on the dilemmas
+PDs (each player's T > R > P > S in 0..5): 225; games where Pareto-optimal and individually rational profiles differ from {CC}: 0
+TD M = 2, r = 1/2: Pareto-optimal [(2, 2)]; and individually rational [(2, 2)]; equal-payoff Pareto-optimal [(2, 2)]
+TD M = 2, r = 1: Pareto-optimal [(2, 2)]; and individually rational [(2, 2)]; equal-payoff Pareto-optimal [(2, 2)]
+TD M = 2, r = 3/2: Pareto-optimal [(2, 2)]; and individually rational [(2, 2)]; equal-payoff Pareto-optimal [(2, 2)]
+TD M = 2, r = 2: Pareto-optimal [(2, 2)]; and individually rational [(2, 2)]; equal-payoff Pareto-optimal [(2, 2)]
+TD M = 2, r = 3: Pareto-optimal [(2, 2)]; and individually rational [(2, 2)]; equal-payoff Pareto-optimal [(2, 2)]
+TD M = 2, r = 5: Pareto-optimal [(2, 2)]; and individually rational [(2, 2)]; equal-payoff Pareto-optimal [(2, 2)]
+TD M = 3, r = 1/2: Pareto-optimal [(3, 3)]; and individually rational [(3, 3)]; equal-payoff Pareto-optimal [(3, 3)]
+TD M = 3, r = 1: Pareto-optimal [(3, 3)]; and individually rational [(3, 3)]; equal-payoff Pareto-optimal [(3, 3)]
+TD M = 3, r = 3/2: Pareto-optimal [(2, 3), (3, 2), (3, 3)]; and individually rational [(3, 3)]; equal-payoff Pareto-optimal [(3, 3)]
+TD M = 3, r = 2: Pareto-optimal [(2, 3), (3, 2), (3, 3)]; and individually rational [(3, 3)]; equal-payoff Pareto-optimal [(3, 3)]
+TD M = 3, r = 3: Pareto-optimal [(2, 3), (3, 2), (3, 3)]; and individually rational [(3, 3)]; equal-payoff Pareto-optimal [(3, 3)]
+TD M = 3, r = 5: Pareto-optimal [(2, 3), (3, 2), (3, 3)]; and individually rational [(3, 3)]; equal-payoff Pareto-optimal [(3, 3)]
+TD M = 5, r = 1/2: Pareto-optimal [(5, 5)]; and individually rational [(5, 5)]; equal-payoff Pareto-optimal [(5, 5)]
+TD M = 5, r = 1: Pareto-optimal [(5, 5)]; and individually rational [(5, 5)]; equal-payoff Pareto-optimal [(5, 5)]
+TD M = 5, r = 3/2: Pareto-optimal [(4, 5), (5, 4), (5, 5)]; and individually rational [(4, 5), (5, 4), (5, 5)]; equal-payoff Pareto-optimal [(5, 5)]
+TD M = 5, r = 2: Pareto-optimal [(4, 5), (5, 4), (5, 5)]; and individually rational [(4, 5), (5, 4), (5, 5)]; equal-payoff Pareto-optimal [(5, 5)]
+TD M = 5, r = 3: Pareto-optimal [(4, 5), (5, 4), (5, 5)]; and individually rational [(5, 5)]; equal-payoff Pareto-optimal [(5, 5)]
+TD M = 5, r = 5: Pareto-optimal [(4, 5), (5, 4), (5, 5)]; and individually rational [(5, 5)]; equal-payoff Pareto-optimal [(5, 5)]
+TD M = 6, r = 1/2: Pareto-optimal [(6, 6)]; and individually rational [(6, 6)]; equal-payoff Pareto-optimal [(6, 6)]
+TD M = 6, r = 1: Pareto-optimal [(6, 6)]; and individually rational [(6, 6)]; equal-payoff Pareto-optimal [(6, 6)]
+TD M = 6, r = 3/2: Pareto-optimal [(5, 6), (6, 5), (6, 6)]; and individually rational [(5, 6), (6, 5), (6, 6)]; equal-payoff Pareto-optimal [(6, 6)]
+TD M = 6, r = 2: Pareto-optimal [(5, 6), (6, 5), (6, 6)]; and individually rational [(5, 6), (6, 5), (6, 6)]; equal-payoff Pareto-optimal [(6, 6)]
+TD M = 6, r = 3: Pareto-optimal [(5, 6), (6, 5), (6, 6)]; and individually rational [(5, 6), (6, 5), (6, 6)]; equal-payoff Pareto-optimal [(6, 6)]
+TD M = 6, r = 5: Pareto-optimal [(5, 6), (6, 5), (6, 6)]; and individually rational [(6, 6)]; equal-payoff Pareto-optimal [(6, 6)]
+TD M = 10, r = 1/2: Pareto-optimal [(10, 10)]; and individually rational [(10, 10)]; equal-payoff Pareto-optimal [(10, 10)]
+TD M = 10, r = 1: Pareto-optimal [(10, 10)]; and individually rational [(10, 10)]; equal-payoff Pareto-optimal [(10, 10)]
+TD M = 10, r = 3/2: Pareto-optimal [(9, 10), (10, 9), (10, 10)]; and individually rational [(9, 10), (10, 9), (10, 10)]; equal-payoff Pareto-optimal [(10, 10)]
+TD M = 10, r = 2: Pareto-optimal [(9, 10), (10, 9), (10, 10)]; and individually rational [(9, 10), (10, 9), (10, 10)]; equal-payoff Pareto-optimal [(10, 10)]
+TD M = 10, r = 3: Pareto-optimal [(9, 10), (10, 9), (10, 10)]; and individually rational [(9, 10), (10, 9), (10, 10)]; equal-payoff Pareto-optimal [(10, 10)]
+TD M = 10, r = 5: Pareto-optimal [(9, 10), (10, 9), (10, 10)]; and individually rational [(9, 10), (10, 9), (10, 10)]; equal-payoff Pareto-optimal [(10, 10)]
+TD checks (r > 1, M >= 3: Pareto optima are (M,M), (M-1,M), (M,M-1); (M-1,M) individually rational iff M >= r + 3): violations []
+
+== 2. Which concepts satisfy which properties
+-- strict 2x2: 576 games (not symmetric: the ET column is not the note's (ET))
+   concept: empty, Eff fails, WE fails, IR fails, ET fails, Eff fails without ties
+   SPP12    : 0, 0, 0, 0, 36, 0
+   SPP21    : 0, 0, 0, 0, 36, 0
+   RPP12    : 0, 0, 0, 0, 32, 0
+   RPP21    : 0, 0, 0, 0, 32, 0
+   PTE      : 60, 60, 60, 0, 36, 60
+   truncPTE : 0, 20, 0, 0, 36, 20
+   NB       : 0, 0, 0, 0, 16, 0
+   MG       : 0, 0, 0, 0, 16, 0
+   alphacore: 0, 0, 0, 0, 52, 0
+   POIR     : 0, 0, 0, 0, 52, 0
+   EGAL     : 0, 0, 0, 0, 0, 0
+   MGU      : 0, 0, 0, 0, 16, 0
+   Nash     : 72, 136, 100, 0, 84, 136
+-- 2x2 with payoffs in {0,1,2}: 6561 games (not symmetric: the ET column is not the note's (ET))
+   concept: empty, Eff fails, WE fails, IR fails, ET fails, Eff fails without ties
+   SPP12    : 0, 2622, 0, 0, 1258, 0
+   SPP21    : 0, 2622, 0, 0, 1258, 0
+   RPP12    : 0, 2574, 0, 0, 1230, 0
+   RPP21    : 0, 2574, 0, 0, 1230, 0
+   PTE      : 148, 2714, 148, 0, 1242, 0
+   truncPTE : 0, 2634, 0, 0, 1242, 0
+   NB       : 0, 2964, 0, 0, 1376, 0
+   MG       : 0, 2996, 0, 0, 1400, 0
+   alphacore: 0, 3972, 0, 0, 2052, 0
+   POIR     : 0, 0, 0, 0, 340, 0
+   EGAL     : 0, 800, 0, 0, 500, 0
+   MGU      : 0, 3236, 0, 0, 1576, 0
+   Nash     : 162, 3114, 322, 0, 1616, 0
+-- symmetric strict 2x2: 24 games
+   concept: empty, Eff fails, WE fails, IR fails, ET fails, Inv fails, Eff fails without ties
+   SPP12    : 0, 0, 0, 0, 2, 6, 0
+   SPP21    : 0, 0, 0, 0, 2, 6, 0
+   RPP12    : 0, 0, 0, 0, 2, 6, 0
+   RPP21    : 0, 0, 0, 0, 2, 6, 0
+   PTE      : 6, 6, 6, 0, 2, 0, 6
+   truncPTE : 0, 2, 0, 0, 2, 0, 2
+   NB       : 0, 0, 0, 0, 0, 0, 0
+   MG       : 0, 0, 0, 0, 0, 0, 0
+   alphacore: 0, 0, 0, 0, 2, 0, 0
+   POIR     : 0, 0, 0, 0, 2, 0, 0
+   EGAL     : 0, 0, 0, 0, 0, 0, 0
+   MGU      : 0, 0, 0, 0, 0, 0, 0
+   Nash     : 0, 8, 2, 0, 10, 0, 8
+   superrat : 0, 4, 4, 0, 0, 0
+-- symmetric 2x2 with payoffs in {0,1,2}: 81 games
+   concept: empty, Eff fails, WE fails, IR fails, ET fails, Inv fails, Eff fails without ties
+   SPP12    : 0, 38, 0, 0, 28, 4, 0
+   SPP21    : 0, 38, 0, 0, 28, 4, 0
+   RPP12    : 0, 36, 0, 0, 26, 2, 0
+   RPP21    : 0, 36, 0, 0, 26, 2, 0
+   PTE      : 2, 38, 2, 0, 26, 0, 0
+   truncPTE : 0, 38, 0, 0, 26, 0, 0
+   NB       : 0, 10, 0, 0, 0, 0, 0
+   MG       : 0, 10, 0, 0, 0, 0, 0
+   alphacore: 0, 18, 0, 0, 10, 0, 0
+   POIR     : 0, 0, 0, 0, 2, 0, 0
+   EGAL     : 0, 8, 0, 0, 0, 0, 0
+   MGU      : 0, 10, 0, 0, 0, 0, 0
+   Nash     : 0, 34, 0, 0, 26, 0, 0
+   superrat : 0, 17, 17, 0, 5, 0
+-- random symmetric 3x3 ranking games: 3000 games
+   concept: empty, Eff fails, WE fails, IR fails, ET fails, Inv fails, Eff fails without ties
+   SPP12    : 0, 0, 0, 0, 383, 1060, 0
+   SPP21    : 0, 0, 0, 0, 383, 1060, 0
+   RPP12    : 0, 0, 0, 0, 351, 1028, 0
+   RPP21    : 0, 0, 0, 0, 351, 1028, 0
+   PTE      : 1028, 1028, 1028, 0, 351, 0, 1028
+   truncPTE : 0, 554, 0, 0, 351, 0, 554
+   NB       : 0, 0, 0, 0, 102, 0, 0
+   MG       : 0, 0, 0, 0, 0, 0, 0
+   alphacore: 0, 0, 0, 0, 742, 0, 0
+   POIR     : 0, 0, 0, 0, 742, 0, 0
+   EGAL     : 0, 0, 0, 0, 0, 0, 0
+   MGU      : 0, 0, 0, 0, 0, 0, 0
+   Nash     : 244, 1545, 554, 0, 1574, 0, 1545
+   superrat : 0, 677, 677, 0, 0, 0
+-- prisoner's dilemmas: 225 games (not symmetric: the ET column is not the note's (ET))
+   concept: empty, Eff fails, WE fails, IR fails, ET fails, Eff fails without ties
+   SPP12    : 0, 0, 0, 0, 0, 0
+   SPP21    : 0, 0, 0, 0, 0, 0
+   RPP12    : 0, 0, 0, 0, 0, 0
+   RPP21    : 0, 0, 0, 0, 0, 0
+   PTE      : 0, 0, 0, 0, 0, 0
+   truncPTE : 0, 0, 0, 0, 0, 0
+   NB       : 0, 0, 0, 0, 0, 0
+   MG       : 0, 0, 0, 0, 0, 0
+   alphacore: 0, 0, 0, 0, 0, 0
+   POIR     : 0, 0, 0, 0, 0, 0
+   EGAL     : 0, 0, 0, 0, 0, 0
+   MGU      : 0, 0, 0, 0, 0, 0
+   Nash     : 0, 225, 225, 0, 81, 225
+-- traveler's dilemmas: 54 games
+   concept: empty, Eff fails, WE fails, IR fails, ET fails, Inv fails, Eff fails without ties
+   SPP12    : 0, 0, 0, 0, 0, 0, 0
+   SPP21    : 0, 0, 0, 0, 0, 0, 0
+   RPP12    : 0, 0, 0, 0, 0, 0, 0
+   RPP21    : 0, 0, 0, 0, 0, 0, 0
+   PTE      : 0, 0, 0, 0, 0, 0, 0
+   truncPTE : 0, 0, 0, 0, 0, 0, 0
+   NB       : 0, 0, 0, 0, 0, 0, 0
+   MG       : 0, 0, 0, 0, 0, 0, 0
+   alphacore: 0, 7, 0, 0, 27, 0, 0
+   POIR     : 0, 0, 0, 0, 20, 0, 0
+   EGAL     : 0, 0, 0, 0, 0, 0, 0
+   MGU      : 0, 0, 0, 0, 0, 0, 0
+   Nash     : 0, 48, 32, 0, 48, 0, 5
+   superrat : 0, 0, 0, 0, 0, 0
+
+== 3. Named games
+chicken (Y=0, A=1): Pareto-optimal [(0, 0), (0, 1), (1, 0)]; individually rational [(0, 0), (0, 1), (1, 0)]; equal-payoff Pareto-optimal [(0, 0)]
+   SPP12    : [(0, 1)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': False, 'Inv': False}
+   SPP21    : [(1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': False, 'Inv': False}
+   RPP12    : [(1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': False, 'Inv': False}
+   RPP21    : [(0, 1)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': False, 'Inv': False}
+   PTE      : []  {'empty': True, 'Eff': False, 'WE': False, 'IR': True, 'ET': False, 'Inv': True}
+   truncPTE : [(0, 0), (0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': False, 'Inv': True}
+   NB       : [(0, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   MG       : [(0, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   alphacore: [(0, 0), (0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': False, 'Inv': True}
+   POIR     : [(0, 0), (0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': False, 'Inv': True}
+   EGAL     : [(0, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   MGU      : [(0, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   Nash     : [(0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': False, 'Inv': True}
+G_e (Y=0, A=1): Pareto-optimal [(0, 1), (1, 0)]; individually rational [(0, 0), (0, 1), (1, 0)]; equal-payoff Pareto-optimal []
+   SPP12    : [(0, 1)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': False}
+   SPP21    : [(1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': False}
+   RPP12    : [(1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': False}
+   RPP21    : [(0, 1)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': False}
+   PTE      : []  {'empty': True, 'Eff': False, 'WE': False, 'IR': True, 'ET': True, 'Inv': True}
+   truncPTE : [(0, 0), (0, 1), (1, 0)]  {'empty': False, 'Eff': False, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   NB       : [(0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   MG       : [(0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   alphacore: [(0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   POIR     : [(0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   EGAL     : [(0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   MGU      : [(0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+   Nash     : [(0, 1), (1, 0)]  {'empty': False, 'Eff': True, 'WE': True, 'IR': True, 'ET': True, 'Inv': True}
+
+== 4. Symmetric games in which reasoning in turn breaks equal treatment
+symmetric strict 2x2: 24 games, 20 with an equal-payoff Pareto-optimal profile; equal treatment broken by SPP (some order) in 2, by RPP in 2, of which the PTE limit is empty in 2
+random symmetric 3x3 ranking games: 3000 games, 2323 with an equal-payoff Pareto-optimal profile; equal treatment broken by SPP (some order) in 383, by RPP in 351, of which the PTE limit is empty in 351
+
+== 5. Symmetric efficiency (SE): in a symmetric game in which some symmetric profile (x, x) is Pareto-optimal,
+   every predicted profile is a Pareto-optimal symmetric profile (no comparison of payoffs across players)
+-- symmetric strict 2x2: 24 games, 20 with a Pareto-optimal symmetric profile; SE fails for:
+   SPP12 2 (2 nonempty); SPP21 2 (2 nonempty); RPP12 2 (2 nonempty); RPP21 2 (2 nonempty); PTE 2 (0 nonempty); truncPTE 2 (2 nonempty); NB 0 (0 nonempty); MG 0 (0 nonempty); alphacore 2 (2 nonempty); POIR 2 (2 nonempty); EGAL 0 (0 nonempty); MGU 0 (0 nonempty); Nash 10 (10 nonempty); superrat 0 (0 nonempty)
+-- symmetric 2x2 with payoffs in {0,1,2}: 81 games, 64 with a Pareto-optimal symmetric profile; SE fails for:
+   SPP12 34 (34 nonempty); SPP21 34 (34 nonempty); RPP12 32 (32 nonempty); RPP21 32 (32 nonempty); PTE 32 (32 nonempty); truncPTE 32 (32 nonempty); NB 9 (9 nonempty); MG 9 (9 nonempty); alphacore 19 (19 nonempty); POIR 11 (11 nonempty); EGAL 9 (9 nonempty); MGU 9 (9 nonempty); Nash 35 (35 nonempty); superrat 0 (0 nonempty)
+-- random symmetric 3x3 ranking games: 3000 games, 2323 with a Pareto-optimal symmetric profile; SE fails for:
+   SPP12 383 (383 nonempty); SPP21 383 (383 nonempty); RPP12 351 (351 nonempty); RPP21 351 (351 nonempty); PTE 351 (0 nonempty); truncPTE 351 (351 nonempty); NB 102 (102 nonempty); MG 0 (0 nonempty); alphacore 742 (742 nonempty); POIR 742 (742 nonempty); EGAL 0 (0 nonempty); MGU 0 (0 nonempty); Nash 1574 (1432 nonempty); superrat 0 (0 nonempty)
+-- traveler's dilemmas: 54 games, 54 with a Pareto-optimal symmetric profile; SE fails for:
+   SPP12 0 (0 nonempty); SPP21 0 (0 nonempty); RPP12 0 (0 nonempty); RPP21 0 (0 nonempty); PTE 0 (0 nonempty); truncPTE 0 (0 nonempty); NB 0 (0 nonempty); MG 0 (0 nonempty); alphacore 27 (27 nonempty); POIR 20 (20 nonempty); EGAL 0 (0 nonempty); MGU 0 (0 nonempty); Nash 48 (48 nonempty); superrat 0 (0 nonempty)
+-- symmetric prisoner's dilemmas: 15 games, 15 with a Pareto-optimal symmetric profile; SE fails for:
+   SPP12 0 (0 nonempty); SPP21 0 (0 nonempty); RPP12 0 (0 nonempty); RPP21 0 (0 nonempty); PTE 0 (0 nonempty); truncPTE 0 (0 nonempty); NB 0 (0 nonempty); MG 0 (0 nonempty); alphacore 0 (0 nonempty); POIR 0 (0 nonempty); EGAL 0 (0 nonempty); MGU 0 (0 nonempty); Nash 15 (15 nonempty); superrat 0 (0 nonempty)
+   first example, PTE on symmetric 2x2 with payoffs in {0,1,2}: u = [((0, 0), (0, 0)), ((0, 1), (0, 0)), ((1, 0), (0, 0)), ((1, 1), (0, 0))]; prediction [(0, 0), (0, 1), (1, 0), (1, 1)]; Pareto-optimal symmetric profiles [(0, 0), (1, 1)]
+   first example, NB on random symmetric 3x3 ranking games: u = [((0, 0), (3, 3)), ((0, 1), (7, 1)), ((0, 2), (4, 8)), ((1, 0), (1, 7)), ((1, 1), (6, 6)), ((1, 2), (9, 5)), ((2, 0), (8, 4)), ((2, 1), (5, 9)), ((2, 2), (2, 2))]; prediction [(1, 2), (2, 1)]; Pareto-optimal symmetric profiles [(1, 1)]
+   first example, NB on symmetric 2x2 with payoffs in {0,1,2}: u = [((0, 0), (0, 0)), ((0, 1), (0, 0)), ((1, 0), (0, 0)), ((1, 1), (0, 0))]; prediction [(0, 0), (0, 1), (1, 0), (1, 1)]; Pareto-optimal symmetric profiles [(0, 0), (1, 1)]
+   first example, SPP12 on symmetric strict 2x2: u = [((0, 0), (1, 1)), ((0, 1), (4, 2)), ((1, 0), (2, 4)), ((1, 1), (3, 3))]; prediction [(1, 0)]; Pareto-optimal symmetric profiles [(1, 1)]
+   theorem check: in symmetric games without ties, is a nonempty PTE limit always a Pareto-optimal symmetric profile?
+   symmetric strict 2x2: counterexamples 0
+   symmetric 2x2 with payoffs in {0,1,2}: counterexamples 0
+   random symmetric 3x3 ranking games: counterexamples 0
+   traveler's dilemmas: counterexamples 0
+   symmetric prisoner's dilemmas: counterexamples 0
+
+== 6. Chicken of Aumann (Y = 0, A = 1): every reachable set (steps E -> intersection of the verdicts of a
+   nonempty set of players)
+   5 reachable sets: [[], [(0, 1)], [(1, 0)], [(0, 0), (0, 1), (1, 0)], [(0, 0), (0, 1), (1, 0), (1, 1)]]
+   reachable rest points: [[], [(0, 1)], [(1, 0)]]
+   is {(Y,Y)} reachable: False; SE requires the prediction to be {(Y,Y)}
+
+== 7. Equal treatment in symmetric games with ties: nonempty PTE limits that break it (first 6)
+   u = [(0, 0), (0, 0), (0, 0), (1, 1)] (profiles (0,0), (0,1), (1,0), (1,1)); PTE limit [(0, 0), (0, 1), (1, 0), (1, 1)]; Pareto-optimal [(1, 1)]; equal-payoff Pareto-optimal [(1, 1)]
+   u = [(0, 0), (0, 0), (0, 0), (2, 2)] (profiles (0,0), (0,1), (1,0), (1,1)); PTE limit [(0, 0), (0, 1), (1, 0), (1, 1)]; Pareto-optimal [(1, 1)]; equal-payoff Pareto-optimal [(1, 1)]
+   u = [(0, 0), (1, 0), (0, 1), (1, 1)] (profiles (0,0), (0,1), (1,0), (1,1)); PTE limit [(0, 0), (0, 1), (1, 0), (1, 1)]; Pareto-optimal [(1, 1)]; equal-payoff Pareto-optimal [(1, 1)]
+   u = [(0, 0), (1, 0), (0, 1), (2, 2)] (profiles (0,0), (0,1), (1,0), (1,1)); PTE limit [(0, 0), (0, 1), (1, 0), (1, 1)]; Pareto-optimal [(1, 1)]; equal-payoff Pareto-optimal [(1, 1)]
+   u = [(0, 0), (1, 1), (1, 1), (0, 0)] (profiles (0,0), (0,1), (1,0), (1,1)); PTE limit [(0, 0), (0, 1), (1, 0), (1, 1)]; Pareto-optimal [(0, 1), (1, 0)]; equal-payoff Pareto-optimal [(0, 1), (1, 0)]
+   u = [(0, 0), (1, 1), (1, 1), (2, 2)] (profiles (0,0), (0,1), (1,0), (1,1)); PTE limit [(0, 1), (1, 0), (1, 1)]; Pareto-optimal [(1, 1)]; equal-payoff Pareto-optimal [(1, 1)]
+   total: 26 of 81

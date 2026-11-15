@@ -1,0 +1,23 @@
+=== A. symmetric 3x3 games, player 1's payoffs a permutation of 1..9
+total games 362880 | copying pays 123648 | copying fails 239232 | among failures, PTE limit = best symmetric 114192
+paper: fails in 239,232; limit best symmetric in 114,192 of these
+violations among copying-pays games (all should be 0): {'prop2': 0, 'prop2_unique': 0, 'trunc': 0, 'seq12': 0, 'seq21': 0, 'res12': 0, 'res21': 0, 'patch': 0, 'mg': 0, 'ma': 0, 'cpo': 0}
+Nash product predicts only asymmetric profiles in 864 of 123648 (paper: 864 of 123,648)
+team reasoning (sum) fails ET in 11040 of 123648 (paper: 11,040)
+empty PTE limit in 125040 of 362880 (OA: 125,040); with an exchange-invariant nonempty reachable rest point: 7824 (OA: 7,824)
+time 488s
+
+=== B. strict 2x2 games (pairs of strict rankings)
+number of games 576
+PTE nonempty in 516 (paper: 516)
+no invariant nonempty SC set containing a PO profile: 8 (paper: 8)
+no invariant nonempty reachable rest point: 12 (paper: 12)
+games with an automorphism exchanging the players and empty PTE: 12 | same set as the previous one: True
+PTE nonempty and some order of sequential perfect prediction misses it: 8 (paper: 8)
+prediction depends on the order: sequential 44 (OA: 44); resolved 60 (OA: 60); resolved with nonempty PTE 0 (should be 0)
+time 2s
+
+=== C. 2x2 games with payoffs in {0,1,2,3}
+PTE nonempty in 62644 of 65536 (paper: 62,644); more than one profile in 28976 (paper: 28,976)
+Prop 6 violations over all 65,536 games, both orders, both concepts (all should be 0): {'nonempty': 0, 'rest': 0, 'csc': 0, 'U': 0, 'IR': 0, 'res=pte': 0, 'reach': 0}
+time 121s

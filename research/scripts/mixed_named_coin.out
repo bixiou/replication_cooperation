@@ -1,0 +1,17 @@
+Payoffs of G' (row player 1, column player 2):
+   C ['(3.00,3.00)', '(2.70,3.70)', '(0.00,10.00)']
+   m ['(3.70,2.70)', '(3.34,3.34)', '(0.10,9.10)']
+   D ['(10.00,0.00)', '(9.10,0.10)', '(1.00,1.00)']
+ties for player 1: False  ties for player 2: False
+
+Pure perfectly transparent rounds on G':
+  PTE round 0: guarantees (1.0000, 1.0000) -> [('C', 'C'), ('C', 'm'), ('D', 'D'), ('m', 'C'), ('m', 'm')]
+  PTE round 1: guarantees (3.3400, 3.3400) -> [('m', 'm')]
+  PTE round 2: guarantees (3.3400, 3.3400) -> [('m', 'm')]
+
+Phi (mixed commitments, grid 1/60 over supports) on G', pure part:
+  Phi round 0: guarantees (1.0000, 1.0000) -> [('C', 'C'), ('C', 'm'), ('D', 'D'), ('m', 'C'), ('m', 'm')]
+  Phi round 1: guarantees (3.3400, 3.3400) -> [('m', 'm')]
+  Phi round 2: guarantees (3.3400, 3.3400) -> [('m', 'm')]
+
+u(m,m) = (Fraction(167, 50), Fraction(167, 50)) = 3.34 against R = 3
